@@ -43,7 +43,7 @@ This folder includes shell scripts to automate the tests.
 2. Launch Vivado (2019.1)
 3. In Vivado Tcl Console run :```source tcl/psddr.tcl```
 
-## List of Commands useful-
+## List of useful commands-
 1. To check the usb port status- ``` dmesg | grep ttyUSB```
 2. To launch serial terminal- ```screen /dev/ttyUSB? 115200```
 3. Petalinux Project related -
