@@ -14,13 +14,12 @@ This repo will include ELM bring up tests for GEM,I2C, and  Petalinux Based test
 Working Vivado project saved in this folder (Vivado 2019.1)
 
 ### petaProj
-*Working Petalinux project saved in this folder. 
+Working Petalinux project saved in this folder. 
 1. Includes HDF sourced from `myProj/<project_1.sdk` directory.
 2. Configured macb Driver in kernel Configuration.
 3. Configured `iperf3` application. 
-	3.1- in your <project_dir>/project-spec/meta-user/recipes-core/images/petalinux-image.bbappend add the following line:
-	```IMAGE_INSTALL_append = " iperf3"```(be aware of the extra space)
-	3.2  in ```petalinux-config -c rootfs``` -> user packages, enable iperf3
+- in your <project_dir>/project-spec/meta-user/recipes-core/images/petalinux-image.bbappend add the following line:```IMAGE_INSTALL_append = " iperf3"```(be aware of the extra space)
+- in ```petalinux-config -c rootfs``` -> user packages, enable iperf3
 	
 ### tcl
 This folder contains tcl file which needs to be sourced when starting from scratch
@@ -41,11 +40,12 @@ This folder includes shell scripts to automate the tests.
 1. To check the usb port status- ``` dmesg | grep ttyUSB```
 2. To launch serial terminal- ```screen /dev/ttyUSB? 115200```
 3. Petalinux Project related -
-	3.1 Create PetaLinux Project:- ```  petalinux-create --type project --template <PLATFORM> --name <PROJECT_NAME> ```
-	3.2 Initialize PetaLinux Project (for custom hardware only):- ``` petalinux-config --get-hw-description=<path-to-directory-containing-hardware description-file> ```
-	3.3 Configure the Linux Kernel:- ```petalinux-config -c kernel ```
-	3.4 Configure the Root Filesystem:- ```petalinux-config -c rootfs ```
-	3.5 Build the System:- ```petalinux-build ```
+- Create PetaLinux Project:- ```  petalinux-create --type project --template <PLATFORM> --name <PROJECT_NAME> ```
+- Initialize PetaLinux Project (for custom hardware only):- ``` petalinux-config --get-hw-description=<path-to-directory-containing-hardware description-file> ```
+-  Configure the Linux Kernel:- ```petalinux-config -c kernel ```
+-  Configure the Root Filesystem:- ```petalinux-config -c rootfs ```
+-  Build the System:- ```petalinux-build ```
 
-## 
+## I2C related-
+Will add it soon 
 
