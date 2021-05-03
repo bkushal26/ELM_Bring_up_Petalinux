@@ -48,7 +48,7 @@ This folder includes shell scripts to automate the tests.
 2. To launch serial terminal- ```screen /dev/ttyUSB? 115200```
 3. Petalinux Project related -
 - Create PetaLinux Project:- ```  petalinux-create --type project --template <PLATFORM> --name <PROJECT_NAME> ```
-- Initialize PetaLinux Project (for custom hardware only):- 
+- Initialize PetaLinux Project (for custom hardware only):- <br />
 ``` petalinux-config --get-hw-description=<path-to-directory-containing-hardware description-file> ```
 -  Configure the Linux Kernel:- ```petalinux-config -c kernel ```
 -  Configure the Root Filesystem:- ```petalinux-config -c rootfs ```
