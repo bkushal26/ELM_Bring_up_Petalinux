@@ -24,7 +24,8 @@ Working Petalinux project saved in this folder.
 - use left/right arrow keys to `<Save>` option.
 	
 3. Configured `iperf3` application. 
-- in your <project_dir>/project-spec/meta-user/recipes-core/images/petalinux-image.bbappend add the following line:```IMAGE_INSTALL_append = " iperf3"```(be aware of the extra space)
+- in your `<project_dir>/project-spec/meta-user/recipes-core/images/petalinux-image.bb`` append add the following line:\
+   ```IMAGE_INSTALL_append = " iperf3"```(be aware of the extra space)
 - in ```petalinux-config -c rootfs``` -> user packages, enable iperf3
 	
 ### tcl
@@ -47,7 +48,7 @@ This folder includes shell scripts to automate the tests.
 2. To launch serial terminal- ```screen /dev/ttyUSB? 115200```
 3. Petalinux Project related -
 - Create PetaLinux Project:- ```  petalinux-create --type project --template <PLATFORM> --name <PROJECT_NAME> ```
-- Initialize PetaLinux Project (for custom hardware only):- ``` petalinux-config --get-hw-description=<path-to-directory-containing-hardware description-file> ```
+- Initialize PetaLinux Project (for custom hardware only):-\ ``` petalinux-config --get-hw-description=<path-to-directory-containing-hardware description-file> ```
 -  Configure the Linux Kernel:- ```petalinux-config -c kernel ```
 -  Configure the Root Filesystem:- ```petalinux-config -c rootfs ```
 -  Build the System:- ```petalinux-build ```
