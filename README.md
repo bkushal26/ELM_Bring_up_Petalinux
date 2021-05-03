@@ -17,6 +17,12 @@ Working Vivado project saved in this folder (Vivado 2019.1)
 Working Petalinux project saved in this folder. 
 1. Includes HDF sourced from `myProj/<project_1.sdk` directory.
 2. Configured macb Driver in kernel Configuration.
+-  ```petalinux-config -c kernel ```
+- Then go to to `Device Drivers--> Network device support--> Ethernet Driver Support-->` \
+ 		`[*] Cadence devices`\
+		`<*> Cadence MACB/GEM support ` (this option is not selected by default, press 'y' to select, 'n' to deselect.)
+- use left/right arrow keys to `<Save>` option.
+	
 3. Configured `iperf3` application. 
 - in your <project_dir>/project-spec/meta-user/recipes-core/images/petalinux-image.bbappend add the following line:```IMAGE_INSTALL_append = " iperf3"```(be aware of the extra space)
 - in ```petalinux-config -c rootfs``` -> user packages, enable iperf3
