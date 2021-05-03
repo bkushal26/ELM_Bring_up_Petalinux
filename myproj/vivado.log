@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Apr 21 15:47:21 2021
+# Process ID: 11560
+# Current directory: /home/ehep/Vivado_Projects/elmGem1/myproj
+# Command line: vivado project_1.xpr
+# Log file: /home/ehep/Vivado_Projects/elmGem1/myproj/vivado.log
+# Journal file: /home/ehep/Vivado_Projects/elmGem1/myproj/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 6634.684 ; gain = 133.055 ; free physical = 7718 ; free virtual = 18275
+update_compile_order -fileset sources_1
+open_bd_design {/home/ehep/Vivado_Projects/elmGem1/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd}
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_e_0
+Successfully read diagram <ps_block> from BD file </home/ehep/Vivado_Projects/elmGem1/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd>
+CRITICAL WARNING: [PSU-1]  Setting of Bank Group Address Count (Parameter PSU__DDRC__BG_ADDR_COUNT) to 2 is not valid when the value of DRAM IC Bus Width (Parameter PSU__DDRC__DRAM_WIDTH) is set to 16. The valid value for Bank Group Address Count (Parameter PSU__DDRC__BG_ADDR_COUNT) is 1. 
+CRITICAL WARNING: [PSU-2]  Setting of DDR Row Address Count (Parameter PSU__DDRC__ROW_ADDR_COUNT) to 16 is not valid when the value of Device Capacity (Parameter PSU__DDRC__DEVICE_CAPACITY) is set to 16384. The valid value for Row Address Count (Parameter PSU__DDRC__ROW_ADDR_COUNT) is 17. 
+CRITICAL WARNING: [PSU-1]  Setting of Bank Group Address Count (Parameter PSU__DDRC__BG_ADDR_COUNT) to 2 is not valid when the value of DRAM IC Bus Width (Parameter PSU__DDRC__DRAM_WIDTH) is set to 16. The valid value for Bank Group Address Count (Parameter PSU__DDRC__BG_ADDR_COUNT) is 1. 
+CRITICAL WARNING: [PSU-2]  Setting of DDR Row Address Count (Parameter PSU__DDRC__ROW_ADDR_COUNT) to 16 is not valid when the value of Device Capacity (Parameter PSU__DDRC__DEVICE_CAPACITY) is set to 16384. The valid value for Row Address Count (Parameter PSU__DDRC__ROW_ADDR_COUNT) is 17. 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 21 15:52:05 2021...
