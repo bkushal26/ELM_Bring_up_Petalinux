@@ -16,7 +16,7 @@ Working Vivado project saved in this folder (Vivado 2019.1)
 ### petaProj
 Working Petalinux project saved in this folder. 
 1. Includes HDF sourced from `myProj/<project_1.sdk` directory.
-2. Configured macb Driver in kernel Configuration.
+2. Configured macb Driver in kernel Configuration. Steps for checking macb driver configuration:- 
 -  ```petalinux-config -c kernel ```
 - Then go to to `Device Drivers--> Network device support--> Ethernet Driver Support-->` \
  		`[*] Cadence devices`\
