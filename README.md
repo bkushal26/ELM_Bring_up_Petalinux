@@ -5,12 +5,12 @@ This repo will include ELM bring up tests for GEM,I2C, and  Petalinux Based test
 ### Using HTTPS:-
 ``` git clone --recursive https://github.com/bkushal26/ELM_Bring_up_Petalinux.git```
 
-#### Using SSH-
+### Using SSH-
 ``` git clone --recursive git@github.com:bkushal26/ELM_Bring_up_Petalinux.git```
 
 ## Git Repo Structure for GEM1:-
 
-#### myproj
+### myproj
 Working Vivado project saved in this folder (Vivado 2019.1)
 
 ### petaProj
@@ -24,7 +24,7 @@ Working Petalinux project saved in this folder.
 ### tcl
 This folder contains tcl file which needs to be sourced when starting from scratch
 
-###shellScripts
+### shellScripts
 This folder includes shell scripts to automate the tests.
 1. ping_iperf_client.sh-To be sourced on Board by- ``` sh ping_iperf_clinet.sh ```
 2. ping_iperf_slient.sh-To be sourced on Host PC by- ``` sh ping_iperf_server.sh ```
