@@ -17,16 +17,16 @@ Working Vivado project saved in this folder (Vivado 2019.1)
 Working Petalinux project saved in this folder. 
 1. Includes HDF sourced from `myProj/<project_1.sdk` directory.
 2. Configured macb Driver in kernel Configuration. Steps for checking macb driver configuration:- 
--  ```petalinux-config -c kernel ```
-- Then go to to `Device Drivers--> Network device support--> Ethernet Driver Support-->` \
+ -  ```petalinux-config -c kernel ```
+ - Then go to to `Device Drivers--> Network device support--> Ethernet Driver Support-->` \
  		`[*] Cadence devices`\
 		`<*> Cadence MACB/GEM support ` (this option is not selected by default, press 'y' to select, 'n' to deselect.)
-- use left/right arrow keys to `<Save>` option.
+ - use left/right arrow keys to `<Save>` option.
 	
 3. Configured `iperf3` application. 
-- in your `<project_dir>/project-spec/meta-user/recipes-core/images/petalinux-image.bb` append add the following line:\
+- In your `<project_dir>/project-spec/meta-user/recipes-core/images/petalinux-image.bb` append add the following line:\
    ```IMAGE_INSTALL_append = " iperf3"```(be aware of the extra space)
-- in ```petalinux-config -c rootfs``` -> user packages, enable iperf3
+- In ```petalinux-config -c rootfs``` -> user packages, enable iperf3
 	
 ### tcl
 This folder contains tcl file which needs to be sourced when starting from scratch
@@ -36,6 +36,10 @@ This folder includes shell scripts to automate the tests.
 1. ping_iperf_client.sh-To be sourced on Board by- ``` sh ping_iperf_clinet.sh ```
 2. ping_iperf_slient.sh-To be sourced on Host PC by- ``` sh ping_iperf_server.sh ```
  
+Two tests are conducted-
+ - Ping
+ - iperf
+
 
 
 ## Create a new project from scratch:
