@@ -49,7 +49,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 ##########################Create IP block design####################################
 # CHANGE DESIGN NAME HERE
 variable design_name
-set design_name cpu_block
+set design_name ps_block
 
 create_bd_design $design_name
 
@@ -1039,8 +1039,8 @@ create_bd_design $design_name
    CONFIG.PSU__ENET1__FIFO__ENABLE {0} \
    CONFIG.PSU__ENET1__GRP_MDIO__ENABLE {1} \
    CONFIG.PSU__ENET1__GRP_MDIO__IO {MIO 50 .. 51} \
-   CONFIG.PSU__ENET1__PERIPHERAL__ENABLE {0} \
-   CONFIG.PSU__ENET1__PERIPHERAL__IO {} \
+   CONFIG.PSU__ENET1__PERIPHERAL__ENABLE {1} \
+   CONFIG.PSU__ENET1__PERIPHERAL__IO {MIO 38 .. 49} \
    CONFIG.PSU__ENET1__PTP__ENABLE {0} \
    CONFIG.PSU__ENET1__TSU__ENABLE {0} \
    CONFIG.PSU__ENET2__FIFO__ENABLE {0} \
@@ -1100,8 +1100,8 @@ create_bd_design $design_name
    CONFIG.PSU__GEN_IPI_7__MASTER {NONE} \
    CONFIG.PSU__GEN_IPI_8__MASTER {NONE} \
    CONFIG.PSU__GEN_IPI_9__MASTER {NONE} \
-   CONFIG.PSU__GPIO0_MIO__IO {<select>} \
-   CONFIG.PSU__GPIO0_MIO__PERIPHERAL__ENABLE {0} \
+   CONFIG.PSU__GPIO0_MIO__IO {MIO 0 .. 25} \
+   CONFIG.PSU__GPIO0_MIO__PERIPHERAL__ENABLE {1} \
    CONFIG.PSU__GPIO1_MIO__PERIPHERAL__ENABLE {0} \
    CONFIG.PSU__GPIO2_MIO__IO {<Select>} \
    CONFIG.PSU__GPIO2_MIO__PERIPHERAL__ENABLE {0} \
@@ -1121,13 +1121,13 @@ create_bd_design $design_name
    CONFIG.PSU__HPM0_LPD__NUM_WRITE_THREADS {4} \
    CONFIG.PSU__HPM1_FPD__NUM_READ_THREADS {4} \
    CONFIG.PSU__HPM1_FPD__NUM_WRITE_THREADS {4} \
-   CONFIG.PSU__I2C0_LOOP_I2C1__ENABLE {0} \
-   CONFIG.PSU__I2C0__GRP_INT__ENABLE {0} \
-   CONFIG.PSU__I2C0__PERIPHERAL__ENABLE {0} \
-   CONFIG.PSU__I2C0__PERIPHERAL__IO {EMIO} \
-   CONFIG.PSU__I2C1__GRP_INT__ENABLE {0} \
-   CONFIG.PSU__I2C1__PERIPHERAL__ENABLE {0} \
-   CONFIG.PSU__I2C1__PERIPHERAL__IO {EMIO} \
+   CONFIG.PSU__I2C0__PERIPHERAL__ENABLE {1}  \
+   CONFIG.PSU__I2C0__PERIPHERAL__IO {MIO 10 .. 11}  \
+   CONFIG.PSU__I2C0__GRP_INT__ENABLE {0}  \
+   CONFIG.PSU__I2C1__PERIPHERAL__ENABLE {1}  \
+   CONFIG.PSU__I2C1__PERIPHERAL__IO {MIO 28 .. 29}  \
+   CONFIG.PSU__I2C1__GRP_INT__ENABLE {0}  \
+   CONFIG.PSU__I2C0_LOOP_I2C1__ENABLE {0}  \
    CONFIG.PSU__IOU_SLCR__IOU_TTC_APB_CLK__TTC0_SEL {APB} \
    CONFIG.PSU__IOU_SLCR__IOU_TTC_APB_CLK__TTC1_SEL {APB} \
    CONFIG.PSU__IOU_SLCR__IOU_TTC_APB_CLK__TTC2_SEL {APB} \
@@ -1380,9 +1380,9 @@ create_bd_design $design_name
    CONFIG.PSU__QSPI_ROUTE_THROUGH_FPD {0} \
    CONFIG.PSU__QSPI__GRP_FBCLK__ENABLE {0} \
    CONFIG.PSU__QSPI__PERIPHERAL__DATA_MODE {x4} \
-   CONFIG.PSU__QSPI__PERIPHERAL__ENABLE {0} \
-   CONFIG.PSU__QSPI__PERIPHERAL__IO {<Select>} \
-   CONFIG.PSU__QSPI__PERIPHERAL__MODE {<Select>} \
+   CONFIG.PSU__QSPI__PERIPHERAL__ENABLE {1} \
+   CONFIG.PSU__QSPI__PERIPHERAL__IO {MIO 0 .. 5} \
+   CONFIG.PSU__QSPI__PERIPHERAL__MODE {Single} \
    CONFIG.PSU__REPORT__DBGLOG {0} \
    CONFIG.PSU__RPU_COHERENCY {0} \
    CONFIG.PSU__RPU__POWER__ON {1} \
@@ -1402,8 +1402,8 @@ create_bd_design $design_name
    CONFIG.PSU__SD0__GRP_CD__ENABLE {0} \
    CONFIG.PSU__SD0__GRP_POW__ENABLE {0} \
    CONFIG.PSU__SD0__GRP_WP__ENABLE {0} \
-   CONFIG.PSU__SD0__PERIPHERAL__ENABLE {0} \
-   CONFIG.PSU__SD0__PERIPHERAL__IO {<select>} \
+   CONFIG.PSU__SD0__PERIPHERAL__ENABLE {1} \
+   CONFIG.PSU__SD0__PERIPHERAL__IO {MIO 13 .. 16 21 22} \
    CONFIG.PSU__SD0__RESET__ENABLE {0} \
    CONFIG.PSU__SD0__SLOT_TYPE {SD 2.0} \
    CONFIG.PSU__SD1_COHERENCY {0} \
@@ -1466,10 +1466,10 @@ create_bd_design $design_name
    CONFIG.PSU__UART1__PERIPHERAL__ENABLE {1} \
    CONFIG.PSU__UART1__PERIPHERAL__IO {MIO 8 .. 9} \
    CONFIG.PSU__USB0_COHERENCY {0} \
-   CONFIG.PSU__USB0__PERIPHERAL__ENABLE {0} \
-   CONFIG.PSU__USB0__PERIPHERAL__IO {<Select>} \
-   CONFIG.PSU__USB0__RESET__ENABLE {0} \
-   CONFIG.PSU__USB0__RESET__IO {0} \
+   CONFIG.PSU__USB0__PERIPHERAL__ENABLE {1} \
+   CONFIG.PSU__USB0__PERIPHERAL__IO {MIO 52 .. 63} \
+   CONFIG.PSU__USB0__RESET__ENABLE {1} \
+   CONFIG.PSU__USB0__RESET__IO {MIO 64} \
    CONFIG.PSU__USB1_COHERENCY {0} \
    CONFIG.PSU__USB1__PERIPHERAL__ENABLE {0} \
    CONFIG.PSU__USB1__RESET__ENABLE {0} \
@@ -1550,7 +1550,8 @@ create_bd_design $design_name
    CONFIG.UART1_BOARD_INTERFACE {custom} \
    CONFIG.USB0_BOARD_INTERFACE {custom} \
    CONFIG.USB1_BOARD_INTERFACE {custom} \
- ] $zynq_ultra_ps_e_0
+ 
+] $zynq_ultra_ps_e_0
 
 ##########################validate the design###################################
   
@@ -1562,22 +1563,22 @@ create_bd_design $design_name
 
 ##########################Make the Wrapper#####################################################
 update_compile_order -fileset sources_1
-make_wrapper -files [get_files myproj/project_1.srcs/sources_1/bd/cpu_block/cpu_block.bd] -top
-add_files -norecurse myproj/project_1.srcs/sources_1/bd/cpu_block/hdl/cpu_block_wrapper.v
+make_wrapper -files [get_files myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd] -top
+add_files -norecurse myproj/project_1.srcs/sources_1/bd/ps_block/hdl/ps_block_wrapper.v
 ###############################################################################################
 
 ###############################generate output products#######################################################
-set_property synth_checkpoint_mode None [get_files myproj/project_1.srcs/sources_1/bd/cpu_block/cpu_block.bd]
-generate_target all [get_files myproj/project_1.srcs/sources_1/bd/cpu_block/cpu_block.bd]
-export_ip_user_files -of_objects [get_files myproj/project_1.srcs/sources_1/bd/cpu_block/cpu_block.bd] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files myproj/project_1.srcs/sources_1/bd/cpu_block/cpu_block.bd] -directory myproj/project_1.ip_user_files/sim_scripts -ip_user_files_dir myproj/project_1.ip_user_files -ipstatic_source_dir myproj/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=myproj/project_1.cache/compile_simlib/modelsim} {questa=myproj/project_1.cache/compile_simlib/questa} {riviera=myproj/project_1.cache/compile_simlib/riviera} {activehdl=myproj/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property synth_checkpoint_mode None [get_files myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd]
+generate_target all [get_files myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd]
+export_ip_user_files -of_objects [get_files myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd] -directory myproj/project_1.ip_user_files/sim_scripts -ip_user_files_dir myproj/project_1.ip_user_files -ipstatic_source_dir myproj/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=myproj/project_1.cache/compile_simlib/modelsim} {questa=myproj/project_1.cache/compile_simlib/questa} {riviera=myproj/project_1.cache/compile_simlib/riviera} {activehdl=myproj/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 ########################################################################################################################
 
 #################################Export HW + launch_sdk###########################################################################
 #Note:does not include bit stream
 
 file mkdir myproj/project_1.sdk
-write_hwdef -force  -file myproj/project_1.sdk/cpu_block_wrapper.hdf
-#launch_sdk -workspace myproj/project_1.sdk -hwspec myproj/project_1.sdk/cpu_block_wrapper.hdf
+write_hwdef -force  -file myproj/project_1.sdk/ps_block_wrapper.hdf
+#launch_sdk -workspace myproj/project_1.sdk -hwspec myproj/project_1.sdk/ps_block_wrapper.hdf
 
 #########################################################################################################################################
