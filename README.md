@@ -78,7 +78,7 @@ Working Petalinux project saved in this folder.
 
 4.
 - In  ```petalinux-config``` ->
-- a. ```Image config --> SD card ```
+- a. ```Image packaging configrations  --> rootfile system type --> SD card ```
 5. Editing Device tree 
 
    ```<YourPetalinuxProjectDirectory>/project-spec/meta-user/recipes-bsp/device-tree/files``` 
