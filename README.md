@@ -64,7 +64,7 @@ It is a harware despcription file which is exported from Vivado (2019.1) to crea
 
 ### PetaProj
 Working Petalinux project saved in this folder. 
-1. Includes HDF sourced from `I2C/HDF/project_1.sdk` directory.
+1. Includes HDF sourced from `I2C/HDF/ps_block_wrapper.hdf` 
 2. Configured Cadence Driver in kernel Configuration. Steps for checking Cadence driver configuration:- 
  -  ```petalinux-config -c kernel ```
  - Then go to to `Device Drivers-->  I2C support-->  I2C support(I2C[=y])  I2C hardware Bus Support-->` \
