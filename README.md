@@ -80,7 +80,7 @@ Working Petalinux project saved in this folder.
      Add this device tree
 	/include/ "system-conf.dtsi"
 / {
-
+```
 i2c0 {
 
 status = "okay";
@@ -105,7 +105,7 @@ eeprom@51{
         };
 };
 };
-	
+```	
 ### TCL
 
 This folder contains tcl file which needs to be sourced when starting from scratch
