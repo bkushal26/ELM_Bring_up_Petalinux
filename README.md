@@ -67,17 +67,22 @@ Working Petalinux project saved in this folder.
 1. Includes HDF sourced from `I2C/HDF/ps_block_wrapper.hdf` 
 2. Configured Cadence Driver in kernel Configuration. Steps for checking Cadence driver configuration:- 
  -  ```petalinux-config -c kernel ```
- - Then go to to `Device Drivers-->  I2C support-->  I2C support(I2C[=y])  I2C hardware Bus Support-->` \
+ - Then go to to `Device Drivers--> I2C support--> I2C support(I2C[=y])I2C hardware Bus Support-->` \
  		`[*] Cadence I2C controller `\  (this option is not selected by default, press 'space bar' to select, 'n' to deselect.)
  - use left/right arrow keys to `<Save>` option.
 3.
 - In ```petalinux-config -c rootfs``` -> 
-- a. ```I2C tools (filesystem packages->base->i2c tools )```
-- b. ```GCC run-time (filesystem packages -> misc -> GCC run-time) ```
-- c. ```Packagegroup- petalinux- buildessential (filesystem packages -> misc -> `Packagegroup- petalinux- buildessential ) ```
-4. Editing Device tree 
-   <Your Petalinux project directory>/project-spec/meta-user/recipes-bsp/device-tree/files
-     Add this device tree
+- a. ```I2C tools (filesystem packages-> base-> i2c tools )```
+- b. ```GCC run-time (filesystem packages-> misc-> GCC run-time) ```
+- c. ```Packagegroup-petalinux-buildessential (filesystem packages -> misc -> `Packagegroup-petalinux-buildessential ) ```
+
+4.
+- In  ```petalinux-config``` ->
+- a. ```Image config --> SD card ```
+5. Editing Device tree 
+
+   ```<YourPetalinuxProjectDirectory>/project-spec/meta-user/recipes-bsp/device-tree/files``` 
+    - Add this device tree
 	/include/ "system-conf.dtsi"
 / {
 
