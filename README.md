@@ -83,9 +83,10 @@ Working Petalinux project saved in this folder.
 
    ```<YourPetalinuxProjectDirectory>/project-spec/meta-user/recipes-bsp/device-tree/files``` 
     - Add this device tree
+```
 	/include/ "system-conf.dtsi"
 / {
-```
+
 i2c0 {
 
 status = "okay";
