@@ -78,12 +78,12 @@ Working Petalinux project saved in this folder.
 
 4.
 - In  ```petalinux-config``` ->
-- a. ```Image packaging configrations  --> rootfile system type --> SD card ```
+- a. ```replace Image config --> SD card with Image Packaging Configrations  --> Root filesystem type --> SD card ```
 5. Editing Device tree 
 
    ```<YourPetalinuxProjectDirectory>/project-spec/meta-user/recipes-bsp/device-tree/files``` 
     - Add this device tree
-	/include/ "system-conf.dtsi"
+	```/include/ "system-conf.dtsi"
 / {
 
 i2c0 {
@@ -109,15 +109,15 @@ eeprom@51{
                 reg = <0x51>;
         };
 };
-};
-	
-### TCL
+}; ``` /
 
+
+### tcl
 This folder contains tcl file which needs to be sourced when starting from scratch
 
 ### shellScripts
 This folder includes shell scripts to automate the tests for mac EEPROM and Utility EEPROM
-1. i2c_eeprom_helper.sh-To be sourced on Board by- ``` sh i2c_eeprom_helper.sh ```	
+1. i2c_eeprom_helper.sh-To be sourced on Board by- ``` sh i2c_eeprom_helper.sh ```/	
 
 ### Create a new project from scratch:
 1. check the current working directory has 'tcl' folder.
