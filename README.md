@@ -67,9 +67,10 @@ Working Petalinux project saved in this folder.
 1. Includes HDF sourced from `I2C/HDF/ps_block_wrapper.hdf` 
 2. Configured Cadence Driver in kernel Configuration. Steps for checking Cadence driver configuration:- 
  -  ```petalinux-config -c kernel ```
- - Then go to to `Device Drivers--> I2C support--> I2C support(I2C[=y])I2C hardware Bus Support-->` \
- 		`[*] Cadence I2C controller `\  (this option is not selected by default, press 'space bar' to select, 'n' to deselect.)
- - use left/right arrow keys to `<Save>` option.
+ Then go to to <br /> 
+ `Device Drivers--> I2C support--> I2C support(I2C[=y])I2C hardware Bus Support-->[*] Cadence I2C controller ` <br />
+ (this option is not selected by default, press 'space bar' to select, 'n' to deselect.)
+ use left/right arrow keys to `<Save>` option.
 3.
 - In ```petalinux-config -c rootfs``` -> 
 - a. ```I2C tools (filesystem packages-> base-> i2c tools )```
