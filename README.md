@@ -57,7 +57,7 @@ Two tests are conducted-
 -  Configure the Linux Kernel:- ```petalinux-config -c kernel ```
 -  Configure the Root Filesystem:- ```petalinux-config -c rootfs ```
 -  Build the System:- ```petalinux-build ```
-
+- package (for petalinux2020):- <br /> ``` petalinux-package --boot --format BIN --fsbl images/linux/zynqmp_fsbl.elf --u-boot images/linux/u-boot.elf --pmufw images/linux/pmufw.elf --fpga images/linux/*.bit --force```
 ## I2C related-
 ### HDF
 It is a harware despcription file which is exported from Vivado (2019.1) to create Petalinux Project.
