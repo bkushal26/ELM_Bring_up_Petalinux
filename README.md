@@ -40,7 +40,15 @@ Two tests are conducted-
  - Ping
  - iperf
 
-
+#### Note regarding iperf tests- 
+ If after launching shell script on the server, if this error is printed-```iperf3: error - unable to connect to server: No route to host``` then chances are firewall is blocking the iperf data packets. In that case, Follow the following steps-
+ 1. Check if the port is open by- ``` sudo firewall-cmd --list-ports ```
+ 2. If you dont see 5201/udp or 5201/tcp, add them by- <br />
+ ```
+sudo firewall-cmd --permanent --add-port=5201/udp <br />
+sudo firewall-cmd --permanent --add-port=5201/tcp <br />
+sudo firewall-cmd --reload <br />
+ ```
 
 ## Create a new project from scratch:
 1. check the current working directory has 'tcl' folder.
