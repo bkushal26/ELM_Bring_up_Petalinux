@@ -45,9 +45,9 @@ Two tests are conducted-
  1. Check if the port is open by- ``` sudo firewall-cmd --list-ports ```
  2. If you dont see 5201/udp or 5201/tcp, add them by- <br />
  ```
-sudo firewall-cmd --permanent --add-port=5201/udp <br />
-sudo firewall-cmd --permanent --add-port=5201/tcp <br />
-sudo firewall-cmd --reload <br />
+sudo firewall-cmd --permanent --add-port=5201/udp 
+sudo firewall-cmd --permanent --add-port=5201/tcp 
+sudo firewall-cmd --reload 
  ```
 
 ## Create a new project from scratch:
