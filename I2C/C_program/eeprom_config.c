@@ -24,16 +24,15 @@
 #include <sys/mman.h>
 #include <linux/limits.h>
 
-#include "SI5344C.h"
+
 
 // Make the SDK console work in the debugger
 #define printf(...) \
- fprintf(stdout, __VA_ARGS__); \
- fflush(stdout);
+fprintf(stdout, __VA_ARGS__); \
+fflush(stdout);
 
 typedef long long int u64;
 typedef unsigned int u32;
-
 
 int run_command(char* cline, char* output)
 {
@@ -49,70 +48,78 @@ int run_command(char* cline, char* output)
 	  printf ("cannot popen\n");
 	  return (-1);
 	}
-/* Handle error */;
-
+	/* Handle error */;
 
 	while (fgets(path, PATH_MAX, fp) != NULL)
-	{
 		strcat(output, path);
-//	  printf("%s", path);
-	}
 
 	status = pclose(fp);
 	if (status == -1)
 	{
-	  /* Error reported by pclose() */
-
+	  /*Error reported by pclose()*/
 	}
 	else
 	{
-	  /* Use macros described under wait() to inspect `status' in order
-		 to determine success/failure of command executed by popen() */
+	  /*Use macros described under wait() to inspect `status' in order to determine success/failure of command executed by popen()*/
 	}
 	return status;
 }
 
-// sequence is taken from SI5338 data sheet, page 23
 
 int main(int argc, char * argv[])
 {
-	int bus = 1;	
-	int chip = 0x68;  // i2c address for synth
-	si5344_revd_register_t* regs = si5344_revd_registers;  // register array for synth
-	char * i2cset = "i2cset -y -m %d %d %d %d %d"; // mask bus chip addr value
-	char output[PATH_MAX], cmd[PATH_MAX];
-	int i;
-	int dwords = sizeof(si5344_revd_registers)/sizeof(si5344_revd_register_t); // size of register dump
-	int page_now = -1, page_old = -2;
-
-
-	// set multiplexor on APd
-
-	run_command ("i2cset -y 1 0x70 0x4", output);
-	printf ("i2cset -y 1 0x70 0x4 = %s\n", output);
-
-	// dump registers
-		for (i = 0; i < dwords; i ++)
+	int bus = 0;	
+	int chip, a, dwords, i, flag=0;
+	printf("Enter value 1 for MAC EEPROM and 2 for Utility EEPROM:");
+	scanf("%d",a);
+	while(1)
+	{
+		if(a==1)
 		{
-			si5344_revd_register_t rd = regs[i];
-
-			// detect page switches
-			page_old = page_now;
-			page_now = (rd.address >> 8) & 0xff;
-			if (page_now != page_old)
-			{
-				// page changed, switch
-				sprintf (cmd, i2cset, 0xff, bus, chip, 1, page_now);
-				run_command (cmd, output);
-				printf ("%s = %s\n", cmd, output);
-			}
-
-			sprintf (cmd, i2cset, 0xff, bus, chip, rd.address & 0xff, rd.value);
-			run_command (cmd, output);
-			printf ("%s = %s\n", cmd, output);
-			if (i == 2) 
-				usleep (300000);
+			chip=0x50;
+			dwords=0x7f;
+			break;
 		}
-		printf ("si5344 configuration finished, a = %x\n", chip);
-}
+		else if(a==2)
+		{
+			chip=0x51;
+			dwords=0x7fff; //change according to utility eeprom
+			break;
+		}
+		else
+			printf("\n Incorrect choice. Choose again.")
+	}	
 
+	//si5344_revd_register_t* regs = si5344_revd_registers;  // register array for synth
+
+
+	char* i2cset = "i2cset -y %d %d %x %x"; //'bus' 'chip' 'addr' 'value'
+	char* i2cget = "i2cget -y %d %d %x";	//'bus' 'chip' 'addr'
+	char output[PATH_MAX], cmd[PATH_MAX];
+
+	for (i = 0; i<=dwords; i++)
+	{
+		sprintf (cmd, i2cset, bus, chip, i, i);
+		run_command (cmd, output);
+		printf ("%s = %s\n", cmd, output);
+	}
+
+	for (i = 0; i<=dwords; i++)
+	{
+		sprintf (cmd, i2cget, bus, chip, i);
+		run_command (cmd, output);
+		printf("%s\n",output);
+		/*
+		if(output[]!=i)
+		{
+			printf ("Readback failed, a = %x\n", chip);
+			flag=1;
+			break;
+		}
+		*/			
+	}
+	//if (flag==0)
+	//	printf ("EEPROM test successful of chip %x\n", chip);
+	
+	printf("End of program.");
+}
