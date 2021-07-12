@@ -11,9 +11,11 @@ This repo will include ELM bring up tests for GEM,I2C, and  Petalinux Based test
 ## Git Repo Structure for GEM1:-
 
 ### myproj
-Working Vivado project saved in this folder (Vivado 2019.1)
+Working Vivado project saved in this folder (Vivado 2020.1)
+
 
 ### petaProj
+(switched to 2020.1 version, so will update the project accordingly, (just the boot image files)
 Working Petalinux project saved in this folder. 
 1. Includes HDF sourced from `myProj/<project_1.sdk` directory.
 2. Configured macb Driver in kernel Configuration. Steps for checking macb driver configuration:- 
@@ -124,7 +126,7 @@ eeprom@51{
 ```	
 
 ### tcl
-This folder contains tcl file which needs to be sourced when starting from scratch
+This folder contains tcl file which needs to be sourced when starting from scratch, supports both versions 2019.1 and 2020.1. (2019.1 is temp, will be switiching to 2020.1 fully soon)
 
 ### shellScripts
 This folder includes shell scripts to automate the tests for mac EEPROM and Utility EEPROM
@@ -132,5 +134,5 @@ This folder includes shell scripts to automate the tests for mac EEPROM and Util
 
 ### Create a new project from scratch:
 1. check the current working directory has 'tcl' folder.
-2. Launch Vivado (2019.1)
+2. Launch Vivado (2020.1)
 3. In Vivado Tcl Console run :```source TCL/elm2.tcl```
