@@ -46,6 +46,7 @@
 // 
 // DO NOT MODIFY THIS FILE.
 
+
 #include "ps_block_zynq_ultra_ps_e_0_0_sc.h"
 
 #include "zynq_ultra_ps_e_tlm.h"
@@ -59,45 +60,50 @@ ps_block_zynq_ultra_ps_e_0_0_sc::ps_block_zynq_ultra_ps_e_0_0_sc(const sc_core::
   xsc::utils::xsc_sim_manager::addInstance("ps_block_zynq_ultra_ps_e_0_0", this);
 
   // initialize module
-  xsc::common_cpp::properties model_param_props;
-  model_param_props.addLong("C_DP_USE_AUDIO", "0");
-  model_param_props.addLong("C_DP_USE_VIDEO", "0");
-  model_param_props.addLong("C_MAXIGP0_DATA_WIDTH", "128");
-  model_param_props.addLong("C_MAXIGP1_DATA_WIDTH", "128");
-  model_param_props.addLong("C_MAXIGP2_DATA_WIDTH", "32");
-  model_param_props.addLong("C_SAXIGP0_DATA_WIDTH", "128");
-  model_param_props.addLong("C_SAXIGP1_DATA_WIDTH", "128");
-  model_param_props.addLong("C_SAXIGP2_DATA_WIDTH", "128");
-  model_param_props.addLong("C_SAXIGP3_DATA_WIDTH", "128");
-  model_param_props.addLong("C_SAXIGP4_DATA_WIDTH", "128");
-  model_param_props.addLong("C_SAXIGP5_DATA_WIDTH", "128");
-  model_param_props.addLong("C_SAXIGP6_DATA_WIDTH", "128");
-  model_param_props.addLong("C_USE_DIFF_RW_CLK_GP0", "0");
-  model_param_props.addLong("C_USE_DIFF_RW_CLK_GP1", "0");
-  model_param_props.addLong("C_USE_DIFF_RW_CLK_GP2", "0");
-  model_param_props.addLong("C_USE_DIFF_RW_CLK_GP3", "0");
-  model_param_props.addLong("C_USE_DIFF_RW_CLK_GP4", "0");
-  model_param_props.addLong("C_USE_DIFF_RW_CLK_GP5", "0");
-  model_param_props.addLong("C_USE_DIFF_RW_CLK_GP6", "0");
-  model_param_props.addLong("C_TRACE_PIPELINE_WIDTH", "8");
-  model_param_props.addLong("C_EN_EMIO_TRACE", "0");
-  model_param_props.addLong("C_TRACE_DATA_WIDTH", "32");
-  model_param_props.addLong("C_USE_DEBUG_TEST", "0");
-  model_param_props.addLong("C_SD0_INTERNAL_BUS_WIDTH", "4");
-  model_param_props.addLong("C_SD1_INTERNAL_BUS_WIDTH", "8");
-  model_param_props.addLong("C_NUM_F2P_0_INTR_INPUTS", "1");
-  model_param_props.addLong("C_NUM_F2P_1_INTR_INPUTS", "1");
-  model_param_props.addLong("C_EMIO_GPIO_WIDTH", "1");
-  model_param_props.addLong("C_NUM_FABRIC_RESETS", "1");
-  model_param_props.addString("C_EN_FIFO_ENET0", "0");
-  model_param_props.addString("C_EN_FIFO_ENET1", "0");
-  model_param_props.addString("C_EN_FIFO_ENET2", "0");
-  model_param_props.addString("C_EN_FIFO_ENET3", "0");
-  model_param_props.addString("C_PL_CLK0_BUF", "TRUE");
-  model_param_props.addString("C_PL_CLK1_BUF", "FALSE");
-  model_param_props.addString("C_PL_CLK2_BUF", "FALSE");
-  model_param_props.addString("C_PL_CLK3_BUF", "FALSE");
+    xsc::common_cpp::properties model_param_props;
+    model_param_props.addLong("C_DP_USE_AUDIO", "0");
+    model_param_props.addLong("C_DP_USE_VIDEO", "0");
+    model_param_props.addLong("C_MAXIGP0_DATA_WIDTH", "128");
+    model_param_props.addLong("C_MAXIGP1_DATA_WIDTH", "128");
+    model_param_props.addLong("C_MAXIGP2_DATA_WIDTH", "32");
+    model_param_props.addLong("C_SAXIGP0_DATA_WIDTH", "128");
+    model_param_props.addLong("C_SAXIGP1_DATA_WIDTH", "128");
+    model_param_props.addLong("C_SAXIGP2_DATA_WIDTH", "128");
+    model_param_props.addLong("C_SAXIGP3_DATA_WIDTH", "128");
+    model_param_props.addLong("C_SAXIGP4_DATA_WIDTH", "128");
+    model_param_props.addLong("C_SAXIGP5_DATA_WIDTH", "128");
+    model_param_props.addLong("C_SAXIGP6_DATA_WIDTH", "128");
+    model_param_props.addLong("C_USE_DIFF_RW_CLK_GP0", "0");
+    model_param_props.addLong("C_USE_DIFF_RW_CLK_GP1", "0");
+    model_param_props.addLong("C_USE_DIFF_RW_CLK_GP2", "0");
+    model_param_props.addLong("C_USE_DIFF_RW_CLK_GP3", "0");
+    model_param_props.addLong("C_USE_DIFF_RW_CLK_GP4", "0");
+    model_param_props.addLong("C_USE_DIFF_RW_CLK_GP5", "0");
+    model_param_props.addLong("C_USE_DIFF_RW_CLK_GP6", "0");
+    model_param_props.addLong("C_TRACE_PIPELINE_WIDTH", "8");
+    model_param_props.addLong("C_EN_EMIO_TRACE", "0");
+    model_param_props.addLong("C_TRACE_DATA_WIDTH", "32");
+    model_param_props.addLong("C_USE_DEBUG_TEST", "0");
+    model_param_props.addLong("C_SD0_INTERNAL_BUS_WIDTH", "4");
+    model_param_props.addLong("C_SD1_INTERNAL_BUS_WIDTH", "8");
+    model_param_props.addLong("C_NUM_F2P_0_INTR_INPUTS", "1");
+    model_param_props.addLong("C_NUM_F2P_1_INTR_INPUTS", "1");
+    model_param_props.addLong("C_EMIO_GPIO_WIDTH", "1");
+    model_param_props.addLong("C_NUM_FABRIC_RESETS", "1");
+    model_param_props.addString("C_EN_FIFO_ENET0", "0");
+    model_param_props.addString("C_EN_FIFO_ENET1", "0");
+    model_param_props.addString("C_EN_FIFO_ENET2", "0");
+    model_param_props.addString("C_EN_FIFO_ENET3", "0");
+    model_param_props.addString("C_PL_CLK0_BUF", "TRUE");
+    model_param_props.addString("C_PL_CLK1_BUF", "FALSE");
+    model_param_props.addString("C_PL_CLK2_BUF", "FALSE");
+    model_param_props.addString("C_PL_CLK3_BUF", "FALSE");
+
   mp_impl = new zynq_ultra_ps_e_tlm("inst", model_param_props);
+
+  // initialize sockets
+  M_AXI_HPM0_LPD_rd_socket = mp_impl->M_AXI_HPM0_LPD_rd_socket;
+  M_AXI_HPM0_LPD_wr_socket = mp_impl->M_AXI_HPM0_LPD_wr_socket;
 }
 
 ps_block_zynq_ultra_ps_e_0_0_sc::~ps_block_zynq_ultra_ps_e_0_0_sc()

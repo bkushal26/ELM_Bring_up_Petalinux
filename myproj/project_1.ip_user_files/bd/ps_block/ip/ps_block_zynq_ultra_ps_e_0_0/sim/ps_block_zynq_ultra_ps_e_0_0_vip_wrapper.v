@@ -100,7 +100,7 @@ assign pl_clk0 = pl_clk_t[0] ;
   
 
 
-  zynq_ultra_ps_e_vip_v1_0_5 #(
+  zynq_ultra_ps_e_vip_v1_0_7 #(
     .C_USE_M_AXI_GP0(0),
     .C_USE_M_AXI_GP1(0),
     .C_USE_M_AXI_GP2(0),

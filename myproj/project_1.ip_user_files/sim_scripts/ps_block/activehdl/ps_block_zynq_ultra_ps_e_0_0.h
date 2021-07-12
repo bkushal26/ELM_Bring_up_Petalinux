@@ -49,10 +49,10 @@
 // 
 // DO NOT MODIFY THIS FILE.
 
+
 #ifndef XTLM
 #include "xtlm.h"
 #endif
-
 #ifndef SYSTEMC_INCLUDED
 #include <systemc>
 #endif
@@ -67,6 +67,10 @@
 
 #include "ps_block_zynq_ultra_ps_e_0_0_sc.h"
 
+
+
+
+#ifdef XILINX_SIMULATOR
 class DllExport ps_block_zynq_ultra_ps_e_0_0 : public ps_block_zynq_ultra_ps_e_0_0_sc
 {
 public:
@@ -74,7 +78,7 @@ public:
   ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_module_name& nm);
   virtual ~ps_block_zynq_ultra_ps_e_0_0();
 
-public: // module pin-to-pin RTL interface
+  // module pin-to-pin RTL interface
 
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
@@ -85,6 +89,119 @@ protected:
 
 private:
 
-};
 
+};
+#endif // XILINX_SIMULATOR
+
+
+
+
+#ifdef XM_SYSTEMC
+class DllExport ps_block_zynq_ultra_ps_e_0_0 : public ps_block_zynq_ultra_ps_e_0_0_sc
+{
+public:
+
+  ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_module_name& nm);
+  virtual ~ps_block_zynq_ultra_ps_e_0_0();
+
+  // module pin-to-pin RTL interface
+
+  sc_core::sc_out< bool > pl_resetn0;
+  sc_core::sc_out< bool > pl_clk0;
+
+protected:
+
+  virtual void before_end_of_elaboration();
+
+private:
+
+
+};
+#endif // XM_SYSTEMC
+
+
+
+
+#ifdef RIVIERA
+class DllExport ps_block_zynq_ultra_ps_e_0_0 : public ps_block_zynq_ultra_ps_e_0_0_sc
+{
+public:
+
+  ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_module_name& nm);
+  virtual ~ps_block_zynq_ultra_ps_e_0_0();
+
+  // module pin-to-pin RTL interface
+
+  sc_core::sc_out< bool > pl_resetn0;
+  sc_core::sc_out< bool > pl_clk0;
+
+protected:
+
+  virtual void before_end_of_elaboration();
+
+private:
+
+
+};
+#endif // RIVIERA
+
+
+
+
+#ifdef VCSSYSTEMC
+class DllExport ps_block_zynq_ultra_ps_e_0_0 : public ps_block_zynq_ultra_ps_e_0_0_sc
+{
+public:
+
+  ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_module_name& nm);
+  virtual ~ps_block_zynq_ultra_ps_e_0_0();
+
+  // module pin-to-pin RTL interface
+
+  sc_core::sc_out< bool > pl_resetn0;
+  sc_core::sc_out< bool > pl_clk0;
+
+protected:
+
+  virtual void before_end_of_elaboration();
+
+private:
+
+
+  // Transactor stubs
+
+  // Socket stubs
+
+};
+#endif // VCSSYSTEMC
+
+
+
+
+#ifdef MTI_SYSTEMC
+class DllExport ps_block_zynq_ultra_ps_e_0_0 : public ps_block_zynq_ultra_ps_e_0_0_sc
+{
+public:
+
+  ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_module_name& nm);
+  virtual ~ps_block_zynq_ultra_ps_e_0_0();
+
+  // module pin-to-pin RTL interface
+
+  sc_core::sc_out< bool > pl_resetn0;
+  sc_core::sc_out< bool > pl_clk0;
+
+protected:
+
+  virtual void before_end_of_elaboration();
+
+private:
+
+
+  // Transactor stubs
+
+  // Socket stubs
+
+};
+#endif // MTI_SYSTEMC
 #endif // IP_PS_BLOCK_ZYNQ_ULTRA_PS_E_0_0_H_

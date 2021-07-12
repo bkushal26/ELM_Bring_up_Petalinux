@@ -94,6 +94,10 @@ private:
 	virtual void b_transport(int id,
 				 tlm::tlm_generic_payload& trans,
 				 sc_time& delay);
+    virtual tlm::tlm_sync_enum nb_transport_fw(int id,tlm::tlm_generic_payload& trans,
+			tlm::tlm_phase& phase, sc_core::sc_time& delay);
+    virtual tlm::tlm_sync_enum nb_transport_bw(int id,tlm::tlm_generic_payload& trans,
+			tlm::tlm_phase& phase, sc_core::sc_time& delay);
 	virtual unsigned int transport_dbg(int id,
 					   tlm::tlm_generic_payload& trans);
 public:

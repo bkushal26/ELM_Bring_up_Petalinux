@@ -49,10 +49,10 @@
 // 
 // DO NOT MODIFY THIS FILE.
 
+
 #ifndef XTLM
 #include "xtlm.h"
 #endif
-
 #ifndef SYSTEMC_INCLUDED
 #include <systemc>
 #endif
@@ -76,6 +76,8 @@ public:
 
 public: // module socket-to-socket TLM interface
 
+  xtlm::xtlm_aximm_initiator_socket* M_AXI_HPM0_LPD_rd_socket;
+  xtlm::xtlm_aximm_initiator_socket* M_AXI_HPM0_LPD_wr_socket;
 
 protected:
 

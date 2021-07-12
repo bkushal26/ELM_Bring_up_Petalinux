@@ -1,8 +1,8 @@
-//Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+//Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-//Date        : Tue Apr 20 18:04:12 2021
-//Host        : www1.ino.tifr.res.in running 64-bit unknown
+//Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
+//Date        : Thu Jul  8 05:51:47 2021
+//Host        : madorsky-d2.phys.ufl.edu running 64-bit CentOS Linux release 8.2.2004 (Core)
 //Command     : generate_target ps_block.bd
 //Design      : ps_block
 //Purpose     : IP block netlist

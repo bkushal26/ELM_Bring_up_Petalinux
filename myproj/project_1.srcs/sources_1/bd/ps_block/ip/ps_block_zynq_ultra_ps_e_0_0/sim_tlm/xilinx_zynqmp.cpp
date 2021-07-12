@@ -137,11 +137,17 @@ xilinx_zynqmp::xilinx_zynqmp(sc_module_name name, const char *sk_descr)
 		proxy_in[i].register_b_transport(this,
 						  &xilinx_zynqmp::b_transport,
 						  i);
+		proxy_in[i].register_nb_transport_fw(this,
+						  &xilinx_zynqmp::nb_transport_fw,
+						  i);
 		proxy_in[i].register_transport_dbg(this,
 						  &xilinx_zynqmp::transport_dbg,
 						  i);
 		named[i][0] = &proxy_in[i];
 		proxy_out[i].bind(*out[i]);
+		proxy_out[i].register_nb_transport_bw(this,
+						  &xilinx_zynqmp::nb_transport_bw,
+						  i);
 	}
 
 	for (i = 0; i < 16; i++) {
@@ -263,8 +269,52 @@ void xilinx_zynqmp::b_transport(int id,
 
 	proxy_out[id]->b_transport(trans, delay);
 }
+tlm::tlm_sync_enum xilinx_zynqmp::nb_transport_fw(int id,
+				tlm::tlm_generic_payload& trans,tlm::tlm_phase& phase,
+				sc_time &delay)
+{
+	// The lower 6 bits of the Master ID are controlled by PL logic.
+	// Upper 7 bits are dictated by the PS.
+	//
+	// Bits [9:6] are the port index + 8.
+	// Bits [12:10] are the TBU index.
+#define MASTER_ID(tbu, id_9_6) ((tbu) << 10 | (id_9_6) << 6)
+	static const uint32_t master_id[9] = {
+		MASTER_ID(0, 8),
+		MASTER_ID(0, 9),
+		MASTER_ID(3, 10),
+		MASTER_ID(4, 11),
+		MASTER_ID(4, 12),
+		MASTER_ID(5, 13),
+		MASTER_ID(2, 14),
+		MASTER_ID(0, 2), /* ACP. No TBU. AXI IDs? */
+		MASTER_ID(0, 15), /* ACE. No TBU.  */
+	};
+	uint64_t mid;
+	genattr_extension *genattr;
+
+	trans.get_extension(genattr);
+	if (!genattr) {
+		genattr = new genattr_extension();
+		trans.set_extension(genattr);
+	}
+
+	mid = genattr->get_master_id();
+	/* PL Logic cannot control upper bits.  */
+	mid &= (1ULL << 6) - 1;
+	mid |= master_id[id];
+	genattr->set_master_id(mid);
+
+	return proxy_out[id]->nb_transport_fw(trans, phase, delay);
+}
 
 // Passthrough.
 unsigned int xilinx_zynqmp::transport_dbg(int id, tlm::tlm_generic_payload& trans) {
 	return proxy_out[id]->transport_dbg(trans);
+}
+tlm::tlm_sync_enum xilinx_zynqmp::nb_transport_bw(int id,
+				tlm::tlm_generic_payload& trans,tlm::tlm_phase& phase,
+				sc_time &delay)
+{
+    return proxy_in[id]->nb_transport_bw(trans, phase, delay);
 }

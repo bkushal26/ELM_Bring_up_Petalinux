@@ -690,6 +690,44 @@ set psu_clock_init_data {
 		# This register controls this reference clock
 		#(OFFSET, MASK, VALUE)      (0XFF5E0078, 0x013F3F07U ,0x01010F00U)  */
     mask_write 0XFF5E0078 0x013F3F07 0x01010F00
+		# Register : I2C0_REF_CTRL @ 0XFF5E0120</p>
+
+		# Clock active signal. Switch to 0 to disable the clock
+		# PSU_CRL_APB_I2C0_REF_CTRL_CLKACT                                                0x1
+
+		# 6 bit divider
+		# PSU_CRL_APB_I2C0_REF_CTRL_DIVISOR1                                              0x3
+
+		# 6 bit divider
+		# PSU_CRL_APB_I2C0_REF_CTRL_DIVISOR0                                              0x32
+
+		# 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
+    # ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
+    #  usually an issue, but designers must be aware.)
+		# PSU_CRL_APB_I2C0_REF_CTRL_SRCSEL                                                0x0
+
+		# This register controls this reference clock
+		#(OFFSET, MASK, VALUE)      (0XFF5E0120, 0x013F3F07U ,0x01033200U)  */
+    mask_write 0XFF5E0120 0x013F3F07 0x01033200
+		# Register : I2C1_REF_CTRL @ 0XFF5E0124</p>
+
+		# Clock active signal. Switch to 0 to disable the clock
+		# PSU_CRL_APB_I2C1_REF_CTRL_CLKACT                                                0x1
+
+		# 6 bit divider
+		# PSU_CRL_APB_I2C1_REF_CTRL_DIVISOR1                                              0x3
+
+		# 6 bit divider
+		# PSU_CRL_APB_I2C1_REF_CTRL_DIVISOR0                                              0x32
+
+		# 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
+    # ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
+    #  usually an issue, but designers must be aware.)
+		# PSU_CRL_APB_I2C1_REF_CTRL_SRCSEL                                                0x0
+
+		# This register controls this reference clock
+		#(OFFSET, MASK, VALUE)      (0XFF5E0124, 0x013F3F07U ,0x01033200U)  */
+    mask_write 0XFF5E0124 0x013F3F07 0x01033200
 		# Register : CPU_R5_CTRL @ 0XFF5E0090</p>
 
 		# Turing this off will shut down the OCM, some parts of the APM, and preve
@@ -2659,7 +2697,7 @@ set psu_ddr_init_data {
     # : 5 The selected HIF address bit is determined by adding the internal ba
     # se to the value of this field. If set to 15, this column address bit is
     # set to 0.
-		# PSU_DDRC_ADDRMAP2_ADDRMAP_COL_B5                                                0x0
+		# PSU_DDRC_ADDRMAP2_ADDRMAP_COL_B5                                                0x1
 
 		# - Full bus width mode: Selects the HIF address bit used as column addres
     # s bit 4. - Half bus width mode: Selects the HIF address bit used as colu
@@ -2668,7 +2706,7 @@ set psu_ddr_init_data {
     #  4 The selected HIF address bit is determined by adding the internal bas
     # e to the value of this field. If set to 15, this column address bit is s
     # et to 0.
-		# PSU_DDRC_ADDRMAP2_ADDRMAP_COL_B4                                                0x0
+		# PSU_DDRC_ADDRMAP2_ADDRMAP_COL_B4                                                0x1
 
 		# - Full bus width mode: Selects the HIF address bit used as column addres
     # s bit 3. - Half bus width mode: Selects the HIF address bit used as colu
@@ -2678,7 +2716,7 @@ set psu_ddr_init_data {
     #  value of this field. Note, if UMCTL2_INCL_ARB=1 and MEMC_BURST_LENGTH=1
     # 6, it is required to program this to 0, hence register does not exist in
     #  this case.
-		# PSU_DDRC_ADDRMAP2_ADDRMAP_COL_B3                                                0x0
+		# PSU_DDRC_ADDRMAP2_ADDRMAP_COL_B3                                                0x1
 
 		# - Full bus width mode: Selects the HIF address bit used as column addres
     # s bit 2. - Half bus width mode: Selects the HIF address bit used as colu
@@ -2687,11 +2725,11 @@ set psu_ddr_init_data {
     # elected HIF address bit is determined by adding the internal base to the
     #  value of this field. Note, if UMCTL2_INCL_ARB=1 and MEMC_BURST_LENGTH=8
     #  or 16, it is required to program this to 0.
-		# PSU_DDRC_ADDRMAP2_ADDRMAP_COL_B2                                                0x0
+		# PSU_DDRC_ADDRMAP2_ADDRMAP_COL_B2                                                0x1
 
 		# Address Map Register 2
-		#(OFFSET, MASK, VALUE)      (0XFD070208, 0x0F0F0F0FU ,0x00000000U)  */
-    mask_write 0XFD070208 0x0F0F0F0F 0x00000000
+		#(OFFSET, MASK, VALUE)      (0XFD070208, 0x0F0F0F0FU ,0x01010101U)  */
+    mask_write 0XFD070208 0x0F0F0F0F 0x01010101
 		# Register : ADDRMAP3 @ 0XFD07020C</p>
 
 		# - Full bus width mode: Selects the HIF address bit used as column addres
@@ -2718,7 +2756,7 @@ set psu_ddr_init_data {
     #  and hence no source address bit can be mapped to column address bit 10.
     #  In LPDDR2/LPDDR3, there is a dedicated bit for auto-precharge in the CA
     #  bus and hence column bit 10 is used.
-		# PSU_DDRC_ADDRMAP3_ADDRMAP_COL_B8                                                0x0
+		# PSU_DDRC_ADDRMAP3_ADDRMAP_COL_B8                                                0x1
 
 		# - Full bus width mode: Selects the HIF address bit used as column addres
     # s bit 7. - Half bus width mode: Selects the HIF address bit used as colu
@@ -2727,7 +2765,7 @@ set psu_ddr_init_data {
     #  7 The selected HIF address bit is determined by adding the internal bas
     # e to the value of this field. If set to 15, this column address bit is s
     # et to 0.
-		# PSU_DDRC_ADDRMAP3_ADDRMAP_COL_B7                                                0x0
+		# PSU_DDRC_ADDRMAP3_ADDRMAP_COL_B7                                                0x1
 
 		# - Full bus width mode: Selects the HIF address bit used as column addres
     # s bit 6. - Half bus width mode: Selects the HIF address bit used as colu
@@ -2736,11 +2774,11 @@ set psu_ddr_init_data {
     #  6 The selected HIF address bit is determined by adding the internal bas
     # e to the value of this field. If set to 15, this column address bit is s
     # et to 0.
-		# PSU_DDRC_ADDRMAP3_ADDRMAP_COL_B6                                                0x0
+		# PSU_DDRC_ADDRMAP3_ADDRMAP_COL_B6                                                0x1
 
 		# Address Map Register 3
-		#(OFFSET, MASK, VALUE)      (0XFD07020C, 0x0F0F0F0FU ,0x0F000000U)  */
-    mask_write 0XFD07020C 0x0F0F0F0F 0x0F000000
+		#(OFFSET, MASK, VALUE)      (0XFD07020C, 0x0F0F0F0FU ,0x0F010101U)  */
+    mask_write 0XFD07020C 0x0F0F0F0F 0x0F010101
 		# Register : ADDRMAP4 @ 0XFD070210</p>
 
 		# - Full bus width mode: Selects the HIF address bit used as column addres
@@ -2870,11 +2908,11 @@ set psu_ddr_init_data {
     # ge: 0 to 30 Internal Base: 2 The selected HIF address bit for each of th
     # e bank group address bits is determined by adding the internal base to t
     # he value of this field.
-		# PSU_DDRC_ADDRMAP8_ADDRMAP_BG_B0                                                 0x7
+		# PSU_DDRC_ADDRMAP8_ADDRMAP_BG_B0                                                 0x0
 
 		# Address Map Register 8
-		#(OFFSET, MASK, VALUE)      (0XFD070220, 0x00001F1FU ,0x00000707U)  */
-    mask_write 0XFD070220 0x00001F1F 0x00000707
+		#(OFFSET, MASK, VALUE)      (0XFD070220, 0x00001F1FU ,0x00000700U)  */
+    mask_write 0XFD070220 0x00001F1F 0x00000700
 		# Register : ADDRMAP9 @ 0XFD070224</p>
 
 		# Selects the HIF address bits used as row address bit 5. Valid Range: 0 t
@@ -4638,11 +4676,11 @@ set psu_ddr_init_data {
 		# Register : GPR1 @ 0XFD0800C4</p>
 
 		# General Purpose Register 1
-		# PSU_DDR_PHY_GPR1_GPR1                                                           0xde
+		# PSU_DDR_PHY_GPR1_GPR1                                                           0xe3
 
 		# General Purpose Register 1
-		#(OFFSET, MASK, VALUE)      (0XFD0800C4, 0xFFFFFFFFU ,0x000000DEU)  */
-    mask_write 0XFD0800C4 0xFFFFFFFF 0x000000DE
+		#(OFFSET, MASK, VALUE)      (0XFD0800C4, 0xFFFFFFFFU ,0x000000E3U)  */
+    mask_write 0XFD0800C4 0xFFFFFFFF 0x000000E3
 		# Register : DCR @ 0XFD080100</p>
 
 		# DDR4 Gear Down Timing.
@@ -6816,14 +6854,14 @@ set psu_ddr_init_data {
 		# PSU_DDR_PHY_DX2GCR4_RESERVED_7_6                                                0x0
 
 		# VREF Enable control for DQ IO (Single Ended) buffers of a byte lane.
-		# PSU_DDR_PHY_DX2GCR4_DXREFIEN                                                    0xf
+		# PSU_DDR_PHY_DX2GCR4_DXREFIEN                                                    0x1
 
 		# VRMON control for DQ IO (Single Ended) buffers of a byte lane.
 		# PSU_DDR_PHY_DX2GCR4_DXREFIMON                                                   0x0
 
 		# DATX8 n General Configuration Register 4
-		#(OFFSET, MASK, VALUE)      (0XFD080910, 0xFFFFFFFFU ,0x0E00B03CU)  */
-    mask_write 0XFD080910 0xFFFFFFFF 0x0E00B03C
+		#(OFFSET, MASK, VALUE)      (0XFD080910, 0xFFFFFFFFU ,0x0E00B004U)  */
+    mask_write 0XFD080910 0xFFFFFFFF 0x0E00B004
 		# Register : DX2GCR5 @ 0XFD080914</p>
 
 		# Reserved. Returns zeros on reads.
@@ -7069,14 +7107,14 @@ set psu_ddr_init_data {
 		# PSU_DDR_PHY_DX3GCR4_RESERVED_7_6                                                0x0
 
 		# VREF Enable control for DQ IO (Single Ended) buffers of a byte lane.
-		# PSU_DDR_PHY_DX3GCR4_DXREFIEN                                                    0xf
+		# PSU_DDR_PHY_DX3GCR4_DXREFIEN                                                    0x1
 
 		# VRMON control for DQ IO (Single Ended) buffers of a byte lane.
 		# PSU_DDR_PHY_DX3GCR4_DXREFIMON                                                   0x0
 
 		# DATX8 n General Configuration Register 4
-		#(OFFSET, MASK, VALUE)      (0XFD080A10, 0xFFFFFFFFU ,0x0E00B03CU)  */
-    mask_write 0XFD080A10 0xFFFFFFFF 0x0E00B03C
+		#(OFFSET, MASK, VALUE)      (0XFD080A10, 0xFFFFFFFFU ,0x0E00B004U)  */
+    mask_write 0XFD080A10 0xFFFFFFFF 0x0E00B004
 		# Register : DX3GCR5 @ 0XFD080A14</p>
 
 		# Reserved. Returns zeros on reads.
@@ -7259,7 +7297,7 @@ set psu_ddr_init_data {
 		# PSU_DDR_PHY_DX4GCR3_WDLVT                                                       0x0
 
 		# Write Leveling LCDL Delay VT Compensation
-		# PSU_DDR_PHY_DX4GCR3_WLLVT                                                       0x1
+		# PSU_DDR_PHY_DX4GCR3_WLLVT                                                       0x0
 
 		# Reserved. Returns zeroes on reads.
 		# PSU_DDR_PHY_DX4GCR3_RESERVED_23_22                                              0x0
@@ -7298,8 +7336,8 @@ set psu_ddr_init_data {
 		# PSU_DDR_PHY_DX4GCR3_RESERVED_1_0                                                0x0
 
 		# DATX8 n General Configuration Register 3
-		#(OFFSET, MASK, VALUE)      (0XFD080B0C, 0xFFFFFFFFU ,0x0129A4A4U)  */
-    mask_write 0XFD080B0C 0xFFFFFFFF 0x0129A4A4
+		#(OFFSET, MASK, VALUE)      (0XFD080B0C, 0xFFFFFFFFU ,0x0029A4A4U)  */
+    mask_write 0XFD080B0C 0xFFFFFFFF 0x0029A4A4
 		# Register : DX4GCR4 @ 0XFD080B10</p>
 
 		# Byte lane VREF IOM (Used only by D4MU IOs)
@@ -9610,50 +9648,6 @@ set psu_ddr_init_data {
 		# DATX8 0-1 I/O Configuration Register
 		#(OFFSET, MASK, VALUE)      (0XFD081530, 0xFFFFFFFFU ,0x70400000U)  */
     mask_write 0XFD081530 0xFFFFFFFF 0x70400000
-		# Register : DX8SLbPLLCR0 @ 0XFD0817C4</p>
-
-		# PLL Bypass
-		# PSU_DDR_PHY_DX8SLBPLLCR0_PLLBYP                                                 0x0
-
-		# PLL Reset
-		# PSU_DDR_PHY_DX8SLBPLLCR0_PLLRST                                                 0x0
-
-		# PLL Power Down
-		# PSU_DDR_PHY_DX8SLBPLLCR0_PLLPD                                                  0x0
-
-		# Reference Stop Mode
-		# PSU_DDR_PHY_DX8SLBPLLCR0_RSTOPM                                                 0x0
-
-		# PLL Frequency Select
-		# PSU_DDR_PHY_DX8SLBPLLCR0_FRQSEL                                                 0x0
-
-		# Relock Mode
-		# PSU_DDR_PHY_DX8SLBPLLCR0_RLOCKM                                                 0x0
-
-		# Charge Pump Proportional Current Control
-		# PSU_DDR_PHY_DX8SLBPLLCR0_CPPC                                                   0x7
-
-		# Charge Pump Integrating Current Control
-		# PSU_DDR_PHY_DX8SLBPLLCR0_CPIC                                                   0x0
-
-		# Gear Shift
-		# PSU_DDR_PHY_DX8SLBPLLCR0_GSHIFT                                                 0x0
-
-		# Reserved. Return zeroes on reads.
-		# PSU_DDR_PHY_DX8SLBPLLCR0_RESERVED_11_9                                          0x0
-
-		# Analog Test Enable (ATOEN)
-		# PSU_DDR_PHY_DX8SLBPLLCR0_ATOEN                                                  0x0
-
-		# Analog Test Control
-		# PSU_DDR_PHY_DX8SLBPLLCR0_ATC                                                    0x0
-
-		# Digital Test Control
-		# PSU_DDR_PHY_DX8SLBPLLCR0_DTC                                                    0x0
-
-		# DAXT8 0-8 PLL Control Register 0
-		#(OFFSET, MASK, VALUE)      (0XFD0817C4, 0xFFFFFFFFU ,0x000E0000U)  */
-    mask_write 0XFD0817C4 0xFFFFFFFF 0x000E0000
 		# Register : DX8SLbDQSCTL @ 0XFD0817DC</p>
 
 		# Reserved. Return zeroes on reads.
@@ -9704,6 +9698,133 @@ set psu_ddr_init_data {
 }
 
 set psu_ddr_qos_init_data {
+		# : AFI INTERCONNECT QOS CONFIGURATION
+		# Register : AFIFM_RDQoS @ 0XFD360008</p>
+
+		# Sets the level of the QoS field to be used for the read channel 4'b0000:
+    #  Lowest Priority' ' '4'b1111: Highest Priority
+		# PSU_AFIFM0_AFIFM_RDQOS_VALUE                                                    0
+
+		# QoS Read Channel Register
+		#(OFFSET, MASK, VALUE)      (0XFD360008, 0x0000000FU ,0x00000000U)  */
+    mask_write 0XFD360008 0x0000000F 0x00000000
+		# Register : AFIFM_WRQoS @ 0XFD36001C</p>
+
+		# Sets the level of the QoS field to be used for the write channel 4'b0000
+    # : Lowest Priority' ' '4'b1111: Highest Priority
+		# PSU_AFIFM0_AFIFM_WRQOS_VALUE                                                    0
+
+		# QoS Write Channel Register
+		#(OFFSET, MASK, VALUE)      (0XFD36001C, 0x0000000FU ,0x00000000U)  */
+    mask_write 0XFD36001C 0x0000000F 0x00000000
+		# Register : AFIFM_RDQoS @ 0XFD370008</p>
+
+		# Sets the level of the QoS field to be used for the read channel 4'b0000:
+    #  Lowest Priority' ' '4'b1111: Highest Priority
+		# PSU_AFIFM1_AFIFM_RDQOS_VALUE                                                    0
+
+		# QoS Read Channel Register
+		#(OFFSET, MASK, VALUE)      (0XFD370008, 0x0000000FU ,0x00000000U)  */
+    mask_write 0XFD370008 0x0000000F 0x00000000
+		# Register : AFIFM_WRQoS @ 0XFD37001C</p>
+
+		# Sets the level of the QoS field to be used for the write channel 4'b0000
+    # : Lowest Priority' ' '4'b1111: Highest Priority
+		# PSU_AFIFM1_AFIFM_WRQOS_VALUE                                                    0
+
+		# QoS Write Channel Register
+		#(OFFSET, MASK, VALUE)      (0XFD37001C, 0x0000000FU ,0x00000000U)  */
+    mask_write 0XFD37001C 0x0000000F 0x00000000
+		# Register : AFIFM_RDQoS @ 0XFD380008</p>
+
+		# Sets the level of the QoS field to be used for the read channel 4'b0000:
+    #  Lowest Priority' ' '4'b1111: Highest Priority
+		# PSU_AFIFM2_AFIFM_RDQOS_VALUE                                                    0
+
+		# QoS Read Channel Register
+		#(OFFSET, MASK, VALUE)      (0XFD380008, 0x0000000FU ,0x00000000U)  */
+    mask_write 0XFD380008 0x0000000F 0x00000000
+		# Register : AFIFM_WRQoS @ 0XFD38001C</p>
+
+		# Sets the level of the QoS field to be used for the write channel 4'b0000
+    # : Lowest Priority' ' '4'b1111: Highest Priority
+		# PSU_AFIFM2_AFIFM_WRQOS_VALUE                                                    0
+
+		# QoS Write Channel Register
+		#(OFFSET, MASK, VALUE)      (0XFD38001C, 0x0000000FU ,0x00000000U)  */
+    mask_write 0XFD38001C 0x0000000F 0x00000000
+		# Register : AFIFM_RDQoS @ 0XFD390008</p>
+
+		# Sets the level of the QoS field to be used for the read channel 4'b0000:
+    #  Lowest Priority' ' '4'b1111: Highest Priority
+		# PSU_AFIFM3_AFIFM_RDQOS_VALUE                                                    0
+
+		# QoS Read Channel Register
+		#(OFFSET, MASK, VALUE)      (0XFD390008, 0x0000000FU ,0x00000000U)  */
+    mask_write 0XFD390008 0x0000000F 0x00000000
+		# Register : AFIFM_WRQoS @ 0XFD39001C</p>
+
+		# Sets the level of the QoS field to be used for the write channel 4'b0000
+    # : Lowest Priority' ' '4'b1111: Highest Priority
+		# PSU_AFIFM3_AFIFM_WRQOS_VALUE                                                    0
+
+		# QoS Write Channel Register
+		#(OFFSET, MASK, VALUE)      (0XFD39001C, 0x0000000FU ,0x00000000U)  */
+    mask_write 0XFD39001C 0x0000000F 0x00000000
+		# Register : AFIFM_RDQoS @ 0XFD3A0008</p>
+
+		# Sets the level of the QoS field to be used for the read channel 4'b0000:
+    #  Lowest Priority' ' '4'b1111: Highest Priority
+		# PSU_AFIFM4_AFIFM_RDQOS_VALUE                                                    0
+
+		# QoS Read Channel Register
+		#(OFFSET, MASK, VALUE)      (0XFD3A0008, 0x0000000FU ,0x00000000U)  */
+    mask_write 0XFD3A0008 0x0000000F 0x00000000
+		# Register : AFIFM_WRQoS @ 0XFD3A001C</p>
+
+		# Sets the level of the QoS field to be used for the write channel 4'b0000
+    # : Lowest Priority' ' '4'b1111: Highest Priority
+		# PSU_AFIFM4_AFIFM_WRQOS_VALUE                                                    0
+
+		# QoS Write Channel Register
+		#(OFFSET, MASK, VALUE)      (0XFD3A001C, 0x0000000FU ,0x00000000U)  */
+    mask_write 0XFD3A001C 0x0000000F 0x00000000
+		# Register : AFIFM_RDQoS @ 0XFD3B0008</p>
+
+		# Sets the level of the QoS field to be used for the read channel 4'b0000:
+    #  Lowest Priority' ' '4'b1111: Highest Priority
+		# PSU_AFIFM5_AFIFM_RDQOS_VALUE                                                    0
+
+		# QoS Read Channel Register
+		#(OFFSET, MASK, VALUE)      (0XFD3B0008, 0x0000000FU ,0x00000000U)  */
+    mask_write 0XFD3B0008 0x0000000F 0x00000000
+		# Register : AFIFM_WRQoS @ 0XFD3B001C</p>
+
+		# Sets the level of the QoS field to be used for the write channel 4'b0000
+    # : Lowest Priority' ' '4'b1111: Highest Priority
+		# PSU_AFIFM5_AFIFM_WRQOS_VALUE                                                    0
+
+		# QoS Write Channel Register
+		#(OFFSET, MASK, VALUE)      (0XFD3B001C, 0x0000000FU ,0x00000000U)  */
+    mask_write 0XFD3B001C 0x0000000F 0x00000000
+		# Register : AFIFM_RDQoS @ 0XFF9B0008</p>
+
+		# Sets the level of the QoS field to be used for the read channel 4'b0000:
+    #  Lowest Priority' ' '4'b1111: Highest Priority
+		# PSU_AFIFM6_AFIFM_RDQOS_VALUE                                                    0
+
+		# QoS Read Channel Register
+		#(OFFSET, MASK, VALUE)      (0XFF9B0008, 0x0000000FU ,0x00000000U)  */
+    mask_write 0XFF9B0008 0x0000000F 0x00000000
+		# Register : AFIFM_WRQoS @ 0XFF9B001C</p>
+
+		# Sets the level of the QoS field to be used for the write channel 4'b0000
+    # : Lowest Priority' ' '4'b1111: Highest Priority
+		# PSU_AFIFM6_AFIFM_WRQOS_VALUE                                                    0
+
+		# QoS Write Channel Register
+		#(OFFSET, MASK, VALUE)      (0XFF9B001C, 0x0000000FU ,0x00000000U)  */
+    mask_write 0XFF9B001C 0x0000000F 0x00000000
 }
 
 set psu_mio_init_data {
@@ -10005,11 +10126,11 @@ set psu_mio_init_data {
     # i1, Output, spi1_so- (MISO signal) 5= ttc2, Input, ttc2_clk_in- (TTC Clo
     # ck) 6= ua0, Input, ua0_rxd- (UART receiver serial input) 7= trace, Outpu
     # t, tracedq[8]- (Trace Port Databus)
-		# PSU_IOU_SLCR_MIO_PIN_10_L3_SEL                                                  0
+		# PSU_IOU_SLCR_MIO_PIN_10_L3_SEL                                                  2
 
 		# Configures MIO Pin 10 peripheral interface mapping
-		#(OFFSET, MASK, VALUE)      (0XFF180028, 0x000000FEU ,0x00000000U)  */
-    mask_write 0XFF180028 0x000000FE 0x00000000
+		#(OFFSET, MASK, VALUE)      (0XFF180028, 0x000000FEU ,0x00000040U)  */
+    mask_write 0XFF180028 0x000000FE 0x00000040
 		# Register : MIO_PIN_11 @ 0XFF18002C</p>
 
 		# Level 0 Mux Select 0= Level 1 Mux Output 1= qspi, Input, qspi_mi_upper[3
@@ -10034,11 +10155,11 @@ set psu_mio_init_data {
     # 4= spi1, Input, spi1_si- (MOSI signal) 5= ttc2, Output, ttc2_wave_out- (
     # TTC Waveform Clock) 6= ua0, Output, ua0_txd- (UART transmitter serial ou
     # tput) 7= trace, Output, tracedq[9]- (Trace Port Databus)
-		# PSU_IOU_SLCR_MIO_PIN_11_L3_SEL                                                  0
+		# PSU_IOU_SLCR_MIO_PIN_11_L3_SEL                                                  2
 
 		# Configures MIO Pin 11 peripheral interface mapping
-		#(OFFSET, MASK, VALUE)      (0XFF18002C, 0x000000FEU ,0x00000000U)  */
-    mask_write 0XFF18002C 0x000000FE 0x00000000
+		#(OFFSET, MASK, VALUE)      (0XFF18002C, 0x000000FEU ,0x00000040U)  */
+    mask_write 0XFF18002C 0x000000FE 0x00000040
 		# Register : MIO_PIN_12 @ 0XFF180030</p>
 
 		# Level 0 Mux Select 0= Level 1 Mux Output 1= qspi, Output, qspi_sclk_out_
@@ -10429,6 +10550,63 @@ set psu_mio_init_data {
 		# Configures MIO Pin 25 peripheral interface mapping
 		#(OFFSET, MASK, VALUE)      (0XFF180064, 0x000000FEU ,0x00000000U)  */
     mask_write 0XFF180064 0x000000FE 0x00000000
+		# Register : MIO_PIN_28 @ 0XFF180070</p>
+
+		# Level 0 Mux Select 0= Level 1 Mux Output 1= gem0, Output, gem0_rgmii_txd
+    # [1]- (TX RGMII data)
+		# PSU_IOU_SLCR_MIO_PIN_28_L0_SEL                                                  0
+
+		# Level 1 Mux Select 0= Level 2 Mux Output 1= nand, Input, nfc_rb_n[1]- (N
+    # AND Ready/Busy)
+		# PSU_IOU_SLCR_MIO_PIN_28_L1_SEL                                                  0
+
+		# Level 2 Mux Select 0= Level 3 Mux Output 1= pmu, Input, pmu_gpi[2]- (PMU
+    #  GPI) 2= test_scan, Input, test_scan_in[28]- (Test Scan Port) = test_sca
+    # n, Output, test_scan_out[28]- (Test Scan Port) 3= dpaux, Input, dp_hot_p
+    # lug_detect- (Dp Aux Hot Plug)
+		# PSU_IOU_SLCR_MIO_PIN_28_L2_SEL                                                  0
+
+		# Level 3 Mux Select 0= gpio1, Input, gpio_1_pin_in[2]- (GPIO bank 1) 0= g
+    # pio1, Output, gpio_1_pin_out[2]- (GPIO bank 1) 1= can1, Output, can1_phy
+    # _tx- (Can TX signal) 2= i2c1, Input, i2c1_scl_input- (SCL signal) 2= i2c
+    # 1, Output, i2c1_scl_out- (SCL signal) 3= pjtag, Output, pjtag_tdo- (PJTA
+    # G TDO) 4= spi0, Output, spi0_n_ss_out[1]- (SPI Master Selects) 5= ttc1,
+    # Input, ttc1_clk_in- (TTC Clock) 6= ua1, Output, ua1_txd- (UART transmitt
+    # er serial output) 7= trace, Output, tracedq[6]- (Trace Port Databus)
+		# PSU_IOU_SLCR_MIO_PIN_28_L3_SEL                                                  2
+
+		# Configures MIO Pin 28 peripheral interface mapping
+		#(OFFSET, MASK, VALUE)      (0XFF180070, 0x000000FEU ,0x00000040U)  */
+    mask_write 0XFF180070 0x000000FE 0x00000040
+		# Register : MIO_PIN_29 @ 0XFF180074</p>
+
+		# Level 0 Mux Select 0= Level 1 Mux Output 1= gem0, Output, gem0_rgmii_txd
+    # [2]- (TX RGMII data)
+		# PSU_IOU_SLCR_MIO_PIN_29_L0_SEL                                                  0
+
+		# Level 1 Mux Select 0= Level 2 Mux Output 1= pcie, Input, pcie_reset_n- (
+    # PCIE Reset signal)
+		# PSU_IOU_SLCR_MIO_PIN_29_L1_SEL                                                  0
+
+		# Level 2 Mux Select 0= Level 3 Mux Output 1= pmu, Input, pmu_gpi[3]- (PMU
+    #  GPI) 2= test_scan, Input, test_scan_in[29]- (Test Scan Port) = test_sca
+    # n, Output, test_scan_out[29]- (Test Scan Port) 3= dpaux, Input, dp_aux_d
+    # ata_in- (Dp Aux Data) = dpaux, Output, dp_aux_data_out- (Dp Aux Data)
+		# PSU_IOU_SLCR_MIO_PIN_29_L2_SEL                                                  0
+
+		# Level 3 Mux Select 0= gpio1, Input, gpio_1_pin_in[3]- (GPIO bank 1) 0= g
+    # pio1, Output, gpio_1_pin_out[3]- (GPIO bank 1) 1= can1, Input, can1_phy_
+    # rx- (Can RX signal) 2= i2c1, Input, i2c1_sda_input- (SDA signal) 2= i2c1
+    # , Output, i2c1_sda_out- (SDA signal) 3= pjtag, Input, pjtag_tms- (PJTAG
+    # TMS) 4= spi0, Input, spi0_n_ss_in- (SPI Master Selects) 4= spi0, Output,
+    #  spi0_n_ss_out[0]- (SPI Master Selects) 5= ttc1, Output, ttc1_wave_out-
+    # (TTC Waveform Clock) 6= ua1, Input, ua1_rxd- (UART receiver serial input
+    # ) 7= trace, Output, tracedq[7]- (Trace Port Databus)
+		# PSU_IOU_SLCR_MIO_PIN_29_L3_SEL                                                  2
+
+		# Configures MIO Pin 29 peripheral interface mapping
+		#(OFFSET, MASK, VALUE)      (0XFF180074, 0x000000FEU ,0x00000040U)  */
+    mask_write 0XFF180074 0x000000FE 0x00000040
 		# Register : MIO_PIN_38 @ 0XFF180098</p>
 
 		# Level 0 Mux Select 0= Level 1 Mux Output 1= gem1, Output, gem1_rgmii_tx_
@@ -13164,6 +13342,18 @@ set psu_peripherals_init_data {
     mask_write 0XFF180324 0x000003C0 0x00000000
 		# : CAN
 		# : I2C
+		# Register : RST_LPD_IOU2 @ 0XFF5E0238</p>
+
+		# Block level reset
+		# PSU_CRL_APB_RST_LPD_IOU2_I2C0_RESET                                             0
+
+		# Block level reset
+		# PSU_CRL_APB_RST_LPD_IOU2_I2C1_RESET                                             0
+
+		# Software control register for the IOU block. Each bit will cause a singl
+    # erperipheral or part of the peripheral to be reset.
+		#(OFFSET, MASK, VALUE)      (0XFF5E0238, 0x00000600U ,0x00000000U)  */
+    mask_write 0XFF5E0238 0x00000600 0x00000000
 		# : SWDT
 		# Register : RST_LPD_IOU2 @ 0XFF5E0238</p>
 
@@ -13211,20 +13401,20 @@ set psu_peripherals_init_data {
 		# Register : Baud_rate_divider_reg0 @ 0XFF000034</p>
 
 		# Baud rate divider value: 0 - 3: ignored 4 - 255: Baud rate
-		# PSU_UART0_BAUD_RATE_DIVIDER_REG0_BDIV                                           0x5
+		# PSU_UART0_BAUD_RATE_DIVIDER_REG0_BDIV                                           0x6
 
 		# Baud Rate Divider Register
-		#(OFFSET, MASK, VALUE)      (0XFF000034, 0x000000FFU ,0x00000005U)  */
-    mask_write 0XFF000034 0x000000FF 0x00000005
+		#(OFFSET, MASK, VALUE)      (0XFF000034, 0x000000FFU ,0x00000006U)  */
+    mask_write 0XFF000034 0x000000FF 0x00000006
 		# Register : Baud_rate_gen_reg0 @ 0XFF000018</p>
 
 		# Baud Rate Clock Divisor Value: 0: Disables baud_sample 1: Clock divisor
     # bypass (baud_sample = sel_clk) 2 - 65535: baud_sample
-		# PSU_UART0_BAUD_RATE_GEN_REG0_CD                                                 0x8f
+		# PSU_UART0_BAUD_RATE_GEN_REG0_CD                                                 0x7c
 
 		# Baud Rate Generator Register.
-		#(OFFSET, MASK, VALUE)      (0XFF000018, 0x0000FFFFU ,0x0000008FU)  */
-    mask_write 0XFF000018 0x0000FFFF 0x0000008F
+		#(OFFSET, MASK, VALUE)      (0XFF000018, 0x0000FFFFU ,0x0000007CU)  */
+    mask_write 0XFF000018 0x0000FFFF 0x0000007C
 		# Register : Control_reg0 @ 0XFF000000</p>
 
 		# Stop transmitter break: 0: no affect 1: stop transmission of the break a
@@ -13301,20 +13491,20 @@ set psu_peripherals_init_data {
 		# Register : Baud_rate_divider_reg0 @ 0XFF010034</p>
 
 		# Baud rate divider value: 0 - 3: ignored 4 - 255: Baud rate
-		# PSU_UART1_BAUD_RATE_DIVIDER_REG0_BDIV                                           0x5
+		# PSU_UART1_BAUD_RATE_DIVIDER_REG0_BDIV                                           0x6
 
 		# Baud Rate Divider Register
-		#(OFFSET, MASK, VALUE)      (0XFF010034, 0x000000FFU ,0x00000005U)  */
-    mask_write 0XFF010034 0x000000FF 0x00000005
+		#(OFFSET, MASK, VALUE)      (0XFF010034, 0x000000FFU ,0x00000006U)  */
+    mask_write 0XFF010034 0x000000FF 0x00000006
 		# Register : Baud_rate_gen_reg0 @ 0XFF010018</p>
 
 		# Baud Rate Clock Divisor Value: 0: Disables baud_sample 1: Clock divisor
     # bypass (baud_sample = sel_clk) 2 - 65535: baud_sample
-		# PSU_UART1_BAUD_RATE_GEN_REG0_CD                                                 0x8f
+		# PSU_UART1_BAUD_RATE_GEN_REG0_CD                                                 0x7c
 
 		# Baud Rate Generator Register.
-		#(OFFSET, MASK, VALUE)      (0XFF010018, 0x0000FFFFU ,0x0000008FU)  */
-    mask_write 0XFF010018 0x0000FFFF 0x0000008F
+		#(OFFSET, MASK, VALUE)      (0XFF010018, 0x0000FFFFU ,0x0000007CU)  */
+    mask_write 0XFF010018 0x0000FFFF 0x0000007C
 		# Register : Control_reg0 @ 0XFF010000</p>
 
 		# Stop transmitter break: 0: no affect 1: stop transmission of the break a
@@ -14486,6 +14676,16 @@ set psu_afi_config {
 		#(OFFSET, MASK, VALUE)      (0XFF5E023C, 0x00080000U ,0x00000000U)  */
     mask_write 0XFF5E023C 0x00080000 0x00000000
 		# : AFIFM INTERFACE WIDTH
+		# Register : afi_fs @ 0XFF419000</p>
+
+		# Select the 32/64/128-bit data width selection for the Slave 0 00: 32-bit
+    #  AXI data width (default) 01: 64-bit AXI data width 10: 128-bit AXI data
+    #  width 11: reserved
+		# PSU_LPD_SLCR_AFI_FS_DW_SS2_SEL                                                  0x0
+
+		# afi fs SLCR control register. Do not change the bits durin
+		#(OFFSET, MASK, VALUE)      (0XFF419000, 0x00000300U ,0x00000000U)  */
+    mask_write 0XFF419000 0x00000300 0x00000000
 }
 
 set psu_ps_pl_reset_config_data {

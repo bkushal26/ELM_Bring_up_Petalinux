@@ -48,6 +48,26 @@
 
 #include "zynq_ultra_ps_e_tlm.h"
 
+template <int IN_WIDTH, int OUT_WIDTH>
+rptlm2xtlm_converter<IN_WIDTH, OUT_WIDTH>::rptlm2xtlm_converter(sc_module_name name):sc_module(name)
+    ,target_socket("target_socket")
+    ,wr_socket("init_wr_socket",OUT_WIDTH)
+    ,rd_socket("init_rd_socket",OUT_WIDTH)
+    ,m_btrans_conv("b_transport_converter")
+    ,xtlm_bridge("tlm2xtlmbridge")
+{
+    target_socket.bind(m_btrans_conv.target_socket);
+    m_btrans_conv.initiator_socket.bind(xtlm_bridge.target_socket);
+    xtlm_bridge.rd_socket->bind(rd_socket);
+    xtlm_bridge.wr_socket->bind(wr_socket);
+}
+template <int IN_WIDTH, int OUT_WIDTH>
+void rptlm2xtlm_converter<IN_WIDTH, OUT_WIDTH>::registerUserExtensionHandlerCallback(
+		void (*callback)(xtlm::aximm_payload*,
+				const tlm::tlm_generic_payload*)) {
+    xtlm_bridge.registerUserExtensionHandlerCallback(callback);
+}
+
 /***************************************************************************************
 *   Global method, get registered with tlm2xtlm bridge
 *   This function is called when tlm2xtlm bridge convert tlm payload to xtlm payload.
@@ -122,13 +142,17 @@ void add_extensions_to_tlm(const xtlm::aximm_payload* xtlm_pay, tlm::tlm_generic
 
     zynq_ultra_ps_e_tlm :: zynq_ultra_ps_e_tlm (sc_core::sc_module_name name,
     xsc::common_cpp::properties&): sc_module(name)//registering module name with parent
+        ,maxihpm0_lpd_aclk("maxihpm0_lpd_aclk")
         ,pl_resetn0("pl_resetn0")
         ,pl_clk0("pl_clk0")
+    ,m_rp_bridge_M_AXI_HPM0_LPD("m_rp_bridge_M_AXI_HPM0_LPD")
         ,pl_clk0_clk("pl_clk0_clk", sc_time(10.312603155035747,sc_core::SC_NS))//clock period in nanoseconds = 1000/freq(in MZ)
     {
         //creating instances of xtlm slave sockets
 
         //creating instances of xtlm master sockets
+        M_AXI_HPM0_LPD_wr_socket = new xtlm::xtlm_aximm_initiator_socket("M_AXI_HPM0_LPD_wr_socket", 32);
+        M_AXI_HPM0_LPD_rd_socket = new xtlm::xtlm_aximm_initiator_socket("M_AXI_HPM0_LPD_rd_socket", 32);
 
         char* tcpip_addr = getenv("COSIM_MACHINE_TCPIP_ADDRESS");
         if(tcpip_addr == NULL)  {
@@ -139,21 +163,20 @@ void add_extensions_to_tlm(const xtlm::aximm_payload* xtlm_pay, tlm::tlm_generic
         char* skt_name = strdup(tcpip_addr);
         m_zynqmp_tlm_model = new xilinx_zynqmp("xilinx_zynqmp",skt_name);
 
-        m_xtlm2tlm = new xtlm::xaximm_xtlm2tlm*[9];
-        m_tlm2xtlm = new xtlm::xaximm_tlm2xtlm*[3];
-        for(int index = 0; index < 9; index++)  {
-            m_xtlm2tlm[index] = NULL;
-            if(index < 3)
-                m_tlm2xtlm[index] = NULL;
-        }
-
         
+        //instantiating TLM2XTLM bridge and stiching it between 
+        //s_axi_hpm_lpd initiator socket of zynqmp Qemu tlm wrapper to M_AXI_HPM0_LPD_wr_socket/rd_socket sockets 
+        m_rp_bridge_M_AXI_HPM0_LPD.wr_socket->bind(*M_AXI_HPM0_LPD_wr_socket);
+        m_rp_bridge_M_AXI_HPM0_LPD.rd_socket->bind(*M_AXI_HPM0_LPD_rd_socket);
+        m_rp_bridge_M_AXI_HPM0_LPD.target_socket.bind(*m_zynqmp_tlm_model->s_axi_hpm_lpd);
+
         m_zynqmp_tlm_model->tie_off();
 
         SC_METHOD(trigger_pl_clk0_pin);
         sensitive << pl_clk0_clk;
         dont_initialize();
         
+        m_rp_bridge_M_AXI_HPM0_LPD.registerUserExtensionHandlerCallback(&get_extensions_from_tlm);
 
         m_zynqmp_tlm_model->rst(qemu_rst);
 
@@ -161,8 +184,8 @@ void add_extensions_to_tlm(const xtlm::aximm_payload* xtlm_pay, tlm::tlm_generic
 
     zynq_ultra_ps_e_tlm :: ~zynq_ultra_ps_e_tlm ()    {
         //deleteing dynamically created objects 
-        delete[] m_tlm2xtlm;
-        delete[] m_xtlm2tlm;
+        delete M_AXI_HPM0_LPD_wr_socket;
+        delete M_AXI_HPM0_LPD_rd_socket;
     }
     
     //Method which is sentive to pl_clk0_clk sc_clock object
