@@ -1,5 +1,7 @@
 # ELM_Bring_up_Petalinux
-This repo will include ELM bring up tests for GEM,I2C, and  Petalinux Based tests
+This repo will include ELM bring up tests for GEM,I2C, and  Petalinux Based tests. \
+
+***Note-*** This project is under development so repo and readme is incomplete 
 
 ## Getting Started:-
 ### Using HTTPS:-
