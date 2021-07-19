@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="ps_block" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1626086389"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1626086389"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1626086389"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1626086389"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1626437863"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1626437863"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1626437863"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1626437863"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/ps_block_zynq_ultra_ps_e_0_0/ps_block_zynq_ultra_ps_e_0_0.xci" Type="IP">
         <Instance HierarchyPath="zynq_ultra_ps_e_0"/>
@@ -34,14 +34,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip/ps_block_clkTestTop_0_2/ps_block_clkTestTop_0_2.xci" Type="IP">
-        <Instance HierarchyPath="clkTestTop_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip/ps_block_ps8_0_axi_periph_0/ps_block_ps8_0_axi_periph_0.xci" Type="IP">
         <Instance HierarchyPath="ps8_0_axi_periph"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -52,6 +44,14 @@
       </File>
       <File Name="ip/ps_block_rst_ps8_0_96M_0/ps_block_rst_ps8_0_96M_0.xci" Type="IP">
         <Instance HierarchyPath="rst_ps8_0_96M"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/ps_block_clktestTop_1_0/ps_block_clktestTop_1_0.xci" Type="IP">
+        <Instance HierarchyPath="clktestTop_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

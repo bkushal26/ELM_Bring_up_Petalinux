@@ -37,6 +37,13 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 # To test this script, run the following commands from Vivado Tcl console:
 # source ps_block_script.tcl
 
+
+# The design that will be created by this Tcl script contains the following 
+# module references:
+# clktestTop
+
+# Please add the sources of those modules before sourcing this Tcl script.
+
 # If there is no project opened, this script will create a
 # project, but make sure you do not have an existing project
 # <./myproj/project_1.xpr> in the current working folder.
@@ -157,10 +164,10 @@ proc create_root_design { parentCell } {
   # Create interface ports
 
   # Create ports
-  set fclkn_0 [ create_bd_port -dir I fclkn_0 ]
-  set fclkp_0 [ create_bd_port -dir I fclkp_0 ]
-  set gth_refClkN_i_0 [ create_bd_port -dir I -from 1 -to 0 gth_refClkN_i_0 ]
-  set gth_refClkP_i_0 [ create_bd_port -dir I -from 1 -to 0 gth_refClkP_i_0 ]
+  set fclkn_1 [ create_bd_port -dir I fclkn_1 ]
+  set fclkp_1 [ create_bd_port -dir I fclkp_1 ]
+  set gth_refClkN_i_1 [ create_bd_port -dir I -from 1 -to 0 gth_refClkN_i_1 ]
+  set gth_refClkP_i_1 [ create_bd_port -dir I -from 1 -to 0 gth_refClkP_i_1 ]
 
   # Create instance: axi_gpio_0, and set properties
   set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
@@ -170,9 +177,17 @@ proc create_root_design { parentCell } {
    CONFIG.C_IS_DUAL {1} \
  ] $axi_gpio_0
 
-  # Create instance: clkTestTop_0, and set properties
-  set clkTestTop_0 [ create_bd_cell -type ip -vlnv user.org:user:clkTestTop:1.0 clkTestTop_0 ]
-
+  # Create instance: clktestTop_1, and set properties
+  set block_name clktestTop
+  set block_cell_name clktestTop_1
+  if { [catch {set clktestTop_1 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $clktestTop_1 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: ps8_0_axi_periph, and set properties
   set ps8_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ps8_0_axi_periph ]
   set_property -dict [ list \
@@ -1677,12 +1692,12 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net zynq_ultra_ps_e_0_M_AXI_HPM0_LPD [get_bd_intf_pins ps8_0_axi_periph/S00_AXI] [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM0_LPD]
 
   # Create port connections
-  connect_bd_net -net clkTestTop_0_freq_O1 [get_bd_pins axi_gpio_0/gpio_io_i] [get_bd_pins clkTestTop_0/freq_O1]
-  connect_bd_net -net clkTestTop_0_freq_O2 [get_bd_pins axi_gpio_0/gpio2_io_i] [get_bd_pins clkTestTop_0/freq_O2]
-  connect_bd_net -net fclkn_0_1 [get_bd_ports fclkn_0] [get_bd_pins clkTestTop_0/fclkn]
-  connect_bd_net -net fclkp_0_1 [get_bd_ports fclkp_0] [get_bd_pins clkTestTop_0/fclkp]
-  connect_bd_net -net gth_refClkN_i_0_1 [get_bd_ports gth_refClkN_i_0] [get_bd_pins clkTestTop_0/gth_refClkN_i]
-  connect_bd_net -net gth_refClkP_i_0_1 [get_bd_ports gth_refClkP_i_0] [get_bd_pins clkTestTop_0/gth_refClkP_i]
+  connect_bd_net -net clktestTop_1_freq_O1 [get_bd_pins axi_gpio_0/gpio_io_i] [get_bd_pins clktestTop_1/freq_O1]
+  connect_bd_net -net clktestTop_1_freq_O2 [get_bd_pins axi_gpio_0/gpio2_io_i] [get_bd_pins clktestTop_1/freq_O2]
+  connect_bd_net -net fclkn_1_1 [get_bd_ports fclkn_1] [get_bd_pins clktestTop_1/fclkn]
+  connect_bd_net -net fclkp_1_1 [get_bd_ports fclkp_1] [get_bd_pins clktestTop_1/fclkp]
+  connect_bd_net -net gth_refClkN_i_1_1 [get_bd_ports gth_refClkN_i_1] [get_bd_pins clktestTop_1/gth_refClkN_i]
+  connect_bd_net -net gth_refClkP_i_1_1 [get_bd_ports gth_refClkP_i_1] [get_bd_pins clktestTop_1/gth_refClkP_i]
   connect_bd_net -net rst_ps8_0_96M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins ps8_0_axi_periph/ARESETN] [get_bd_pins ps8_0_axi_periph/M00_ARESETN] [get_bd_pins ps8_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps8_0_96M/peripheral_aresetn]
   connect_bd_net -net zynq_ultra_ps_e_0_pl_clk0 [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins ps8_0_axi_periph/ACLK] [get_bd_pins ps8_0_axi_periph/M00_ACLK] [get_bd_pins ps8_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps8_0_96M/slowest_sync_clk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_lpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
   connect_bd_net -net zynq_ultra_ps_e_0_pl_resetn0 [get_bd_pins rst_ps8_0_96M/ext_reset_in] [get_bd_pins zynq_ultra_ps_e_0/pl_resetn0]

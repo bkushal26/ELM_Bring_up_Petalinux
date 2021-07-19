@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu4cg-sfvc784-2-e" LaunchTime="1626086393">
+<GenRun Id="synth_1" LaunchPart="xczu4cg-sfvc784-2-e" LaunchTime="1626438616">
   <File Type="VDS-TIMING-PB" Name="ps_block_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="ps_block_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="ps_block_wrapper.dcp"/>
@@ -11,6 +11,20 @@
   <File Type="PA-TCL" Name="ps_block_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/freq_meter.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clktestTop.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/ps_block/ps_block.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -33,14 +47,14 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/new/clkTestCostr.xdc">
+    <File Path="$PSRCDIR/constrs_1/new/elmXdc.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
     <Config>
-      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/clkTestCostr.xdc"/>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/elmXdc.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -51,9 +65,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

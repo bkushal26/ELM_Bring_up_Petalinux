@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x2060743920607439",
+      "boundary_crc": "0x48BADB7B48BADB7B",
       "device": "xczu4cg-sfvc784-2-e",
       "name": "ps_block",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -12,29 +12,29 @@
     "design_tree": {
       "zynq_ultra_ps_e_0": "",
       "axi_gpio_0": "",
-      "clkTestTop_0": "",
       "ps8_0_axi_periph": {
         "s00_couplers": {
           "auto_pc": ""
         }
       },
-      "rst_ps8_0_96M": ""
+      "rst_ps8_0_96M": "",
+      "clktestTop_1": ""
     },
     "ports": {
-      "gth_refClkP_i_0": {
+      "gth_refClkP_i_1": {
         "direction": "I",
         "left": "1",
         "right": "0"
       },
-      "gth_refClkN_i_0": {
+      "gth_refClkN_i_1": {
         "direction": "I",
         "left": "1",
         "right": "0"
       },
-      "fclkp_0": {
+      "fclkp_1": {
         "direction": "I"
       },
-      "fclkn_0": {
+      "fclkn_1": {
         "direction": "I"
       }
     },
@@ -2949,10 +2949,6 @@
           }
         }
       },
-      "clkTestTop_0": {
-        "vlnv": "user.org:user:clkTestTop:1.0",
-        "xci_name": "ps_block_clkTestTop_0_2"
-      },
       "ps8_0_axi_periph": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
         "xci_name": "ps_block_ps8_0_axi_periph_0",
@@ -3162,6 +3158,43 @@
       "rst_ps8_0_96M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "ps_block_rst_ps8_0_96M_0"
+      },
+      "clktestTop_1": {
+        "vlnv": "xilinx.com:module_ref:clktestTop:1.0",
+        "xci_name": "ps_block_clktestTop_1_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clktestTop",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "gth_refClkP_i": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "gth_refClkN_i": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "fclkp": {
+            "direction": "I"
+          },
+          "fclkn": {
+            "direction": "I"
+          },
+          "freq_O1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "freq_O2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -3179,42 +3212,6 @@
       }
     },
     "nets": {
-      "clkTestTop_0_freq_O1": {
-        "ports": [
-          "clkTestTop_0/freq_O1",
-          "axi_gpio_0/gpio_io_i"
-        ]
-      },
-      "clkTestTop_0_freq_O2": {
-        "ports": [
-          "clkTestTop_0/freq_O2",
-          "axi_gpio_0/gpio2_io_i"
-        ]
-      },
-      "gth_refClkP_i_0_1": {
-        "ports": [
-          "gth_refClkP_i_0",
-          "clkTestTop_0/gth_refClkP_i"
-        ]
-      },
-      "gth_refClkN_i_0_1": {
-        "ports": [
-          "gth_refClkN_i_0",
-          "clkTestTop_0/gth_refClkN_i"
-        ]
-      },
-      "fclkp_0_1": {
-        "ports": [
-          "fclkp_0",
-          "clkTestTop_0/fclkp"
-        ]
-      },
-      "fclkn_0_1": {
-        "ports": [
-          "fclkn_0",
-          "clkTestTop_0/fclkn"
-        ]
-      },
       "zynq_ultra_ps_e_0_pl_clk0": {
         "ports": [
           "zynq_ultra_ps_e_0/pl_clk0",
@@ -3239,6 +3236,42 @@
           "axi_gpio_0/s_axi_aresetn",
           "ps8_0_axi_periph/M00_ARESETN",
           "ps8_0_axi_periph/ARESETN"
+        ]
+      },
+      "clktestTop_1_freq_O1": {
+        "ports": [
+          "clktestTop_1/freq_O1",
+          "axi_gpio_0/gpio_io_i"
+        ]
+      },
+      "clktestTop_1_freq_O2": {
+        "ports": [
+          "clktestTop_1/freq_O2",
+          "axi_gpio_0/gpio2_io_i"
+        ]
+      },
+      "gth_refClkP_i_1_1": {
+        "ports": [
+          "gth_refClkP_i_1",
+          "clktestTop_1/gth_refClkP_i"
+        ]
+      },
+      "gth_refClkN_i_1_1": {
+        "ports": [
+          "gth_refClkN_i_1",
+          "clktestTop_1/gth_refClkN_i"
+        ]
+      },
+      "fclkp_1_1": {
+        "ports": [
+          "fclkp_1",
+          "clktestTop_1/fclkp"
+        ]
+      },
+      "fclkn_1_1": {
+        "ports": [
+          "fclkn_1",
+          "clktestTop_1/fclkn"
         ]
       }
     },

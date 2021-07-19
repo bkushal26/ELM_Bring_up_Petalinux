@@ -1,0 +1,1328 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:35 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 1799322
+License: Customer
+
+Current time: 	Fri Jul 16 05:32:00 EDT 2021
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: CentOS Linux release 8.2.2004 (Core)
+OS Version: 4.18.0-193.19.1.el8_2.x86_64
+OS Architecture: amd64
+Available processors (cores): 4
+
+Display: :1
+Screen size: 1536x841
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/home/software/xilinx/Vivado/2020.1/tps/lnx64/jre9.0.4
+Java executable location: 	/home/software/xilinx/Vivado/2020.1/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	bhalerao
+User home directory: /home/bhalerao
+User working directory: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/software/xilinx/Vivado
+HDI_APPROOT: /home/software/xilinx/Vivado/2020.1
+RDI_DATADIR: /home/software/xilinx/Vivado/2020.1/data
+RDI_BINDIR: /home/software/xilinx/Vivado/2020.1/bin
+
+Vivado preferences file location: /home/bhalerao/.Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: /home/bhalerao/.Xilinx/Vivado/2020.1/
+Vivado layouts directory: /home/bhalerao/.Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	/home/software/xilinx/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/vivado.log
+Vivado journal file location: 	/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-1799322-madorsky-d2.phys.ufl.edu
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /home/software/xilinx/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: /home/software/xilinx/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: /home/software/xilinx/Vivado/2020.1
+XILINX_SDK: /home/software/xilinx/Vitis/2020.1
+XILINX_VITIS: /home/software/xilinx/Vitis/2020.1
+XILINX_VIVADO: /home/software/xilinx/Vivado/2020.1
+XILINX_VIVADO_HLS: /home/software/xilinx/Vivado/2020.1
+
+
+GUI allocated memory:	371 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,620 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 105 MB (+107192kb) [00:00:11]
+// [Engine Memory]: 1,467 MB (+1386912kb) [00:00:11]
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: project_1.xpr. Version: Vivado v2020.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project project_1.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,625 MB. GUI used memory: 90 MB. Current time: 7/16/21, 5:32:01 AM EDT
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 1,717 MB (+185280kb) [00:00:31]
+// [GUI Memory]: 122 MB (+12922kb) [00:00:31]
+// WARNING: HEventQueue.dispatchEvent() is taking  5685 ms.
+// Tcl Message: open_project project_1.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from '/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmReg/myproj' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [filemgmt 56-1] IP Repository Path: Directory not found as '/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/clkTestElmwovio/clkTestElm'; using path '/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmwovio/clkTestElm' instead. INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmwovio/clkTestElm'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/software/xilinx/Vivado/2020.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,523 MB. GUI used memory: 71 MB. Current time: 7/16/21, 5:32:22 AM EDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1193 ms.
+// Tcl Message: open_project: Time (s): cpu = 00:00:40 ; elapsed = 00:00:23 . Memory (MB): peak = 7106.691 ; gain = 27.055 ; free physical = 317 ; free virtual = 41044 
+// Project name: project_1; location: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj; part: xczu4cg-sfvc784-2-e
+dismissDialog("Open Project"); // bz (cs)
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 38 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ps_block_wrapper (ps_block_wrapper.v)]", 1); // B (F, cs)
+// PAPropertyPanels.initPanels (ps_block.bd) elapsed time: 0.2s
+// Elapsed time: 61 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ps_block_wrapper (ps_block_wrapper.v), ps_block_i : ps_block (ps_block.bd)]", 2, true); // B (F, cs) - Node
+// Elapsed time: 35 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, "Add"); // E (g, c)
+selectMenuItem(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File..."); // ai (ao, c)
+// F (c): Create Source File: addNotify
+// Elapsed time: 14 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "clktestTop"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 40 seconds
+dismissDialog("Add Sources"); // c (cs)
+// Tcl Message: close [ open /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/new/clktestTop.v w ] 
+// bz (cs):  Add Sources  : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/new/clktestTop.v 
+// I (cs): Define Module: addNotify
+dismissDialog("Add Sources"); // bz (cs)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton (v, C)
+dismissDialog("Define Module"); // I (cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clktestTop (clktestTop.v)]", 4, false); // B (F, cs)
+// Elapsed time: 69 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clktestTop (clktestTop.v)]", 4, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clktestTop (clktestTop.v)]", 4, false, false, false, false, false, true); // B (F, cs) - Double Click
+// Elapsed time: 48 seconds
+selectCodeEditor("clktestTop.v", 174, 419); // bP (w, cs)
+typeControlKey((HResource) null, "clktestTop.v", 'v'); // bP (w, cs)
+// Elapsed time: 31 seconds
+typeControlKey((HResource) null, "clktestTop.v", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "clktestTop.v", 'v'); // bP (w, cs)
+// Elapsed time: 133 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clktestTop (clktestTop.v)]", 4, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "freq_meter"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 16 seconds
+dismissDialog("Add Sources"); // c (cs)
+// Tcl Message: close [ open /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/new/freq_meter.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/new/freq_meter.v 
+// I (cs): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 139 MB (+10795kb) [00:09:34]
+// Elapsed time: 11 seconds
+selectButton("OptionPane.button", "Yes"); // JButton (v, C)
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // I (cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 105 seconds
+selectCodeEditor("clktestTop.v", 168, 412); // bP (w, cs)
+selectCodeEditor("clktestTop.v", 169, 412, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 75 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, freq_meter (freq_meter.v)]", 5, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, freq_meter (freq_meter.v)]", 5, false, false, false, false, false, true); // B (F, cs) - Double Click
+// Elapsed time: 91 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clktestTop.v", 1); // m (l, cs)
+// Elapsed time: 84 seconds
+selectCodeEditor("clktestTop.v", 178, 311); // bP (w, cs)
+typeControlKey((HResource) null, "clktestTop.v", 'v'); // bP (w, cs)
+// Elapsed time: 571 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "freq_meter.v", 2); // m (l, cs)
+// Elapsed time: 54 seconds
+selectCodeEditor("freq_meter.v", 184, 348); // bP (w, cs)
+// Elapsed time: 98 seconds
+typeControlKey((HResource) null, "freq_meter.v", 'v'); // bP (w, cs)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E (g, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,720 MB. GUI used memory: 77 MB. Current time: 7/16/21, 5:59:46 AM EDT
+// Elapsed time: 20 seconds
+selectCodeEditor("freq_meter.v", 162, 106); // bP (w, cs)
+// Elapsed time: 29 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clktestTop.v", 1); // m (l, cs)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "freq_meter.v", 2); // m (l, cs)
+selectCodeEditor("freq_meter.v", 247, 385); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clktestTop.v", 1); // m (l, cs)
+selectCodeEditor("clktestTop.v", 43, 112); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "freq_meter.v", 2); // m (l, cs)
+// Elapsed time: 35 seconds
+selectCodeEditor("freq_meter.v", 81, 400); // bP (w, cs)
+typeControlKey((HResource) null, "freq_meter.v", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "freq_meter.v", 'v'); // bP (w, cs)
+// Elapsed time: 41 seconds
+selectCodeEditor("freq_meter.v", 220, 254); // bP (w, cs)
+// Elapsed time: 14 seconds
+selectCodeEditor("freq_meter.v", 108, 419); // bP (w, cs)
+// Elapsed time: 33 seconds
+selectCodeEditor("freq_meter.v", 56, 471); // bP (w, cs)
+// Elapsed time: 32 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clktestTop.v", 1); // m (l, cs)
+// Elapsed time: 183 seconds
+selectCodeEditor("clktestTop.v", 78, 449); // bP (w, cs)
+selectCodeEditor("clktestTop.v", 78, 449, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 407 seconds
+selectCodeEditor("clktestTop.v", 58, 398); // bP (w, cs)
+typeControlKey((HResource) null, "clktestTop.v", 'c'); // bP (w, cs)
+selectCodeEditor("clktestTop.v", 64, 384); // bP (w, cs)
+typeControlKey((HResource) null, "clktestTop.v", 'v'); // bP (w, cs)
+// Elapsed time: 25 seconds
+selectCodeEditor("clktestTop.v", 130, 385); // bP (w, cs)
+// Elapsed time: 190 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 29 seconds
+typeControlKey((HResource) null, "clktestTop.v", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "clktestTop.v", 'v'); // bP (w, cs)
+// Elapsed time: 607 seconds
+selectCodeEditor("clktestTop.v", 191, 169); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,685 MB. GUI used memory: 69 MB. Current time: 7/16/21, 6:29:47 AM EDT
+// Elapsed time: 103 seconds
+selectButton(PAResourceEtoH.FileSetPanel_MESSAGES, "2"); // h (g, cs)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-806] Syntax error near #. [/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/new/freq_meter.v:24]. ]", 2, false); // ah (J, cs)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/new/freq_meter.v;-;;-;16;-;line;-;24;-;;-;16;-;"); // ah (J, cs)
+// Elapsed time: 14 seconds
+selectCodeEditor("freq_meter.v", 136, 180); // bP (w, cs)
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clktestTop.v", 1); // m (l, cs)
+selectCodeEditor("clktestTop.v", 294, 112); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,681 MB. GUI used memory: 67 MB. Current time: 7/16/21, 6:59:47 AM EDT
+// Elapsed time: 2119 seconds
+selectCodeEditor("clktestTop.v", 0, 55); // bP (w, cs)
+typeControlKey((HResource) null, "clktestTop.v", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "clktestTop.v", 'v'); // bP (w, cs)
+// Elapsed time: 32 seconds
+selectCodeEditor("clktestTop.v", 214, 56); // bP (w, cs)
+// Elapsed time: 27 seconds
+typeControlKey((HResource) null, "clktestTop.v", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "clktestTop.v", 'v'); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "freq_meter.v", 2); // m (l, cs)
+// Elapsed time: 244 seconds
+selectCodeEditor("freq_meter.v", 138, 126); // bP (w, cs)
+// Elapsed time: 21 seconds
+typeControlKey((HResource) null, "freq_meter.v", 'c'); // bP (w, cs)
+// Elapsed time: 11 seconds
+typeControlKey((HResource) null, "freq_meter.v", 'v'); // bP (w, cs)
+// Elapsed time: 30 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clktestTop.v", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "freq_meter.v", 2); // m (l, cs)
+typeControlKey(null, null, 'z');
+selectCodeEditor("freq_meter.v", 155, 3); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clktestTop.v", 1); // m (l, cs)
+// Elapsed time: 33 seconds
+selectCodeEditor("clktestTop.v", 14, 192); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,678 MB. GUI used memory: 66 MB. Current time: 7/16/21, 7:29:47 AM EDT
+// Elapsed time: 1262 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "freq_meter.v", 2); // m (l, cs)
+// Elapsed time: 177 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clktestTop.v", 1); // m (l, cs)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "freq_meter.v", 2); // m (l, cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("freq_meter.v", 134, 232); // bP (w, cs)
+// Elapsed time: 11 seconds
+typeControlKey((HResource) null, "freq_meter.v", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "freq_meter.v", 'v'); // bP (w, cs)
+// Elapsed time: 458 seconds
+selectCodeEditor("freq_meter.v", 303, 71); // bP (w, cs)
+// Elapsed time: 24 seconds
+typeControlKey((HResource) null, "freq_meter.v", 'c'); // bP (w, cs)
+// Elapsed time: 12 seconds
+typeControlKey((HResource) null, "freq_meter.v", 'v'); // bP (w, cs)
+// Elapsed time: 36 seconds
+selectCodeEditor("freq_meter.v", 208, 52); // bP (w, cs)
+typeControlKey((HResource) null, "freq_meter.v", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "freq_meter.v", 'v'); // bP (w, cs)
+// Elapsed time: 180 seconds
+selectCodeEditor("freq_meter.v", 82, 187); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clktestTop.v", 1); // m (l, cs)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "freq_meter.v", 2); // m (l, cs)
+selectCodeEditor("freq_meter.v", 59, 190); // bP (w, cs)
+selectCodeEditor("freq_meter.v", 65, 222); // bP (w, cs)
+// Elapsed time: 53 seconds
+selectCodeEditor("freq_meter.v", 502, 172); // bP (w, cs)
+// Elapsed time: 54 seconds
+selectCodeEditor("freq_meter.v", 160, 292); // bP (w, cs)
+// Elapsed time: 16 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E (g, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("freq_meter.v", 269, 24); // bP (w, cs)
+typeControlKey((HResource) null, "freq_meter.v", 'c'); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clktestTop.v", 1); // m (l, cs)
+selectCodeEditor("clktestTop.v", 214, 397); // bP (w, cs)
+// Elapsed time: 12 seconds
+typeControlKey((HResource) null, "clktestTop.v", 'v'); // bP (w, cs)
+// Elapsed time: 21 seconds
+typeControlKey((HResource) null, "clktestTop.v", 'v'); // bP (w, cs)
+// Elapsed time: 14 seconds
+selectCodeEditor("clktestTop.v", 219, 476); // bP (w, cs)
+// Elapsed time: 25 seconds
+typeControlKey((HResource) null, "clktestTop.v", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "clktestTop.v", 'v'); // bP (w, cs)
+// Elapsed time: 14 seconds
+selectCodeEditor("clktestTop.v", 220, 397); // bP (w, cs)
+// Elapsed time: 18 seconds
+selectCodeEditor("clktestTop.v", 84, 380); // bP (w, cs)
+typeControlKey((HResource) null, "clktestTop.v", 'c'); // bP (w, cs)
+selectCodeEditor("clktestTop.v", 190, 396); // bP (w, cs)
+selectCodeEditor("clktestTop.v", 182, 397); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "freq_meter.v", 2); // m (l, cs)
+selectCodeEditor("freq_meter.v", 158, 159); // bP (w, cs)
+selectCodeEditor("freq_meter.v", 308, 21); // bP (w, cs)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E (g, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clktestTop.v", 1); // m (l, cs)
+selectCodeEditor("clktestTop.v", 201, 399); // bP (w, cs)
+typeControlKey((HResource) null, "clktestTop.v", 'v'); // bP (w, cs)
+typeControlKey((HResource) null, "clktestTop.v", 'v'); // bP (w, cs)
+// Elapsed time: 118 seconds
+selectCodeEditor("clktestTop.v", 203, 415); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,719 MB. GUI used memory: 67 MB. Current time: 7/16/21, 7:59:47 AM EDT
+// Elapsed time: 165 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E (g, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 17 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clktestTop (clktestTop.v)]", 4); // B (F, cs)
+// Elapsed time: 19 seconds
+selectCodeEditor("clktestTop.v", 3, 219); // bP (w, cs)
+// Elapsed time: 16 seconds
+selectCodeEditor("clktestTop.v", 105, 131); // bP (w, cs)
+selectCodeEditor("clktestTop.v", 105, 131, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 72 seconds
+selectCodeEditor("clktestTop.v", 174, 367); // bP (w, cs)
+selectCodeEditor("clktestTop.v", 174, 367, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 28 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "freq_meter.v", 2); // m (l, cs)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clktestTop.v", 1); // m (l, cs)
+// Elapsed time: 21 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "freq_meter.v", 2); // m (l, cs)
+// Elapsed time: 329 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clktestTop.v", 1); // m (l, cs)
+// Elapsed time: 14 seconds
+selectCodeEditor("clktestTop.v", 264, 178); // bP (w, cs)
+selectCodeEditor("clktestTop.v", 232, 143); // bP (w, cs)
+selectCodeEditor("clktestTop.v", 232, 143, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("clktestTop.v", 30, 219); // bP (w, cs)
+selectCodeEditor("clktestTop.v", 30, 219, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 35 seconds
+selectCodeEditor("clktestTop.v", 10, 282); // bP (w, cs)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E (g, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ps_block_wrapper (ps_block_wrapper.v), ps_block_i : ps_block (ps_block.bd)]", 2, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ps_block_wrapper (ps_block_wrapper.v), ps_block_i : ps_block (ps_block.bd)]", 2, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+// bz (cs):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: open_bd_design {/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd} 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_e_0 Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0 Adding component instance block -- user.org:user:clkTestTop:1.0 - clkTestTop_0 Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps8_0_96M Successfully read diagram <ps_block> from BD file </home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd> 
+// TclEventType: RSB_OPEN_DIAGRAM
+// WARNING: HEventQueue.dispatchEvent() is taking  2889 ms.
+// TclEventType: RSB_CONNECTION_CHANGE
+// Elapsed time: 10 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: RSB_LOCK_CHANGE
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 7424.879 ; gain = 60.070 ; free physical = 743 ; free virtual = 41075 
+dismissDialog("Open Block Design"); // bz (cs)
+// Elapsed time: 39 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 607, 472, 1213, 604, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_MODULE, "Add Module..."); // ai (ao, cs)
+// cU (cs): Add Module: addNotify
+selectList(PAResourceQtoS.RSBAddModuleDialog_MODULE_LIST, "clktestTop (clktestTop.v)", 0); // cY (J, cU)
+selectList(PAResourceQtoS.RSBAddModuleDialog_MODULE_LIST, "fm : freq_meter (freq_meter.v)", 1, true, false, false, false, false); // cY (J, cU) - Shift Key
+selectList(PAResourceQtoS.RSBAddModuleDialog_MODULE_LIST, "clktestTop (clktestTop.v)", 0); // cY (J, cU)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (cU)
+dismissDialog("Add Module"); // cU (cs)
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// bz (cs):  Add Module : addNotify
+// Tcl Message: create_bd_cell -type module -reference clktestTop clktestTop_1 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmwovio/clkTestElm'. 
+dismissDialog("Add Module"); // bz (cs)
+// Tcl Command: 'set_property location {2 948 571} [get_bd_cells clktestTop_1]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2 948 571} [get_bd_cells clktestTop_1] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets gth_refClkP_i_0_1] [get_bd_nets gth_refClkN_i_0_1] [get_bd_nets fclkp_0_1] [get_bd_nets fclkn_0_1] [get_bd_nets clkTestTop_0_freq_O1] [get_bd_nets clkTestTop_0_freq_O2] [get_bd_cells clkTestTop_0] 
+// Tcl Command: 'set_property location {3 1195 404} [get_bd_cells clktestTop_1]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {3 1195 404} [get_bd_cells clktestTop_1] 
+// Elapsed time: 46 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1093, 242, 1213, 604, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // af (ao, cs)
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_END_CONNECTION_MODE, "End Connection Mode"); // ai (ao, cs)
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_i] [get_bd_pins clktestTop_1/freq_O1] 
+// PAPropertyPanels.initPanels (clktestTop_1_freq_O1) elapsed time: 0.2s
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins axi_gpio_0/gpio2_io_i] [get_bd_pins clktestTop_1/freq_O2] 
+// Elapsed time: 56 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 776, 333, 1213, 604, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, "Make External"); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins clktestTop_1/gth_refClkP_i] 
+// Tcl Message: endgroup 
+// Elapsed time: 11 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 629, 370, 1213, 604, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, "Make External"); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins clktestTop_1/gth_refClkN_i] 
+// Tcl Message: endgroup 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 965, 424, 1213, 604, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, "Make External"); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins clktestTop_1/fclkp] 
+// Tcl Message: endgroup 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 965, 440, 1213, 604, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, "Make External"); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins clktestTop_1/fclkn] 
+// Tcl Message: endgroup 
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 110, 224, 1213, 604, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // af (ao, cs)
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "System_zoom_out"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_OUT, "System_zoom_out"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_OUT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "System_zoom_in"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 117, 81, 1213, 604, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Delete"); // ai (ao, cs)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_ports fclkn_0] 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 145, 106, 1213, 604, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Delete"); // ai (ao, cs)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_ports fclkp_0] 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 149, 121, 1213, 604, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Delete"); // ai (ao, cs)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_ports gth_refClkN_i_0] 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 137, 138, 1213, 604, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Delete"); // ai (ao, cs)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_ports gth_refClkP_i_0] 
+unMinimizeFrame(PAResourceOtoP.PAViews_SIGNALS, "Signals"); // aA
+unMinimizeFrame(RDIResource.RDIViews_PROPERTIES, "Properties"); // aA
+// Elapsed time: 18 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 5); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 6, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, clkTestCostr.xdc]", 7, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, clkTestCostr.xdc]", 7, false, false, false, false, false, true); // B (F, cs) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,776 MB. GUI used memory: 77 MB. Current time: 7/16/21, 8:15:12 AM EDT
+// Elapsed time: 11 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, clkTestCostr.xdc]", 7, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, clkTestCostr.xdc]", 7, false, false, false, false, false, true); // B (F, cs) - Double Click
+// Elapsed time: 100 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, clkTestCostr.xdc]", 7, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ai (ao, cs)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cs): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cs)
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/constrs_1/new/clkTestCostr.xdc] -no_script -reset -force -quiet 
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  -fileset constrs_1 /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/constrs_1/new/clkTestCostr.xdc 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 6, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 6, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// am (cs): Save Project: addNotify
+dismissDialog("Run Synthesis"); // A (cs)
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (am)
+// bz (cs):  Save Constraints : addNotify
+dismissDialog("Save Project"); // am (cs)
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd>  Wrote  : </home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ui/bd_ebbe11d1.ui>  
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Save Constraints"); // bz (cs)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : </home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd>  
+// TclEventType: DG_GRAPH_STALE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,796 MB. GUI used memory: 77 MB. Current time: 7/16/21, 8:17:37 AM EDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: VHDL Output written to : /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/synth/ps_block.v VHDL Output written to : /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/sim/ps_block.v VHDL Output written to : /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/hdl/ps_block_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block clktestTop_1 . 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: Exporting to file /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/hw_handoff/ps_block.hwh Generated Block Design Tcl file /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/hw_handoff/ps_block_bd.tcl Generated Hardware Definition File /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/synth/ps_block.hwdef 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Fri Jul 16 08:17:54 2021] Launched synth_1... Run output will be captured here: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.runs/synth_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 7424.879 ; gain = 0.000 ; free physical = 617 ; free virtual = 40939 
+// 'k' command handler elapsed time: 30 seconds
+// Elapsed time: 22 seconds
+dismissDialog("Starting Design Runs"); // bz (cs)
+// [Engine Memory]: 1,805 MB (+2209kb) [02:46:08]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,813 MB. GUI used memory: 134 MB. Current time: 7/16/21, 8:17:56 AM EDT
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 341 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN, "Open Synthesized Design"); // a (Q, ag)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN
+// bz (cs):  Open Synthesized Design : addNotify
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xczu4cg-sfvc784-2-e 
+// Elapsed time: 12 seconds
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a (bz)
+// 'dZ' command handler elapsed time: 12 seconds
+// HMemoryUtils.trashcanNow. Engine heap size: 1,908 MB. GUI used memory: 78 MB. Current time: 7/16/21, 8:24:02 AM EDT
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,518 MB. GUI used memory: 78 MB. Current time: 7/16/21, 8:24:27 AM EDT
+// [Engine Memory]: 2,518 MB (+653193kb) [02:52:41]
+// Xgd.load filename: /home/software/xilinx/Vivado/2020.1/data/parts/xilinx/zynquplus/devint/zynquplus/xczu4cg/xczu4cg.xgd; ZipEntry: xczu4cg_floorplan.xgd elapsed time: 0.7s
+// TclEventType: DESIGN_NEW
+// [GUI Memory]: 200 MB (+57127kb) [02:52:46]
+// Xgd.load filename: /home/software/xilinx/Vivado/2020.1/data/parts/xilinx/zynquplus/devint/zynquplus/xczu4cg/xczu4cg.xgd; ZipEntry: xczu4cg_detail.xgd elapsed time: 3.5s
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 4.2s
+// [GUI Memory]: 218 MB (+7961kb) [02:52:46]
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 2.5s
+// Package: addNotify
+// Device: addNotify
+// DeviceView Instantiated
+// [Engine Memory]: 2,882 MB (+249655kb) [02:52:50]
+// WARNING: HEventQueue.dispatchEvent() is taking  7920 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xczu4cg-sfvc784-2-e 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 8096.641 ; gain = 0.000 ; free physical = 2819 ; free virtual = 40355 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2020.1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ip/ps_block_zynq_ultra_ps_e_0_0/ps_block_zynq_ultra_ps_e_0_0.xdc] for cell 'ps_block_i/zynq_ultra_ps_e_0/inst' 
+// Tcl Message: create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 8112.648 ; gain = 0.000 ; free physical = 2720 ; free virtual = 40256 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8112.648 ; gain = 0.000 ; free physical = 2719 ; free virtual = 40256 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 1 instances were transformed.   IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance   
+// Tcl Message: open_run: Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 8205.348 ; gain = 780.469 ; free physical = 2475 ; free virtual = 40012 
+// ExpRunCommands.openSynthResults elapsed time: 61.5s
+// Elapsed time: 49 seconds
+dismissDialog("Open Synthesized Design"); // bz (cs)
+// [GUI Memory]: 232 MB (+3134kb) [02:52:59]
+// Elapsed time: 11 seconds
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1 (4) ; IN ; gth_refClkN_i_1 ;  ;  ;  ; default (DIFF_HSTL_I_18) ;  ;  ;  ;  ; NONE ; NONE ;  ; RTT_NONE ; ", 1); // z (J, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,972 MB. GUI used memory: 170 MB. Current time: 7/16/21, 8:24:53 AM EDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1114 ms.
+// PAPropertyPanels.initPanels (gth_refClkP_i_1[1]) elapsed time: 0.2s
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[1] ; IN ; gth_refClkN_i_1[1] ;  ;  ;  ; default (DIFF_HSTL_I_18) ;  ;  ;  ;  ; NONE ; NONE ;  ; RTT_NONE ; ", 2, (String) null, 3, false); // z (J, cs)
+// TclEventType: PLACEDB_MODIFIY_PRE
+// RouteApi: Init Delay Mediator Swing Worker Join Forever
+// RouteApi::initDelayMediator elapsed time: 117.4s
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// [Engine Memory]: 4,202 MB (+1232921kb) [02:54:48]
+// TclEventType: LOC_CONSTRAINT_ADD
+// WARNING: HEventQueue.dispatchEvent() is taking  95752 ms.
+// Thread: SyntheticaAnimation 50
+// 	at java.base@9.0.4/java.lang.Thread.sleep(Native Method)
+// 	at ui.utils.lnf.b.run(SourceFile:100)
+// Thread: Java2D Disposer
+// 	at java.base@9.0.4/java.lang.Object.wait(Native Method)
+// 	at java.base@9.0.4/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+// 	at java.base@9.0.4/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+// 	at java.desktop@9.0.4/sun.java2d.Disposer.run(Unknown Source)
+// 	at java.base@9.0.4/java.lang.Thread.run(Unknown Source)
+// Thread: AWT-XAWT
+// 	at java.desktop@9.0.4/sun.awt.X11.XToolkit.waitForEvents(Native Method)
+// 	at java.desktop@9.0.4/sun.awt.X11.XToolkit.run(Unknown Source)
+// 	at java.desktop@9.0.4/sun.awt.X11.XToolkit.run(Unknown Source)
+// 	at java.base@9.0.4/java.lang.Thread.run(Unknown Source)
+// Thread: Thread-1
+// Thread: SyntheticaCleanerThread
+// 	at java.base@9.0.4/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.StyleFactory$ComponentPropertyStore$1.run(StyleFactory.java:1885)
+// Thread: Attach Listener
+// Thread: AWT-EventQueue-0
+// 	at java.base@9.0.4/java.lang.Object.wait(Native Method)
+// 	at java.base@9.0.4/java.lang.Thread.join(Unknown Source)
+// 	at ui.frmwork.y.gJZ(SourceFile:139)
+// 	at ui.data.fed.b.csP(SourceFile:1812)
+// 	at ui.data.aV.a(SourceFile:92)
+// 	at ui.frmwork.b.l.d(SourceFile:42)
+// 	at ui.frmwork.G.i(SourceFile:260)
+// 	at ui.frmwork.G.fireTclEvent(SourceFile:326)
+// 	at ui.frmwork.loccmdi.HTCLocPlaceHelper_placePortsAtPlaceLocs(Native Method)
+// 	at ui.a.B.a(SourceFile:255)
+// 	at ui.views.M.F.setValueAt(SourceFile:292)
+// 	at com.jidesoft.grid.TreeTableModel.setValueAt(Unknown Source)
+// 	at com.jidesoft.grid.TableModelWrapperImpl.setValueAt(Unknown Source)
+// 	at com.jidesoft.grid.DefaultTableModelWrapper.setValueAt(Unknown Source)
+// 	at com.jidesoft.grid.TableModelWrapperImpl.setValueAt(Unknown Source)
+// 	at com.jidesoft.grid.DefaultTableModelWrapper.setValueAt(Unknown Source)
+// 	at java.desktop@9.0.4/javax.swing.JTable.setValueAt(Unknown Source)
+// 	at ui.views.M.z.setValueAt(SourceFile:789)
+// 	at com.jidesoft.grid.JideTable.editingStopped(Unknown Source)
+// 	at java.desktop@9.0.4/javax.swing.AbstractCellEditor.fireEditingStopped(Unknown Source)
+// 	at java.desktop@9.0.4/javax.swing.DefaultCellEditor$EditorDelegate.stopCellEditing(Unknown Source)
+// 	at ui.views.M.f.acceptHint(SourceFile:123)
+// 	at com.jidesoft.hints.AbstractIntelliHints$5.mouseClicked(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.AWTEventMulticaster.mouseClicked(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Component.processMouseEvent(Unknown Source)
+// 	at java.desktop@9.0.4/javax.swing.JComponent.processMouseEvent(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Component.processEvent(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Container.processEvent(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Component.dispatchEventImpl(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Container.dispatchEventImpl(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Component.dispatchEvent(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Container.dispatchEventImpl(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Window.dispatchEventImpl(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.Component.dispatchEvent(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventQueue.access$500(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventQueue$3.run(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventQueue$3.run(Unknown Source)
+// 	at java.base@9.0.4/java.security.AccessController.doPrivileged(Native Method)
+// 	at java.base@9.0.4/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+// 	at java.base@9.0.4/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventQueue$4.run(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventQueue$4.run(Unknown Source)
+// 	at java.base@9.0.4/java.security.AccessController.doPrivileged(Native Method)
+// 	at java.base@9.0.4/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventQueue.dispatchEvent(Unknown Source)
+// 	at ui.frmwork.b.d.dispatchEvent(SourceFile:88)
+// 	at java.desktop@9.0.4/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+// 	at java.desktop@9.0.4/java.awt.EventDispatchThread.run(Unknown Source)
+// Thread: Refresh Filesets Swing Worker Thread
+// 	at java.base@9.0.4/java.lang.Thread.sleep(Native Method)
+// 	at ui.data.design.y.construct(SourceFile:2503)
+// 	at ui.frmwork.A.run(SourceFile:203)
+// 	at java.base@9.0.4/java.lang.Thread.run(Unknown Source)
+// Thread: TimerQueue
+// 	at java.base@9.0.4/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@9.0.4/java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+// 	at java.base@9.0.4/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+// 	at java.base@9.0.4/java.util.concurrent.DelayQueue.take(Unknown Source)
+// 	at java.desktop@9.0.4/javax.swing.TimerQueue.run(Unknown Source)
+// 	at java.base@9.0.4/java.lang.Thread.run(Unknown Source)
+// Thread: Finalizer
+// 	at java.base@9.0.4/java.lang.Object.wait(Native Method)
+// 	at java.base@9.0.4/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+// 	at java.base@9.0.4/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+// 	at java.base@9.0.4/java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
+// Thread: hw_ila_monitor
+// 	at java.base@9.0.4/java.lang.Object.wait(Native Method)
+// 	at java.base@9.0.4/java.lang.Object.wait(Unknown Source)
+// 	at java.base@9.0.4/java.util.TimerThread.mainLoop(Unknown Source)
+// 	at java.base@9.0.4/java.util.TimerThread.run(Unknown Source)
+// Thread: SyntheticaAnimation 70
+// 	at java.base@9.0.4/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.painter.AnimationThreadFactory$AnimationThread.run(AnimationThreadFactory.java:119)
+// Thread: Update Runs Swing Worker Thread
+// 	at java.base@9.0.4/java.lang.Thread.sleep(Native Method)
+// 	at ui.data.experiment.F.construct(SourceFile:317)
+// 	at ui.frmwork.A.run(SourceFile:203)
+// 	at java.base@9.0.4/java.lang.Thread.run(Unknown Source)
+// Thread: SyntheticaAnimation 50
+// 	at java.base@9.0.4/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.painter.AnimationThreadFactory$AnimationThread.run(AnimationThreadFactory.java:119)
+// Thread: RouteApi Init Delay Mediator Thread
+// 	at ui.data.fed.fedi.RouteApi_initDelayMediator(Native Method)
+// 	at ui.data.fed.b.csQ(SourceFile:1877)
+// 	at ui.data.fed.b.n(SourceFile:75)
+// 	at ui.data.fed.d.construct(SourceFile:1565)
+// 	at ui.frmwork.A.run(SourceFile:203)
+// 	at java.base@9.0.4/java.lang.Thread.run(Unknown Source)
+// Thread: main
+// 	at java.base@9.0.4/java.lang.Thread.sleep(Native Method)
+// 	at ui.PlanAhead.c(SourceFile:1118)
+// 	at ui.PlanAhead.jswMain(SourceFile:1165)
+// Thread: Monitor HEventQueue Thread
+// 	at java.base@9.0.4/java.lang.Thread.dumpThreads(Native Method)
+// 	at java.base@9.0.4/java.lang.Thread.getAllStackTraces(Unknown Source)
+// 	at ui.utils.d.c.hsh(SourceFile:531)
+// 	at ui.frmwork.b.e.construct(SourceFile:140)
+// 	at ui.frmwork.A.run(SourceFile:203)
+// 	at java.base@9.0.4/java.lang.Thread.run(Unknown Source)
+// Thread: Batik CleanerThread
+// 	at java.base@9.0.4/java.lang.Object.wait(Native Method)
+// 	at java.base@9.0.4/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+// 	at java.base@9.0.4/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+// 	at org.apache.batik.util.CleanerThread.run(CleanerThread.java:106)
+// Thread: Thread-11257
+// Thread: Image Animator 3
+// 	at java.base@9.0.4/java.lang.Thread.sleep(Native Method)
+// 	at java.desktop@9.0.4/sun.awt.image.GifFrame.dispose(Unknown Source)
+// 	at java.desktop@9.0.4/sun.awt.image.GifImageDecoder.readImage(Unknown Source)
+// 	at java.desktop@9.0.4/sun.awt.image.GifImageDecoder.produceImage(Unknown Source)
+// 	at java.desktop@9.0.4/sun.awt.image.InputStreamImageSource.doFetch(Unknown Source)
+// 	at java.desktop@9.0.4/sun.awt.image.ImageFetcher.fetchloop(Unknown Source)
+// 	at java.desktop@9.0.4/sun.awt.image.ImageFetcher.run(Unknown Source)
+// Thread: Common-Cleaner
+// 	at java.base@9.0.4/java.lang.Object.wait(Native Method)
+// 	at java.base@9.0.4/java.lang.ref.ReferenceQueue.remove(Unknown Source)
+// 	at java.base@9.0.4/jdk.internal.ref.CleanerImpl.run(Unknown Source)
+// 	at java.base@9.0.4/java.lang.Thread.run(Unknown Source)
+// 	at java.base@9.0.4/jdk.internal.misc.InnocuousThread.run(Unknown Source)
+// Thread: AWT-Shutdown
+// 	at java.base@9.0.4/java.lang.Object.wait(Native Method)
+// 	at java.base@9.0.4/java.lang.Object.wait(Unknown Source)
+// 	at java.desktop@9.0.4/sun.awt.AWTAutoShutdown.run(Unknown Source)
+// 	at java.base@9.0.4/java.lang.Thread.run(Unknown Source)
+// Thread: Process Messages Thread
+// 	at java.base@9.0.4/java.lang.Thread.sleep(Native Method)
+// 	at ui.frmwork.d.h.construct(SourceFile:133)
+// 	at ui.frmwork.A.run(SourceFile:203)
+// 	at java.base@9.0.4/java.lang.Thread.run(Unknown Source)
+// Thread: SyntheticaAnimation 25
+// 	at java.base@9.0.4/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.painter.AnimationThreadFactory$AnimationThread.run(AnimationThreadFactory.java:119)
+// Thread: Thread-11263
+// Thread: SyntheticaAnimation 50
+// 	at java.base@9.0.4/java.lang.Thread.sleep(Native Method)
+// 	at com.jidesoft.plaf.synthetica.AnimationThreadFactory$AnimationThread.run(AnimationThreadFactory.java:99)
+// Thread: Reference Handler
+// 	at java.base@9.0.4/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+// 	at java.base@9.0.4/java.lang.ref.Reference.processPendingReferences(Unknown Source)
+// 	at java.base@9.0.4/java.lang.ref.Reference.access$000(Unknown Source)
+// 	at java.base@9.0.4/java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+// Tcl Message: place_ports {gth_refClkP_i_1[1]} V6 
+// HMemoryUtils.trashcanNow. Engine heap size: 4,202 MB. GUI used memory: 171 MB. Current time: 7/16/21, 8:26:36 AM EDT
+// PAPropertyPanels.initPanels (gth_refClkP_i_1[0]) elapsed time: 0.2s
+// Elapsed time: 100 seconds
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[0] ; IN ; gth_refClkN_i_1[0] ;  ;  ;  ; default (DIFF_HSTL_I_18) ;  ;  ;  ;  ; NONE ; NONE ;  ; RTT_NONE ; ", 3, (String) null, 3, false); // z (J, cs)
+// WARNING: HEventQueue.dispatchEvent() is taking  1157 ms.
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL (aI, cs)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[1] ; IN ; gth_refClkN_i_1[1] ; V6 ; true ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2, "V6", 3, false); // z (J, cs)
+selectTreeTableHeader(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Package Pin", 3); // z (J, cs)
+selectTab((HResource) null, (HResource) null, "Package Pins", 5); // aL (aI, cs)
+// Tcl Message: place_ports: Time (s): cpu = 00:00:58 ; elapsed = 00:01:36 . Memory (MB): peak = 9441.215 ; gain = 1233.867 ; free physical = 1334 ; free virtual = 38980 
+// Tcl Message: set_property package_pin "" [get_ports [list  {gth_refClkP_i_1[0]}]] 
+selectTab((HResource) null, (HResource) null, "I/O Ports", 6); // aL (aI, cs)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[0] ; IN ; gth_refClkN_i_1[0] ;  ;  ;  ; default (DIFF_HSTL_I_18) ;  ;  ;  ;  ; NONE ; NONE ;  ; RTT_NONE ; ", 2, (String) null, 3, false); // z (J, cs)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[0] ; IN ; gth_refClkN_i_1[0] ;  ;  ;  ; default (DIFF_HSTL_I_18) ;  ;  ;  ;  ; NONE ; NONE ;  ; RTT_NONE ; ", 2, (String) null, 3, false); // z (J, cs)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[0] ; IN ; gth_refClkN_i_1[0] ;  ;  ;  ; default (DIFF_HSTL_I_18) ;  ;  ;  ;  ; NONE ; NONE ;  ; RTT_NONE ; ", 2, (String) null, 3, false); // z (J, cs)
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports {gth_refClkP_i_1[0]} Y6 
+selectTreeTableHeader(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Package Pin", 3); // z (J, cs)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[1] ; IN ; gth_refClkN_i_1[1] ; V6 ; true ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2, (String) null, 6, false); // z (J, cs)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[1] ; IN ; gth_refClkN_i_1[1] ; V6 ; true ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2, (String) null, 6, false); // z (J, cs)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[1] ; IN ; gth_refClkN_i_1[1] ; V6 ; true ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2); // z (J, cs)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[1] ; IN ; gth_refClkN_i_1[1] ; V6 ; true ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2, (String) null, 6, false, false, false, false, false, true); // z (J, cs) - Double Click
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[1] ; IN ; gth_refClkN_i_1[1] ; V6 ; true ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2, (String) null, 6, false); // z (J, cs)
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1 (4) ; IN ; gth_refClkN_i_1 ;  ; true ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 1); // z (J, cs)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1 (4) ; IN ; gth_refClkN_i_1 ;  ; true ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 1); // z (J, cs)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[1] ; IN ; gth_refClkN_i_1[1] ; V6 ; true ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2, "true", 4, false); // z (J, cs)
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: set_property is_loc_fixed false [get_ports [list  {gth_refClkP_i_1[1]}]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[0] ; IN ; gth_refClkN_i_1[0] ; Y6 ; true ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 3, "true", 4, false); // z (J, cs)
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: set_property is_loc_fixed false [get_ports [list  {gth_refClkP_i_1[0]}]] 
+// Schematic: addNotify
+// PAPropertyPanels.initPanels (gth_refClkP_i_1) elapsed time: 0.3s
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1 (4) ; IN ; gth_refClkN_i_1 ;  ; false ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 1, (String) null, 6, true); // z (J, cs) - Node
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1 (4) ; IN ; gth_refClkN_i_1 ;  ; false ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 1, (String) null, 6, true); // z (J, cs) - Node
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "All ports (6) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 0); // z (J, cs)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "All ports (6) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 0); // z (J, cs)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1 (4) ; IN ; gth_refClkN_i_1 ;  ; false ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 1, (String) null, 6, true); // z (J, cs) - Node
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1 (4) ; IN ; gth_refClkN_i_1 ;  ; false ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 1, (String) null, 6, true); // z (J, cs) - Node
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[1] ; IN ; gth_refClkN_i_1[1] ; V6 ; false ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2, (String) null, 6, false); // z (J, cs)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[1] ; IN ; gth_refClkN_i_1[1] ; V6 ; false ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2, (String) null, 6, false); // z (J, cs)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[1] ; IN ; gth_refClkN_i_1[1] ; V6 ; false ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2, (String) null, 6, false, false, false, false, false, true); // z (J, cs) - Double Click
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[1] ; IN ; gth_refClkN_i_1[1] ; V6 ; false ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2, "false", 4, false); // z (J, cs)
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: set_property is_loc_fixed true [get_ports [list  {gth_refClkP_i_1[1]}]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[0] ; IN ; gth_refClkN_i_1[0] ; Y6 ; false ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 3, "false", 4, false); // z (J, cs)
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: set_property is_loc_fixed true [get_ports [list  {gth_refClkP_i_1[0]}]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[1] ; IN ; gth_refClkN_i_1[1] ; V6 ; true ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2, (String) null, 6, false); // z (J, cs)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[1] ; IN ; gth_refClkN_i_1[1] ; V6 ; true ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2, (String) null, 6, false); // z (J, cs)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[1] ; IN ; gth_refClkN_i_1[1] ; V6 ; true ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2, (String) null, 6, false, false, false, false, false, true); // z (J, cs) - Double Click
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (2) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 4); // z (J, cs)
+// PAPropertyPanels.initPanels (fclkp_1) elapsed time: 0.2s
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "fclkp_1 ; IN ; fclkn_1 ;  ;  ;  ; default (DIFF_HSTL_I_18) ;  ;  ;  ;  ; NONE ; NONE ;  ; RTT_NONE ; ", 5, "default (DIFF_HSTL_I_18)", 6, false); // z (J, cs)
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVDS [get_ports [list fclkp_1]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "fclkp_1 ; IN ; fclkn_1 ;  ;  ;  ; LVDS ;  ;  ;  ;  ; NONE ; NONE ;  ;  ; TERM_NONE", 5, (String) null, 3, false); // z (J, cs)
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports fclkp_1 AF7 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[0] ; IN ; gth_refClkN_i_1[0] ; Y6 ; true ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 3, (String) null, 6, false); // z (J, cs)
+// Elapsed time: 16 seconds
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[0] ; IN ; gth_refClkN_i_1[0] ; Y6 ; true ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 3, "Y6", 3, false); // z (J, cs)
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_REMOVE
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[0] ; IN ; gth_refClkN_i_1[0] ;  ;  ;  ; default (DIFF_HSTL_I_18) ;  ;  ;  ;  ; NONE ; NONE ;  ; RTT_NONE ; ", 2, (String) null, 3, false); // z (J, cs)
+// Tcl Message: set_property package_pin "" [get_ports [list  {gth_refClkP_i_1[0]}]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[0] ; IN ; gth_refClkN_i_1[0] ;  ;  ;  ; default (DIFF_HSTL_I_18) ;  ;  ;  ;  ; NONE ; NONE ;  ; RTT_NONE ; ", 2, "default (DIFF_HSTL_I_18)", 6, false); // z (J, cs)
+// Tcl Message: set_property package_pin "" [get_ports [list  {gth_refClkP_i_1[0]}]] 
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVDS [get_ports [list {gth_refClkP_i_1[0]}]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[0] ; IN ; gth_refClkN_i_1[0] ;  ;  ;  ; LVDS ;  ;  ;  ;  ; NONE ; NONE ;  ;  ; TERM_NONE", 2, (String) null, 3, false); // z (J, cs)
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports {gth_refClkP_i_1[0]} Y6 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[0] ; IN ; gth_refClkN_i_1[0] ; Y6 ; true ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 3, "Y6", 3, false); // z (J, cs)
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// Tcl Message: set_property package_pin "" [get_ports [list  {gth_refClkP_i_1[0]}]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[1] ; IN ; gth_refClkN_i_1[1] ; V6 ; true ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 3, "V6", 3, false); // z (J, cs)
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Elapsed time: 10 seconds
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[0] ; IN ; gth_refClkN_i_1[0] ;  ;  ;  ; LVDS ;  ;  ;  ;  ; NONE ; NONE ;  ;  ; TERM_NONE", 2, (String) null, 3, false); // z (J, cs)
+selectButton("OptionPane.button", "Yes"); // JButton (v, B)
+// Tcl Message: startgroup 
+// Tcl Message: set_property package_pin "" [get_ports [list  {gth_refClkP_i_1[1]}]] 
+// Tcl Message: place_ports {gth_refClkP_i_1[1]} V6 
+// Tcl Message: endgroup 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[1] ; IN ; gth_refClkN_i_1[1] ; V6 ; true ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 3, "V6", 3, false); // z (J, cs)
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_REMOVE
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (2) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 4, "Scalar ports (2)", 0, true); // z (J, cs) - Node
+// Tcl Message: set_property package_pin "" [get_ports [list  {gth_refClkP_i_1[1]}]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[1] ; IN ; gth_refClkN_i_1[1] ;  ;  ;  ; default (DIFF_HSTL_I_18) ;  ;  ;  ;  ; NONE ; NONE ;  ; RTT_NONE ; ", 2, "default (DIFF_HSTL_I_18)", 6, false); // z (J, cs)
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVDS [get_ports [list {gth_refClkP_i_1[1]}]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[1] ; IN ; gth_refClkN_i_1[1] ;  ;  ;  ; LVDS ;  ;  ;  ;  ; NONE ; NONE ;  ;  ; TERM_NONE", 2, (String) null, 3, false); // z (J, cs)
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports {gth_refClkP_i_1[1]} V6 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1[0] ; IN ; gth_refClkN_i_1[0] ;  ;  ;  ; LVDS ;  ;  ;  ;  ; NONE ; NONE ;  ;  ; TERM_NONE", 2, (String) null, 3, false); // z (J, cs)
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports {gth_refClkP_i_1[0]} Y6 
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1 (4) ; IN ; gth_refClkN_i_1 ;  ; true ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 1); // z (J, cs)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1 (4) ; IN ; gth_refClkN_i_1 ;  ; true ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 1); // z (J, cs)
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "gth_refClkP_i_1 (4) ; IN ; gth_refClkN_i_1 ;  ; true ; 224 ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 1); // z (J, cs)
+selectButton(PAResourceCommand.PACommandNames_SAVE_DESIGN, "save_design"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_SAVE_DESIGN
+// A (cs): Out of Date Design: addNotify
+// Elapsed time: 17 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// a (cs): Save Constraints: addNotify
+dismissDialog("Out of Date Design"); // A (cs)
+// Elapsed time: 15 seconds
+setText(PAResourceAtoD.CreateConstraintsFilePanel_FILE_NAME, "elmXdc"); // ac (D, a)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (a)
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// bz (cs):  Save Constraints : addNotify
+// Tcl Message: close [ open /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/constrs_1/new/elmXdc.xdc w ] 
+// Tcl Message: add_files -fileset constrs_1 /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/constrs_1/new/elmXdc.xdc 
+// Tcl Message: set_property target_constrs_file /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/constrs_1/new/elmXdc.xdc [current_fileset -constrset] 
+// TclEventType: DESIGN_SAVE
+dismissDialog("Save Constraints"); // a (cs)
+// Tcl Message: save_constraints -force 
+// 'h' command handler elapsed time: 34 seconds
+dismissDialog("Save Constraints"); // bz (cs)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 32, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cD' command handler elapsed time: 5 seconds
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// bz (cs):  Generate Bitstream : addNotify
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri Jul 16 08:30:17 2021] Launched synth_1... Run output will be captured here: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.runs/synth_1/runme.log [Fri Jul 16 08:30:17 2021] Launched impl_1... Run output will be captured here: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // h (ds, cs)
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 4,193 MB. GUI used memory: 167 MB. Current time: 7/16/21, 8:30:22 AM EDT
+// Engine heap size: 4,193 MB. GUI used memory: 167 MB. Current time: 7/16/21, 8:30:22 AM EDT
+// WARNING: HEventQueue.dispatchEvent() is taking  3032 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// bz (cs):  Closing : addNotify
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Closing"); // bz (cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 316 seconds
+selectCodeEditor("freq_meter.v", 572, 230); // bP (w, cs)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 492 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bz (cs):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: SIGNAL_HIERARCHY_CHANGED
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: SIGNAL_HIERARCHY_CHANGED
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: SIGNAL_HIERARCHY_CHANGED
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 3,931 MB. GUI used memory: 86 MB. Current time: 7/16/21, 8:44:03 AM EDT
+// TclEventType: DESIGN_NEW
+// Package: addNotify
+// Xgd.load filename: /home/software/xilinx/Vivado/2020.1/data/parts/xilinx/zynquplus/devint/zynquplus/xczu4cg/xczu4cg.xgd; ZipEntry: xczu4cg_detail.xgd elapsed time: 2.4s
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 2.8s
+// Device: addNotify
+// DeviceView Instantiated
+// PAPropertyPanels.initPanels (constrs_1) elapsed time: 0.2s
+// TclEventType: CURR_DESIGN_SET
+// WARNING: HEventQueue.dispatchEvent() is taking  2363 ms.
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 9441.215 ; gain = 0.000 ; free physical = 3443 ; free virtual = 39141 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2020.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Constraints 18-5170] The checkpoint was created with non-default parameter values which do not match the current Vivado settings.  Mismatching parameters are: 
+// Tcl Message:   general.maxThreads 
+// Tcl Message: INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 9444.215 ; gain = 0.000 ; free physical = 3340 ; free virtual = 39035 
+// Tcl Message: Restored from archive | CPU: 1.780000 secs | Memory: -1.375061 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 9444.215 ; gain = 0.000 ; free physical = 3340 ; free virtual = 39035 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9444.215 ; gain = 0.000 ; free physical = 3341 ; free virtual = 39036 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Elapsed time: 14 seconds
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a (bz)
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: open_run: Time (s): cpu = 00:00:21 ; elapsed = 00:00:14 . Memory (MB): peak = 9444.215 ; gain = 3.000 ; free physical = 3324 ; free virtual = 39036 
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 3s
+// WARNING: HEventQueue.dispatchEvent() is taking  1604 ms.
+// TclEventType: TIMING_SUMMARY_UPDATED
+// WARNING: HEventQueue.dispatchEvent() is taking  1030 ms.
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a (bz)
+// 'dZ' command handler elapsed time: 18 seconds
+// [GUI Memory]: 248 MB (+4942kb) [03:12:26]
+dismissDialog("Open Implemented Design"); // bz (cs)
+// [Engine Memory]: 4,459 MB (+48717kb) [03:12:27]
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL (aI, cs)
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aB, cs)
+closeTask("Implementation", "Implemented Design", "DesignTask.RESULTS_ANALYSIS");
+// A (cs): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bz (cs):  Close : addNotify
+dismissDialog("Confirm Close"); // A (cs)
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 4,252 MB. GUI used memory: 173 MB. Current time: 7/16/21, 8:44:24 AM EDT
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 4,252 MB. GUI used memory: 174 MB. Current time: 7/16/21, 8:44:24 AM EDT
+// WARNING: HEventQueue.dispatchEvent() is taking  3181 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Close"); // bz (cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m (l, cs)
+// Elapsed time: 164 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ps_block_wrapper (ps_block_wrapper.v)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ps_block_wrapper (ps_block_wrapper.v)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ps_block_wrapper (ps_block_wrapper.v)]", 1, true, false, false, false, true, false); // B (F, cs) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ps_block_wrapper (ps_block_wrapper.v), ps_block_i : ps_block (ps_block.bd)]", 2, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ps_block_wrapper (ps_block_wrapper.v), ps_block_i : ps_block (ps_block.bd)]", 2, true, false, false, false, true, false); // B (F, cs) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_CREATE_TOP_HDL, "Create HDL Wrapper..."); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_CREATE_TOP_HDL
+// a (cs): Create HDL Wrapper: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (a)
+dismissDialog("Create HDL Wrapper"); // a (cs)
+// Tcl Message: make_wrapper -files [get_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd] -top 
+// Elapsed time: 10 seconds
+unMinimizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // aA (aL)
+// Elapsed time: 55 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ps_block_wrapper (ps_block_wrapper.v)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ps_block_wrapper (ps_block_wrapper.v)]", 1, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+// Elapsed time: 255 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m (l, cs)
+selectButton(PAResourceCommand.PACommandNames_ZOOM_FIT, "System_zoom_fit"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_FIT
+// Elapsed time: 16 seconds
+selectButton(PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN, "System_validate_bd_design_rsb"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+// 'dT' command handler elapsed time: 3 seconds
+selectButton("OptionPane.button", "Cancel"); // JButton (v, B)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,923 MB. GUI used memory: 88 MB. Current time: 7/16/21, 9:14:24 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 9:44:24 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 10:14:24 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 10:44:24 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 11:14:24 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 11:44:24 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 12:14:24 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 12:44:24 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 1:14:24 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 1:44:24 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 2:14:24 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 2:44:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 3:14:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 3:44:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 4:14:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 4:44:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 5:14:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 5:44:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 6:14:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 6:44:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 7:14:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 7:44:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 8:14:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 8:44:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 9:14:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 9:44:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 10:14:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 10:44:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 11:14:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/16/21, 11:44:25 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 12:14:25 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 12:44:25 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 1:14:25 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 1:44:25 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 2:14:25 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 2:44:25 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 3:14:25 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 3:44:25 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 4:14:25 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 4:44:25 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 5:14:25 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 5:44:25 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 6:14:25 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 6:44:25 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 7:14:25 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 7:44:25 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 8:14:25 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 8:44:25 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 9:14:26 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 9:44:26 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 10:14:26 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 10:44:26 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 11:14:26 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 11:44:26 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 12:14:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 12:44:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 1:14:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 1:44:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 2:14:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 2:44:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 3:14:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 3:44:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 4:14:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 4:44:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 5:14:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 5:44:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 6:14:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 6:44:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 7:14:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 7:44:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 8:14:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 8:44:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 9:14:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 9:44:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 10:14:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 10:44:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 11:14:26 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/17/21, 11:44:27 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/18/21, 12:14:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/18/21, 12:44:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/18/21, 1:14:27 AM EDT
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 553ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 3,914 MB. GUI used memory: 86 MB. Current time: 7/18/21, 1:44:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 2:14:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 2:44:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 3:14:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 3:44:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 4:14:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 4:44:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 5:14:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 5:44:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 6:14:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 6:44:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 7:14:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 7:44:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 8:14:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 8:44:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 9:14:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 9:44:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 10:14:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 10:44:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 11:14:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 11:44:27 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 12:14:27 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 12:44:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 1:14:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 1:44:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 2:14:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 2:44:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 3:14:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 3:44:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 4:14:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 4:44:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 5:14:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 5:44:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 6:14:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 6:44:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 7:14:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 7:44:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 8:14:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 8:44:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 9:14:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 9:44:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 10:14:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 10:44:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 11:14:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/18/21, 11:44:28 PM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/19/21, 12:14:28 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/19/21, 12:44:28 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/19/21, 1:14:28 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 87 MB. Current time: 7/19/21, 1:44:28 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/19/21, 2:14:28 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/19/21, 2:44:28 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/19/21, 3:14:28 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/19/21, 3:44:28 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/19/21, 4:14:28 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,913 MB. GUI used memory: 86 MB. Current time: 7/19/21, 4:44:28 AM EDT

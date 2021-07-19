@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmReg/myproj/project_1.runs/impl_1/ps_block_wrapper.tcl"
+  variable script "/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.runs/impl_1/ps_block_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -133,22 +133,22 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmReg/myproj/project_1.cache/wt [current_project]
-  set_property parent.project_path /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmReg/myproj/project_1.xpr [current_project]
+  set_property webtalk.parent_dir /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/wt [current_project]
+  set_property parent.project_path /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.xpr [current_project]
   set_property ip_repo_paths /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmwovio/clkTestElm [current_project]
   update_ip_catalog
-  set_property ip_output_repo /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmReg/myproj/project_1.cache/ip [current_project]
+  set_property ip_output_repo /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmReg/myproj/project_1.runs/synth_1/ps_block_wrapper.dcp
+  add_files -quiet /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.runs/synth_1/ps_block_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmReg/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd
+  add_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmReg/myproj/project_1.srcs/constrs_1/new/clkTestCostr.xdc
+  read_xdc /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/constrs_1/new/elmXdc.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

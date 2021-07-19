@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
-//Date        : Mon Jul 12 06:38:41 2021
+//Date        : Fri Jul 16 08:17:41 2021
 //Host        : madorsky-d2.phys.ufl.edu running 64-bit CentOS Linux release 8.2.2004 (Core)
 //Command     : generate_target ps_block.bd
 //Design      : ps_block
@@ -9,23 +9,23 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "ps_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=ps_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=7,numReposBlks=5,numNonXlnxBlks=1,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,synth_mode=Global}" *) (* HW_HANDOFF = "ps_block.hwdef" *) 
+(* CORE_GENERATION_INFO = "ps_block,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=ps_block,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=7,numReposBlks=5,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,synth_mode=Global}" *) (* HW_HANDOFF = "ps_block.hwdef" *) 
 module ps_block
-   (fclkn_0,
-    fclkp_0,
-    gth_refClkN_i_0,
-    gth_refClkP_i_0);
-  input fclkn_0;
-  input fclkp_0;
-  input [1:0]gth_refClkN_i_0;
-  input [1:0]gth_refClkP_i_0;
+   (fclkn_1,
+    fclkp_1,
+    gth_refClkN_i_1,
+    gth_refClkP_i_1);
+  input fclkn_1;
+  input fclkp_1;
+  input [1:0]gth_refClkN_i_1;
+  input [1:0]gth_refClkP_i_1;
 
-  wire [31:0]clkTestTop_0_freq_O1;
-  wire [31:0]clkTestTop_0_freq_O2;
-  wire fclkn_0_1;
-  wire fclkp_0_1;
-  wire [1:0]gth_refClkN_i_0_1;
-  wire [1:0]gth_refClkP_i_0_1;
+  wire [31:0]clktestTop_1_freq_O1;
+  wire [31:0]clktestTop_1_freq_O2;
+  wire fclkn_1_1;
+  wire fclkp_1_1;
+  wire [1:0]gth_refClkN_i_1_1;
+  wire [1:0]gth_refClkP_i_1_1;
   wire [39:0]ps8_0_axi_periph_M00_AXI_ARADDR;
   wire ps8_0_axi_periph_M00_AXI_ARREADY;
   wire ps8_0_axi_periph_M00_AXI_ARVALID;
@@ -84,13 +84,13 @@ module ps_block
   wire zynq_ultra_ps_e_0_pl_clk0;
   wire zynq_ultra_ps_e_0_pl_resetn0;
 
-  assign fclkn_0_1 = fclkn_0;
-  assign fclkp_0_1 = fclkp_0;
-  assign gth_refClkN_i_0_1 = gth_refClkN_i_0[1:0];
-  assign gth_refClkP_i_0_1 = gth_refClkP_i_0[1:0];
+  assign fclkn_1_1 = fclkn_1;
+  assign fclkp_1_1 = fclkp_1;
+  assign gth_refClkN_i_1_1 = gth_refClkN_i_1[1:0];
+  assign gth_refClkP_i_1_1 = gth_refClkP_i_1[1:0];
   ps_block_axi_gpio_0_0 axi_gpio_0
-       (.gpio2_io_i(clkTestTop_0_freq_O2),
-        .gpio_io_i(clkTestTop_0_freq_O1),
+       (.gpio2_io_i(clktestTop_1_freq_O2),
+        .gpio_io_i(clktestTop_1_freq_O1),
         .s_axi_aclk(zynq_ultra_ps_e_0_pl_clk0),
         .s_axi_araddr(ps8_0_axi_periph_M00_AXI_ARADDR[8:0]),
         .s_axi_aresetn(rst_ps8_0_96M_peripheral_aresetn),
@@ -110,13 +110,13 @@ module ps_block
         .s_axi_wready(ps8_0_axi_periph_M00_AXI_WREADY),
         .s_axi_wstrb(ps8_0_axi_periph_M00_AXI_WSTRB),
         .s_axi_wvalid(ps8_0_axi_periph_M00_AXI_WVALID));
-  ps_block_clkTestTop_0_2 clkTestTop_0
-       (.fclkn(fclkn_0_1),
-        .fclkp(fclkp_0_1),
-        .freq_O1(clkTestTop_0_freq_O1),
-        .freq_O2(clkTestTop_0_freq_O2),
-        .gth_refClkN_i(gth_refClkN_i_0_1),
-        .gth_refClkP_i(gth_refClkP_i_0_1));
+  ps_block_clktestTop_1_0 clktestTop_1
+       (.fclkn(fclkn_1_1),
+        .fclkp(fclkp_1_1),
+        .freq_O1(clktestTop_1_freq_O1),
+        .freq_O2(clktestTop_1_freq_O2),
+        .gth_refClkN_i(gth_refClkN_i_1_1),
+        .gth_refClkP_i(gth_refClkP_i_1_1));
   ps_block_ps8_0_axi_periph_0 ps8_0_axi_periph
        (.ACLK(zynq_ultra_ps_e_0_pl_clk0),
         .ARESETN(rst_ps8_0_96M_peripheral_aresetn),

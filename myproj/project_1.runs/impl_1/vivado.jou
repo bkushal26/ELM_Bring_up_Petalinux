@@ -2,11 +2,11 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Mon Jul 12 06:44:58 2021
-# Process ID: 1237929
-# Current directory: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmReg/myproj/project_1.runs/impl_1
+# Start of session at: Fri Jul 16 08:35:34 2021
+# Process ID: 1833812
+# Current directory: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.runs/impl_1
 # Command line: vivado -log ps_block_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ps_block_wrapper.tcl -notrace
-# Log file: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmReg/myproj/project_1.runs/impl_1/ps_block_wrapper.vdi
-# Journal file: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmReg/myproj/project_1.runs/impl_1/vivado.jou
+# Log file: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.runs/impl_1/ps_block_wrapper.vdi
+# Journal file: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.runs/impl_1/vivado.jou
 #-----------------------------------------------------------
 source ps_block_wrapper.tcl -notrace
