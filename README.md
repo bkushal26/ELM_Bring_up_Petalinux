@@ -45,7 +45,8 @@ This folder includes shell scripts to automate the tests.
 ## I2C related-
 ### HDF
 It is a harware despcription file which is exported from Vivado (2019.1) to create Petalinux Project.
-
+### C_Program
+C-code, which writes into the eeproms and then reads back using i2c tools. Current version have some logical errors. When tested individual memory locations, it reads and writes sucessfully. Issue lies with function arguments being passed to the i2c get/set commands, (development under process)
 ### PetaProj
 Working Petalinux project saved in this folder. 
 1. Includes HDF sourced from `I2C/HDF/ps_block_wrapper.hdf` 
@@ -64,40 +65,6 @@ Working Petalinux project saved in this folder.
 4.
 - In  ```petalinux-config``` ->
 - a. ```replace Image config --> SD card with Image Packaging Configrations  --> Root filesystem type --> SD card ```
-5. Editing Device tree 
-
-   ```<YourPetalinuxProjectDirectory>/project-spec/meta-user/recipes-bsp/device-tree/files``` 
-    - Add this device tree
-```
-	/include/ "system-conf.dtsi"
-/ {
-
-i2c0 {
-
-status = "okay";
-clock-frequency = <400000>;
-bus-id = <0>;
-clocks = <&zynqmp_clk 61>;
-compatible = "cdns,i2c-r1p14", "cdns,i2c-r1p10";
-interrupt-parent = <&gic>;
-interrupts = <0 17 4>;
-reg = <0x0 0xff020000 0x0 0x1000>;
-xlnx,has-interrupt = <0x0>;
-
-eeprom@50 {
-
-compatible = "microchip,24aa02e48";
-reg = <0x50>;
-};
-
-eeprom@51{
-                compatible = "at24,24a256";
-                reg = <0x51>;
-        };
-};
-};
-
-```	
 
 ### tcl
 This folder contains tcl file which needs to be sourced when starting from scratch, supports both versions 2019.1 and 2020.1. (2019.1 is temp, will be switiching to 2020.1 fully soon)
