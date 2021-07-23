@@ -31,8 +31,8 @@ This folder includes shell scripts to automate the tests.
  
 ## Create a new project from scratch:
 1. check the current working directory has 'tcl' folder.
-2. Launch Vivado (2019.1)
-3. In Vivado Tcl Console run :```source tcl/psddr.tcl```
+2. Launch Vivado (2020.1 or 2019.1)
+3. In Vivado Tcl Console run :```source tcl//elm2.tcl```
 
 ## List of useful commands-
 1. To check the usb port status- ``` dmesg | grep ttyUSB```
@@ -46,22 +46,11 @@ This folder includes shell scripts to automate the tests.
 -  Build the System:- ```petalinux-build ```
 - package (for petalinux2020):- <br /> ``` petalinux-package --boot --format BIN --fsbl images/linux/zynqmp_fsbl.elf --u-boot images/linux/u-boot.elf --pmufw images/linux/pmufw.elf --fpga images/linux/*.bit --force```
 ## I2C related-
-### HDF
-It is a harware despcription file which is exported from Vivado (2019.1) to create Petalinux Project.
+
 ### C_Program
 C-code, which writes into the eeproms and then reads back using i2c tools. Current version have some logical errors. When tested individual memory locations, it reads and writes sucessfully. Issue lies with function arguments being passed to the i2c get/set commands, (development under process)
-### PetaProj
-Working Petalinux project saved in this folder. 
-1. Includes HDF sourced from `I2C/HDF/ps_block_wrapper.hdf` 
-
-### tcl
-This folder contains tcl file which needs to be sourced when starting from scratch, supports both versions 2019.1 and 2020.1. (2019.1 is temp, will be switiching to 2020.1 fully soon)
 
 ### shellScripts
 This folder includes shell scripts to automate the tests for mac EEPROM and Utility EEPROM
 1. i2c_eeprom_helper.sh-To be sourced on Board by- ``` sh i2c_eeprom_helper.sh ```
 
-### Create a new project from scratch:
-1. check the current working directory has 'tcl' folder.
-2. Launch Vivado (2020.1)
-3. In Vivado Tcl Console run :```source TCL/elm2.tcl```
