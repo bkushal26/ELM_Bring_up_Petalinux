@@ -34,6 +34,19 @@ This folder includes shell scripts to automate the tests.
 2. Launch Vivado (2020.1 or 2019.1)
 3. In Vivado Tcl Console run :```source tcl//elm2.tcl```
 
+## I2C related-
+
+### C_Program
+C-code, which writes into the eeproms and then reads back using i2c tools. Current version have some logical errors. When tested individual memory locations, it reads and writes sucessfully. Issue lies with function arguments being passed to the i2c get/set commands, (development under process)
+
+### shellScripts
+This folder includes shell scripts to automate the tests for mac EEPROM and Utility EEPROM
+1. i2c_eeprom_helper.sh-To be sourced on Board by- ``` sh i2c_eeprom_helper.sh ```
+
+## Project status 
+
+list of interfaces and status goes here
+
 ## List of useful commands-
 1. To check the usb port status- ``` dmesg | grep ttyUSB```
 2. To launch serial terminal- ```screen /dev/ttyUSB? 115200```
@@ -45,12 +58,3 @@ This folder includes shell scripts to automate the tests.
 -  Configure the Root Filesystem:- ```petalinux-config -c rootfs ```
 -  Build the System:- ```petalinux-build ```
 - package (for petalinux2020):- <br /> ``` petalinux-package --boot --format BIN --fsbl images/linux/zynqmp_fsbl.elf --u-boot images/linux/u-boot.elf --pmufw images/linux/pmufw.elf --fpga images/linux/*.bit --force```
-## I2C related-
-
-### C_Program
-C-code, which writes into the eeproms and then reads back using i2c tools. Current version have some logical errors. When tested individual memory locations, it reads and writes sucessfully. Issue lies with function arguments being passed to the i2c get/set commands, (development under process)
-
-### shellScripts
-This folder includes shell scripts to automate the tests for mac EEPROM and Utility EEPROM
-1. i2c_eeprom_helper.sh-To be sourced on Board by- ``` sh i2c_eeprom_helper.sh ```
-
