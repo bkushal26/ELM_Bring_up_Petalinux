@@ -43,6 +43,9 @@ C-code, which writes into the eeproms and then reads back using i2c tools. Curre
 This folder includes shell scripts to automate the tests for mac EEPROM and Utility EEPROM
 1. i2c_eeprom_helper.sh-To be sourced on Board by- ``` sh i2c_eeprom_helper.sh ```
 
+### Clk_synthesizers
+This folder contains source files for to configure clock synthesizers on board, which are (si5338 and si5344). User is expected to make the executable of the c codes on board and then run it to configure it the the desired freqency. Currently, both clock synthesizers are configured to 250MHZ.
+
 ## Project status 
 
 list of interfaces and status goes here
