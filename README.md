@@ -10,14 +10,17 @@ This repo will include ELM bring up tests for GEM,I2C, and  Petalinux Based test
 ### Using SSH-
 ``` git clone --recursive git@github.com:bkushal26/ELM_Bring_up_Petalinux.git```
 
+## Wiki
+The instructions for GEM and I2C tests can be found [here](https://github.com/bkushal26/ELM_Bring_up_Petalinux/wiki)
+
 ## Git Repo Structure for GEM1:-
 
 ### myproj
 Working Vivado project saved in this folder (Vivado 2020.1)
 
 ### petaProj
-switched to 2020.1 version, so will update the project accordingly, (Currently just the boot image files are added)
- 	
+switched to 2020.1 version, so will update the project accordingly, (Currently just the boot image files are added). 
+- Instructions for Petalinux Project can be found [here](https://github.com/bkushal26/ELM_Bring_up_Petalinux/wiki/Petalinux-Configuration)
 ### tcl
 This folder contains tcl file which needs to be sourced when starting from scratch
 
