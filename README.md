@@ -48,7 +48,16 @@ This folder contains source files for to configure clock synthesizers on board, 
 
 ## Project status 
 
-list of interfaces and status goes here
+| Interface Name        |Details         | Status  |
+| :-------------: |:-------------:| :-------------:|
+|DDR4 Memeory    | Main RAM for CPU,4GB | Tested fully, But upgrading the design to Vivado 2020.1 version |
+|QSPI Flash    | Memory device for reserve system image | Approach to be discussed |
+|Gigabit Ethernet Module| Main channel of communication with outside world. | Tested fully. Status presented Last time|
+|USB     |USB interface | Approach to be discussed  |
+|UART    | Serial transceivers for debugging |  |
+|Chip2chip    |Interface to communicate with another FPGA | MGTs- 1 Design is ready to test. Will be tested after Clock distribution Network |
+|Clock distribution network    |Several clock generators and jitter cleaners | Tested in Standalone+ linux userspace. Custom register IP to replace AXI-GPIO is in progress |
+| I2C interfaces    | For on-board device configuration | 2 clock synthesizers Tested. EERPROM codes needs logic update |
 
 ## List of useful commands-
 1. To check the usb port status- ``` dmesg | grep ttyUSB```
