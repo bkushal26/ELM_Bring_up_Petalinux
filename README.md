@@ -69,4 +69,8 @@ This folder contains source files for to configure clock synthesizers on board, 
 -  Configure the Linux Kernel:- ```petalinux-config -c kernel ```
 -  Configure the Root Filesystem:- ```petalinux-config -c rootfs ```
 -  Build the System:- ```petalinux-build ```
-- package (for petalinux2020):- <br /> ``` petalinux-package --boot --format BIN --fsbl images/linux/zynqmp_fsbl.elf --u-boot images/linux/u-boot.elf --pmufw images/linux/pmufw.elf --fpga images/linux/*.bit --force```
+- package (for petalinux2020):- <br /> 
+``` 
+petalinux-package --boot --format BIN --fsbl images/linux/zynqmp_fsbl.elf --u-boot images/linux/u-boot.elf --pmufw images/linux/pmufw.elf --fpga images/linux/*.bit --force
+
+```
