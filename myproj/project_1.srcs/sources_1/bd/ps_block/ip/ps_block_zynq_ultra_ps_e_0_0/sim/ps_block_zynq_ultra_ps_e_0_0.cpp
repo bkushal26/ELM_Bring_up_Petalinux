@@ -61,15 +61,17 @@
 
 
 #ifdef XILINX_SIMULATOR
-ps_block_zynq_ultra_ps_e_0_0::ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_module_name& nm) : ps_block_zynq_ultra_ps_e_0_0_sc(nm), maxihpm0_lpd_aclk("maxihpm0_lpd_aclk"), maxigp2_awid("maxigp2_awid"), maxigp2_awaddr("maxigp2_awaddr"), maxigp2_awlen("maxigp2_awlen"), maxigp2_awsize("maxigp2_awsize"), maxigp2_awburst("maxigp2_awburst"), maxigp2_awlock("maxigp2_awlock"), maxigp2_awcache("maxigp2_awcache"), maxigp2_awprot("maxigp2_awprot"), maxigp2_awvalid("maxigp2_awvalid"), maxigp2_awuser("maxigp2_awuser"), maxigp2_awready("maxigp2_awready"), maxigp2_wdata("maxigp2_wdata"), maxigp2_wstrb("maxigp2_wstrb"), maxigp2_wlast("maxigp2_wlast"), maxigp2_wvalid("maxigp2_wvalid"), maxigp2_wready("maxigp2_wready"), maxigp2_bid("maxigp2_bid"), maxigp2_bresp("maxigp2_bresp"), maxigp2_bvalid("maxigp2_bvalid"), maxigp2_bready("maxigp2_bready"), maxigp2_arid("maxigp2_arid"), maxigp2_araddr("maxigp2_araddr"), maxigp2_arlen("maxigp2_arlen"), maxigp2_arsize("maxigp2_arsize"), maxigp2_arburst("maxigp2_arburst"), maxigp2_arlock("maxigp2_arlock"), maxigp2_arcache("maxigp2_arcache"), maxigp2_arprot("maxigp2_arprot"), maxigp2_arvalid("maxigp2_arvalid"), maxigp2_aruser("maxigp2_aruser"), maxigp2_arready("maxigp2_arready"), maxigp2_rid("maxigp2_rid"), maxigp2_rdata("maxigp2_rdata"), maxigp2_rresp("maxigp2_rresp"), maxigp2_rlast("maxigp2_rlast"), maxigp2_rvalid("maxigp2_rvalid"), maxigp2_rready("maxigp2_rready"), maxigp2_awqos("maxigp2_awqos"), maxigp2_arqos("maxigp2_arqos"), pl_resetn0("pl_resetn0"), pl_clk0("pl_clk0")
+ps_block_zynq_ultra_ps_e_0_0::ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_module_name& nm) : ps_block_zynq_ultra_ps_e_0_0_sc(nm), maxihpm1_fpd_aclk("maxihpm1_fpd_aclk"), maxigp1_awid("maxigp1_awid"), maxigp1_awaddr("maxigp1_awaddr"), maxigp1_awlen("maxigp1_awlen"), maxigp1_awsize("maxigp1_awsize"), maxigp1_awburst("maxigp1_awburst"), maxigp1_awlock("maxigp1_awlock"), maxigp1_awcache("maxigp1_awcache"), maxigp1_awprot("maxigp1_awprot"), maxigp1_awvalid("maxigp1_awvalid"), maxigp1_awuser("maxigp1_awuser"), maxigp1_awready("maxigp1_awready"), maxigp1_wdata("maxigp1_wdata"), maxigp1_wstrb("maxigp1_wstrb"), maxigp1_wlast("maxigp1_wlast"), maxigp1_wvalid("maxigp1_wvalid"), maxigp1_wready("maxigp1_wready"), maxigp1_bid("maxigp1_bid"), maxigp1_bresp("maxigp1_bresp"), maxigp1_bvalid("maxigp1_bvalid"), maxigp1_bready("maxigp1_bready"), maxigp1_arid("maxigp1_arid"), maxigp1_araddr("maxigp1_araddr"), maxigp1_arlen("maxigp1_arlen"), maxigp1_arsize("maxigp1_arsize"), maxigp1_arburst("maxigp1_arburst"), maxigp1_arlock("maxigp1_arlock"), maxigp1_arcache("maxigp1_arcache"), maxigp1_arprot("maxigp1_arprot"), maxigp1_arvalid("maxigp1_arvalid"), maxigp1_aruser("maxigp1_aruser"), maxigp1_arready("maxigp1_arready"), maxigp1_rid("maxigp1_rid"), maxigp1_rdata("maxigp1_rdata"), maxigp1_rresp("maxigp1_rresp"), maxigp1_rlast("maxigp1_rlast"), maxigp1_rvalid("maxigp1_rvalid"), maxigp1_rready("maxigp1_rready"), maxigp1_awqos("maxigp1_awqos"), maxigp1_arqos("maxigp1_arqos"), maxihpm0_lpd_aclk("maxihpm0_lpd_aclk"), maxigp2_awid("maxigp2_awid"), maxigp2_awaddr("maxigp2_awaddr"), maxigp2_awlen("maxigp2_awlen"), maxigp2_awsize("maxigp2_awsize"), maxigp2_awburst("maxigp2_awburst"), maxigp2_awlock("maxigp2_awlock"), maxigp2_awcache("maxigp2_awcache"), maxigp2_awprot("maxigp2_awprot"), maxigp2_awvalid("maxigp2_awvalid"), maxigp2_awuser("maxigp2_awuser"), maxigp2_awready("maxigp2_awready"), maxigp2_wdata("maxigp2_wdata"), maxigp2_wstrb("maxigp2_wstrb"), maxigp2_wlast("maxigp2_wlast"), maxigp2_wvalid("maxigp2_wvalid"), maxigp2_wready("maxigp2_wready"), maxigp2_bid("maxigp2_bid"), maxigp2_bresp("maxigp2_bresp"), maxigp2_bvalid("maxigp2_bvalid"), maxigp2_bready("maxigp2_bready"), maxigp2_arid("maxigp2_arid"), maxigp2_araddr("maxigp2_araddr"), maxigp2_arlen("maxigp2_arlen"), maxigp2_arsize("maxigp2_arsize"), maxigp2_arburst("maxigp2_arburst"), maxigp2_arlock("maxigp2_arlock"), maxigp2_arcache("maxigp2_arcache"), maxigp2_arprot("maxigp2_arprot"), maxigp2_arvalid("maxigp2_arvalid"), maxigp2_aruser("maxigp2_aruser"), maxigp2_arready("maxigp2_arready"), maxigp2_rid("maxigp2_rid"), maxigp2_rdata("maxigp2_rdata"), maxigp2_rresp("maxigp2_rresp"), maxigp2_rlast("maxigp2_rlast"), maxigp2_rvalid("maxigp2_rvalid"), maxigp2_rready("maxigp2_rready"), maxigp2_awqos("maxigp2_awqos"), maxigp2_arqos("maxigp2_arqos"), pl_resetn0("pl_resetn0"), pl_clk0("pl_clk0")
 {
 
   // initialize pins
+  mp_impl->maxihpm1_fpd_aclk(maxihpm1_fpd_aclk);
   mp_impl->maxihpm0_lpd_aclk(maxihpm0_lpd_aclk);
   mp_impl->pl_resetn0(pl_resetn0);
   mp_impl->pl_clk0(pl_clk0);
 
   // initialize transactors
+  mp_M_AXI_HPM1_FPD_transactor = NULL;
   mp_M_AXI_HPM0_LPD_transactor = NULL;
 
   // initialize socket stubs
@@ -78,6 +80,100 @@ ps_block_zynq_ultra_ps_e_0_0::ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_mod
 
 void ps_block_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
 {
+  // configure 'M_AXI_HPM1_FPD' transactor
+
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("ps_block_zynq_ultra_ps_e_0_0", "M_AXI_HPM1_FPD_TLM_MODE") != 1)
+  {
+    // Instantiate Socket Stubs
+
+  // 'M_AXI_HPM1_FPD' transactor parameters
+    xsc::common_cpp::properties M_AXI_HPM1_FPD_transactor_param_props;
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("FREQ_HZ", "96968727");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("ID_WIDTH", "16");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("ADDR_WIDTH", "40");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("AWUSER_WIDTH", "16");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("ARUSER_WIDTH", "16");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("WUSER_WIDTH", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("RUSER_WIDTH", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("BUSER_WIDTH", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_BURST", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_LOCK", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_PROT", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_CACHE", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_QOS", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_REGION", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_WSTRB", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_BRESP", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_RRESP", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_READ_THREADS", "4");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_WRITE_THREADS", "4");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_SIZE", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_RESET", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addFloat("PHASE", "0.000");
+    M_AXI_HPM1_FPD_transactor_param_props.addString("PROTOCOL", "AXI4");
+    M_AXI_HPM1_FPD_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
+    M_AXI_HPM1_FPD_transactor_param_props.addString("CLK_DOMAIN", "ps_block_zynq_ultra_ps_e_0_0_pl_clk0");
+
+    mp_M_AXI_HPM1_FPD_transactor = new xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>("M_AXI_HPM1_FPD_transactor", M_AXI_HPM1_FPD_transactor_param_props);
+
+    // M_AXI_HPM1_FPD' transactor ports
+
+    mp_M_AXI_HPM1_FPD_transactor->AWID(maxigp1_awid);
+    mp_M_AXI_HPM1_FPD_transactor->AWADDR(maxigp1_awaddr);
+    mp_M_AXI_HPM1_FPD_transactor->AWLEN(maxigp1_awlen);
+    mp_M_AXI_HPM1_FPD_transactor->AWSIZE(maxigp1_awsize);
+    mp_M_AXI_HPM1_FPD_transactor->AWBURST(maxigp1_awburst);
+    mp_M_AXI_HPM1_FPD_transactor->AWLOCK(maxigp1_awlock);
+    mp_M_AXI_HPM1_FPD_transactor->AWCACHE(maxigp1_awcache);
+    mp_M_AXI_HPM1_FPD_transactor->AWPROT(maxigp1_awprot);
+    mp_M_AXI_HPM1_FPD_transactor->AWVALID(maxigp1_awvalid);
+    mp_M_AXI_HPM1_FPD_transactor->AWUSER(maxigp1_awuser);
+    mp_M_AXI_HPM1_FPD_transactor->AWREADY(maxigp1_awready);
+    mp_M_AXI_HPM1_FPD_transactor->WDATA(maxigp1_wdata);
+    mp_M_AXI_HPM1_FPD_transactor->WSTRB(maxigp1_wstrb);
+    mp_M_AXI_HPM1_FPD_transactor->WLAST(maxigp1_wlast);
+    mp_M_AXI_HPM1_FPD_transactor->WVALID(maxigp1_wvalid);
+    mp_M_AXI_HPM1_FPD_transactor->WREADY(maxigp1_wready);
+    mp_M_AXI_HPM1_FPD_transactor->BID(maxigp1_bid);
+    mp_M_AXI_HPM1_FPD_transactor->BRESP(maxigp1_bresp);
+    mp_M_AXI_HPM1_FPD_transactor->BVALID(maxigp1_bvalid);
+    mp_M_AXI_HPM1_FPD_transactor->BREADY(maxigp1_bready);
+    mp_M_AXI_HPM1_FPD_transactor->ARID(maxigp1_arid);
+    mp_M_AXI_HPM1_FPD_transactor->ARADDR(maxigp1_araddr);
+    mp_M_AXI_HPM1_FPD_transactor->ARLEN(maxigp1_arlen);
+    mp_M_AXI_HPM1_FPD_transactor->ARSIZE(maxigp1_arsize);
+    mp_M_AXI_HPM1_FPD_transactor->ARBURST(maxigp1_arburst);
+    mp_M_AXI_HPM1_FPD_transactor->ARLOCK(maxigp1_arlock);
+    mp_M_AXI_HPM1_FPD_transactor->ARCACHE(maxigp1_arcache);
+    mp_M_AXI_HPM1_FPD_transactor->ARPROT(maxigp1_arprot);
+    mp_M_AXI_HPM1_FPD_transactor->ARVALID(maxigp1_arvalid);
+    mp_M_AXI_HPM1_FPD_transactor->ARUSER(maxigp1_aruser);
+    mp_M_AXI_HPM1_FPD_transactor->ARREADY(maxigp1_arready);
+    mp_M_AXI_HPM1_FPD_transactor->RID(maxigp1_rid);
+    mp_M_AXI_HPM1_FPD_transactor->RDATA(maxigp1_rdata);
+    mp_M_AXI_HPM1_FPD_transactor->RRESP(maxigp1_rresp);
+    mp_M_AXI_HPM1_FPD_transactor->RLAST(maxigp1_rlast);
+    mp_M_AXI_HPM1_FPD_transactor->RVALID(maxigp1_rvalid);
+    mp_M_AXI_HPM1_FPD_transactor->RREADY(maxigp1_rready);
+    mp_M_AXI_HPM1_FPD_transactor->AWQOS(maxigp1_awqos);
+    mp_M_AXI_HPM1_FPD_transactor->ARQOS(maxigp1_arqos);
+    mp_M_AXI_HPM1_FPD_transactor->CLK(maxihpm1_fpd_aclk);
+    m_M_AXI_HPM1_FPD_transactor_rst_signal.write(1);
+    mp_M_AXI_HPM1_FPD_transactor->RST(m_M_AXI_HPM1_FPD_transactor_rst_signal);
+
+    // M_AXI_HPM1_FPD' transactor sockets
+
+    mp_impl->M_AXI_HPM1_FPD_rd_socket->bind(*(mp_M_AXI_HPM1_FPD_transactor->rd_socket));
+    mp_impl->M_AXI_HPM1_FPD_wr_socket->bind(*(mp_M_AXI_HPM1_FPD_transactor->wr_socket));
+  }
+
   // configure 'M_AXI_HPM0_LPD' transactor
 
   if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("ps_block_zynq_ultra_ps_e_0_0", "M_AXI_HPM0_LPD_TLM_MODE") != 1)
@@ -180,15 +276,17 @@ void ps_block_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
 
 
 #ifdef XM_SYSTEMC
-ps_block_zynq_ultra_ps_e_0_0::ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_module_name& nm) : ps_block_zynq_ultra_ps_e_0_0_sc(nm), maxihpm0_lpd_aclk("maxihpm0_lpd_aclk"), maxigp2_awid("maxigp2_awid"), maxigp2_awaddr("maxigp2_awaddr"), maxigp2_awlen("maxigp2_awlen"), maxigp2_awsize("maxigp2_awsize"), maxigp2_awburst("maxigp2_awburst"), maxigp2_awlock("maxigp2_awlock"), maxigp2_awcache("maxigp2_awcache"), maxigp2_awprot("maxigp2_awprot"), maxigp2_awvalid("maxigp2_awvalid"), maxigp2_awuser("maxigp2_awuser"), maxigp2_awready("maxigp2_awready"), maxigp2_wdata("maxigp2_wdata"), maxigp2_wstrb("maxigp2_wstrb"), maxigp2_wlast("maxigp2_wlast"), maxigp2_wvalid("maxigp2_wvalid"), maxigp2_wready("maxigp2_wready"), maxigp2_bid("maxigp2_bid"), maxigp2_bresp("maxigp2_bresp"), maxigp2_bvalid("maxigp2_bvalid"), maxigp2_bready("maxigp2_bready"), maxigp2_arid("maxigp2_arid"), maxigp2_araddr("maxigp2_araddr"), maxigp2_arlen("maxigp2_arlen"), maxigp2_arsize("maxigp2_arsize"), maxigp2_arburst("maxigp2_arburst"), maxigp2_arlock("maxigp2_arlock"), maxigp2_arcache("maxigp2_arcache"), maxigp2_arprot("maxigp2_arprot"), maxigp2_arvalid("maxigp2_arvalid"), maxigp2_aruser("maxigp2_aruser"), maxigp2_arready("maxigp2_arready"), maxigp2_rid("maxigp2_rid"), maxigp2_rdata("maxigp2_rdata"), maxigp2_rresp("maxigp2_rresp"), maxigp2_rlast("maxigp2_rlast"), maxigp2_rvalid("maxigp2_rvalid"), maxigp2_rready("maxigp2_rready"), maxigp2_awqos("maxigp2_awqos"), maxigp2_arqos("maxigp2_arqos"), pl_resetn0("pl_resetn0"), pl_clk0("pl_clk0")
+ps_block_zynq_ultra_ps_e_0_0::ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_module_name& nm) : ps_block_zynq_ultra_ps_e_0_0_sc(nm), maxihpm1_fpd_aclk("maxihpm1_fpd_aclk"), maxigp1_awid("maxigp1_awid"), maxigp1_awaddr("maxigp1_awaddr"), maxigp1_awlen("maxigp1_awlen"), maxigp1_awsize("maxigp1_awsize"), maxigp1_awburst("maxigp1_awburst"), maxigp1_awlock("maxigp1_awlock"), maxigp1_awcache("maxigp1_awcache"), maxigp1_awprot("maxigp1_awprot"), maxigp1_awvalid("maxigp1_awvalid"), maxigp1_awuser("maxigp1_awuser"), maxigp1_awready("maxigp1_awready"), maxigp1_wdata("maxigp1_wdata"), maxigp1_wstrb("maxigp1_wstrb"), maxigp1_wlast("maxigp1_wlast"), maxigp1_wvalid("maxigp1_wvalid"), maxigp1_wready("maxigp1_wready"), maxigp1_bid("maxigp1_bid"), maxigp1_bresp("maxigp1_bresp"), maxigp1_bvalid("maxigp1_bvalid"), maxigp1_bready("maxigp1_bready"), maxigp1_arid("maxigp1_arid"), maxigp1_araddr("maxigp1_araddr"), maxigp1_arlen("maxigp1_arlen"), maxigp1_arsize("maxigp1_arsize"), maxigp1_arburst("maxigp1_arburst"), maxigp1_arlock("maxigp1_arlock"), maxigp1_arcache("maxigp1_arcache"), maxigp1_arprot("maxigp1_arprot"), maxigp1_arvalid("maxigp1_arvalid"), maxigp1_aruser("maxigp1_aruser"), maxigp1_arready("maxigp1_arready"), maxigp1_rid("maxigp1_rid"), maxigp1_rdata("maxigp1_rdata"), maxigp1_rresp("maxigp1_rresp"), maxigp1_rlast("maxigp1_rlast"), maxigp1_rvalid("maxigp1_rvalid"), maxigp1_rready("maxigp1_rready"), maxigp1_awqos("maxigp1_awqos"), maxigp1_arqos("maxigp1_arqos"), maxihpm0_lpd_aclk("maxihpm0_lpd_aclk"), maxigp2_awid("maxigp2_awid"), maxigp2_awaddr("maxigp2_awaddr"), maxigp2_awlen("maxigp2_awlen"), maxigp2_awsize("maxigp2_awsize"), maxigp2_awburst("maxigp2_awburst"), maxigp2_awlock("maxigp2_awlock"), maxigp2_awcache("maxigp2_awcache"), maxigp2_awprot("maxigp2_awprot"), maxigp2_awvalid("maxigp2_awvalid"), maxigp2_awuser("maxigp2_awuser"), maxigp2_awready("maxigp2_awready"), maxigp2_wdata("maxigp2_wdata"), maxigp2_wstrb("maxigp2_wstrb"), maxigp2_wlast("maxigp2_wlast"), maxigp2_wvalid("maxigp2_wvalid"), maxigp2_wready("maxigp2_wready"), maxigp2_bid("maxigp2_bid"), maxigp2_bresp("maxigp2_bresp"), maxigp2_bvalid("maxigp2_bvalid"), maxigp2_bready("maxigp2_bready"), maxigp2_arid("maxigp2_arid"), maxigp2_araddr("maxigp2_araddr"), maxigp2_arlen("maxigp2_arlen"), maxigp2_arsize("maxigp2_arsize"), maxigp2_arburst("maxigp2_arburst"), maxigp2_arlock("maxigp2_arlock"), maxigp2_arcache("maxigp2_arcache"), maxigp2_arprot("maxigp2_arprot"), maxigp2_arvalid("maxigp2_arvalid"), maxigp2_aruser("maxigp2_aruser"), maxigp2_arready("maxigp2_arready"), maxigp2_rid("maxigp2_rid"), maxigp2_rdata("maxigp2_rdata"), maxigp2_rresp("maxigp2_rresp"), maxigp2_rlast("maxigp2_rlast"), maxigp2_rvalid("maxigp2_rvalid"), maxigp2_rready("maxigp2_rready"), maxigp2_awqos("maxigp2_awqos"), maxigp2_arqos("maxigp2_arqos"), pl_resetn0("pl_resetn0"), pl_clk0("pl_clk0")
 {
 
   // initialize pins
+  mp_impl->maxihpm1_fpd_aclk(maxihpm1_fpd_aclk);
   mp_impl->maxihpm0_lpd_aclk(maxihpm0_lpd_aclk);
   mp_impl->pl_resetn0(pl_resetn0);
   mp_impl->pl_clk0(pl_clk0);
 
   // initialize transactors
+  mp_M_AXI_HPM1_FPD_transactor = NULL;
   mp_M_AXI_HPM0_LPD_transactor = NULL;
 
   // initialize socket stubs
@@ -197,6 +295,100 @@ ps_block_zynq_ultra_ps_e_0_0::ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_mod
 
 void ps_block_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
 {
+  // configure 'M_AXI_HPM1_FPD' transactor
+
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("ps_block_zynq_ultra_ps_e_0_0", "M_AXI_HPM1_FPD_TLM_MODE") != 1)
+  {
+    // Instantiate Socket Stubs
+
+  // 'M_AXI_HPM1_FPD' transactor parameters
+    xsc::common_cpp::properties M_AXI_HPM1_FPD_transactor_param_props;
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("FREQ_HZ", "96968727");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("ID_WIDTH", "16");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("ADDR_WIDTH", "40");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("AWUSER_WIDTH", "16");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("ARUSER_WIDTH", "16");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("WUSER_WIDTH", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("RUSER_WIDTH", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("BUSER_WIDTH", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_BURST", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_LOCK", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_PROT", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_CACHE", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_QOS", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_REGION", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_WSTRB", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_BRESP", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_RRESP", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_READ_THREADS", "4");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_WRITE_THREADS", "4");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_SIZE", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_RESET", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addFloat("PHASE", "0.000");
+    M_AXI_HPM1_FPD_transactor_param_props.addString("PROTOCOL", "AXI4");
+    M_AXI_HPM1_FPD_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
+    M_AXI_HPM1_FPD_transactor_param_props.addString("CLK_DOMAIN", "ps_block_zynq_ultra_ps_e_0_0_pl_clk0");
+
+    mp_M_AXI_HPM1_FPD_transactor = new xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>("M_AXI_HPM1_FPD_transactor", M_AXI_HPM1_FPD_transactor_param_props);
+
+    // M_AXI_HPM1_FPD' transactor ports
+
+    mp_M_AXI_HPM1_FPD_transactor->AWID(maxigp1_awid);
+    mp_M_AXI_HPM1_FPD_transactor->AWADDR(maxigp1_awaddr);
+    mp_M_AXI_HPM1_FPD_transactor->AWLEN(maxigp1_awlen);
+    mp_M_AXI_HPM1_FPD_transactor->AWSIZE(maxigp1_awsize);
+    mp_M_AXI_HPM1_FPD_transactor->AWBURST(maxigp1_awburst);
+    mp_M_AXI_HPM1_FPD_transactor->AWLOCK(maxigp1_awlock);
+    mp_M_AXI_HPM1_FPD_transactor->AWCACHE(maxigp1_awcache);
+    mp_M_AXI_HPM1_FPD_transactor->AWPROT(maxigp1_awprot);
+    mp_M_AXI_HPM1_FPD_transactor->AWVALID(maxigp1_awvalid);
+    mp_M_AXI_HPM1_FPD_transactor->AWUSER(maxigp1_awuser);
+    mp_M_AXI_HPM1_FPD_transactor->AWREADY(maxigp1_awready);
+    mp_M_AXI_HPM1_FPD_transactor->WDATA(maxigp1_wdata);
+    mp_M_AXI_HPM1_FPD_transactor->WSTRB(maxigp1_wstrb);
+    mp_M_AXI_HPM1_FPD_transactor->WLAST(maxigp1_wlast);
+    mp_M_AXI_HPM1_FPD_transactor->WVALID(maxigp1_wvalid);
+    mp_M_AXI_HPM1_FPD_transactor->WREADY(maxigp1_wready);
+    mp_M_AXI_HPM1_FPD_transactor->BID(maxigp1_bid);
+    mp_M_AXI_HPM1_FPD_transactor->BRESP(maxigp1_bresp);
+    mp_M_AXI_HPM1_FPD_transactor->BVALID(maxigp1_bvalid);
+    mp_M_AXI_HPM1_FPD_transactor->BREADY(maxigp1_bready);
+    mp_M_AXI_HPM1_FPD_transactor->ARID(maxigp1_arid);
+    mp_M_AXI_HPM1_FPD_transactor->ARADDR(maxigp1_araddr);
+    mp_M_AXI_HPM1_FPD_transactor->ARLEN(maxigp1_arlen);
+    mp_M_AXI_HPM1_FPD_transactor->ARSIZE(maxigp1_arsize);
+    mp_M_AXI_HPM1_FPD_transactor->ARBURST(maxigp1_arburst);
+    mp_M_AXI_HPM1_FPD_transactor->ARLOCK(maxigp1_arlock);
+    mp_M_AXI_HPM1_FPD_transactor->ARCACHE(maxigp1_arcache);
+    mp_M_AXI_HPM1_FPD_transactor->ARPROT(maxigp1_arprot);
+    mp_M_AXI_HPM1_FPD_transactor->ARVALID(maxigp1_arvalid);
+    mp_M_AXI_HPM1_FPD_transactor->ARUSER(maxigp1_aruser);
+    mp_M_AXI_HPM1_FPD_transactor->ARREADY(maxigp1_arready);
+    mp_M_AXI_HPM1_FPD_transactor->RID(maxigp1_rid);
+    mp_M_AXI_HPM1_FPD_transactor->RDATA(maxigp1_rdata);
+    mp_M_AXI_HPM1_FPD_transactor->RRESP(maxigp1_rresp);
+    mp_M_AXI_HPM1_FPD_transactor->RLAST(maxigp1_rlast);
+    mp_M_AXI_HPM1_FPD_transactor->RVALID(maxigp1_rvalid);
+    mp_M_AXI_HPM1_FPD_transactor->RREADY(maxigp1_rready);
+    mp_M_AXI_HPM1_FPD_transactor->AWQOS(maxigp1_awqos);
+    mp_M_AXI_HPM1_FPD_transactor->ARQOS(maxigp1_arqos);
+    mp_M_AXI_HPM1_FPD_transactor->CLK(maxihpm1_fpd_aclk);
+    m_M_AXI_HPM1_FPD_transactor_rst_signal.write(1);
+    mp_M_AXI_HPM1_FPD_transactor->RST(m_M_AXI_HPM1_FPD_transactor_rst_signal);
+
+    // M_AXI_HPM1_FPD' transactor sockets
+
+    mp_impl->M_AXI_HPM1_FPD_rd_socket->bind(*(mp_M_AXI_HPM1_FPD_transactor->rd_socket));
+    mp_impl->M_AXI_HPM1_FPD_wr_socket->bind(*(mp_M_AXI_HPM1_FPD_transactor->wr_socket));
+  }
+
   // configure 'M_AXI_HPM0_LPD' transactor
 
   if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("ps_block_zynq_ultra_ps_e_0_0", "M_AXI_HPM0_LPD_TLM_MODE") != 1)
@@ -299,15 +491,17 @@ void ps_block_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
 
 
 #ifdef RIVIERA
-ps_block_zynq_ultra_ps_e_0_0::ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_module_name& nm) : ps_block_zynq_ultra_ps_e_0_0_sc(nm), maxihpm0_lpd_aclk("maxihpm0_lpd_aclk"), maxigp2_awid("maxigp2_awid"), maxigp2_awaddr("maxigp2_awaddr"), maxigp2_awlen("maxigp2_awlen"), maxigp2_awsize("maxigp2_awsize"), maxigp2_awburst("maxigp2_awburst"), maxigp2_awlock("maxigp2_awlock"), maxigp2_awcache("maxigp2_awcache"), maxigp2_awprot("maxigp2_awprot"), maxigp2_awvalid("maxigp2_awvalid"), maxigp2_awuser("maxigp2_awuser"), maxigp2_awready("maxigp2_awready"), maxigp2_wdata("maxigp2_wdata"), maxigp2_wstrb("maxigp2_wstrb"), maxigp2_wlast("maxigp2_wlast"), maxigp2_wvalid("maxigp2_wvalid"), maxigp2_wready("maxigp2_wready"), maxigp2_bid("maxigp2_bid"), maxigp2_bresp("maxigp2_bresp"), maxigp2_bvalid("maxigp2_bvalid"), maxigp2_bready("maxigp2_bready"), maxigp2_arid("maxigp2_arid"), maxigp2_araddr("maxigp2_araddr"), maxigp2_arlen("maxigp2_arlen"), maxigp2_arsize("maxigp2_arsize"), maxigp2_arburst("maxigp2_arburst"), maxigp2_arlock("maxigp2_arlock"), maxigp2_arcache("maxigp2_arcache"), maxigp2_arprot("maxigp2_arprot"), maxigp2_arvalid("maxigp2_arvalid"), maxigp2_aruser("maxigp2_aruser"), maxigp2_arready("maxigp2_arready"), maxigp2_rid("maxigp2_rid"), maxigp2_rdata("maxigp2_rdata"), maxigp2_rresp("maxigp2_rresp"), maxigp2_rlast("maxigp2_rlast"), maxigp2_rvalid("maxigp2_rvalid"), maxigp2_rready("maxigp2_rready"), maxigp2_awqos("maxigp2_awqos"), maxigp2_arqos("maxigp2_arqos"), pl_resetn0("pl_resetn0"), pl_clk0("pl_clk0")
+ps_block_zynq_ultra_ps_e_0_0::ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_module_name& nm) : ps_block_zynq_ultra_ps_e_0_0_sc(nm), maxihpm1_fpd_aclk("maxihpm1_fpd_aclk"), maxigp1_awid("maxigp1_awid"), maxigp1_awaddr("maxigp1_awaddr"), maxigp1_awlen("maxigp1_awlen"), maxigp1_awsize("maxigp1_awsize"), maxigp1_awburst("maxigp1_awburst"), maxigp1_awlock("maxigp1_awlock"), maxigp1_awcache("maxigp1_awcache"), maxigp1_awprot("maxigp1_awprot"), maxigp1_awvalid("maxigp1_awvalid"), maxigp1_awuser("maxigp1_awuser"), maxigp1_awready("maxigp1_awready"), maxigp1_wdata("maxigp1_wdata"), maxigp1_wstrb("maxigp1_wstrb"), maxigp1_wlast("maxigp1_wlast"), maxigp1_wvalid("maxigp1_wvalid"), maxigp1_wready("maxigp1_wready"), maxigp1_bid("maxigp1_bid"), maxigp1_bresp("maxigp1_bresp"), maxigp1_bvalid("maxigp1_bvalid"), maxigp1_bready("maxigp1_bready"), maxigp1_arid("maxigp1_arid"), maxigp1_araddr("maxigp1_araddr"), maxigp1_arlen("maxigp1_arlen"), maxigp1_arsize("maxigp1_arsize"), maxigp1_arburst("maxigp1_arburst"), maxigp1_arlock("maxigp1_arlock"), maxigp1_arcache("maxigp1_arcache"), maxigp1_arprot("maxigp1_arprot"), maxigp1_arvalid("maxigp1_arvalid"), maxigp1_aruser("maxigp1_aruser"), maxigp1_arready("maxigp1_arready"), maxigp1_rid("maxigp1_rid"), maxigp1_rdata("maxigp1_rdata"), maxigp1_rresp("maxigp1_rresp"), maxigp1_rlast("maxigp1_rlast"), maxigp1_rvalid("maxigp1_rvalid"), maxigp1_rready("maxigp1_rready"), maxigp1_awqos("maxigp1_awqos"), maxigp1_arqos("maxigp1_arqos"), maxihpm0_lpd_aclk("maxihpm0_lpd_aclk"), maxigp2_awid("maxigp2_awid"), maxigp2_awaddr("maxigp2_awaddr"), maxigp2_awlen("maxigp2_awlen"), maxigp2_awsize("maxigp2_awsize"), maxigp2_awburst("maxigp2_awburst"), maxigp2_awlock("maxigp2_awlock"), maxigp2_awcache("maxigp2_awcache"), maxigp2_awprot("maxigp2_awprot"), maxigp2_awvalid("maxigp2_awvalid"), maxigp2_awuser("maxigp2_awuser"), maxigp2_awready("maxigp2_awready"), maxigp2_wdata("maxigp2_wdata"), maxigp2_wstrb("maxigp2_wstrb"), maxigp2_wlast("maxigp2_wlast"), maxigp2_wvalid("maxigp2_wvalid"), maxigp2_wready("maxigp2_wready"), maxigp2_bid("maxigp2_bid"), maxigp2_bresp("maxigp2_bresp"), maxigp2_bvalid("maxigp2_bvalid"), maxigp2_bready("maxigp2_bready"), maxigp2_arid("maxigp2_arid"), maxigp2_araddr("maxigp2_araddr"), maxigp2_arlen("maxigp2_arlen"), maxigp2_arsize("maxigp2_arsize"), maxigp2_arburst("maxigp2_arburst"), maxigp2_arlock("maxigp2_arlock"), maxigp2_arcache("maxigp2_arcache"), maxigp2_arprot("maxigp2_arprot"), maxigp2_arvalid("maxigp2_arvalid"), maxigp2_aruser("maxigp2_aruser"), maxigp2_arready("maxigp2_arready"), maxigp2_rid("maxigp2_rid"), maxigp2_rdata("maxigp2_rdata"), maxigp2_rresp("maxigp2_rresp"), maxigp2_rlast("maxigp2_rlast"), maxigp2_rvalid("maxigp2_rvalid"), maxigp2_rready("maxigp2_rready"), maxigp2_awqos("maxigp2_awqos"), maxigp2_arqos("maxigp2_arqos"), pl_resetn0("pl_resetn0"), pl_clk0("pl_clk0")
 {
 
   // initialize pins
+  mp_impl->maxihpm1_fpd_aclk(maxihpm1_fpd_aclk);
   mp_impl->maxihpm0_lpd_aclk(maxihpm0_lpd_aclk);
   mp_impl->pl_resetn0(pl_resetn0);
   mp_impl->pl_clk0(pl_clk0);
 
   // initialize transactors
+  mp_M_AXI_HPM1_FPD_transactor = NULL;
   mp_M_AXI_HPM0_LPD_transactor = NULL;
 
   // initialize socket stubs
@@ -316,6 +510,100 @@ ps_block_zynq_ultra_ps_e_0_0::ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_mod
 
 void ps_block_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
 {
+  // configure 'M_AXI_HPM1_FPD' transactor
+
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("ps_block_zynq_ultra_ps_e_0_0", "M_AXI_HPM1_FPD_TLM_MODE") != 1)
+  {
+    // Instantiate Socket Stubs
+
+  // 'M_AXI_HPM1_FPD' transactor parameters
+    xsc::common_cpp::properties M_AXI_HPM1_FPD_transactor_param_props;
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("FREQ_HZ", "96968727");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("ID_WIDTH", "16");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("ADDR_WIDTH", "40");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("AWUSER_WIDTH", "16");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("ARUSER_WIDTH", "16");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("WUSER_WIDTH", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("RUSER_WIDTH", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("BUSER_WIDTH", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_BURST", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_LOCK", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_PROT", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_CACHE", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_QOS", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_REGION", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_WSTRB", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_BRESP", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_RRESP", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_READ_THREADS", "4");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_WRITE_THREADS", "4");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_SIZE", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_RESET", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addFloat("PHASE", "0.000");
+    M_AXI_HPM1_FPD_transactor_param_props.addString("PROTOCOL", "AXI4");
+    M_AXI_HPM1_FPD_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
+    M_AXI_HPM1_FPD_transactor_param_props.addString("CLK_DOMAIN", "ps_block_zynq_ultra_ps_e_0_0_pl_clk0");
+
+    mp_M_AXI_HPM1_FPD_transactor = new xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>("M_AXI_HPM1_FPD_transactor", M_AXI_HPM1_FPD_transactor_param_props);
+
+    // M_AXI_HPM1_FPD' transactor ports
+
+    mp_M_AXI_HPM1_FPD_transactor->AWID(maxigp1_awid);
+    mp_M_AXI_HPM1_FPD_transactor->AWADDR(maxigp1_awaddr);
+    mp_M_AXI_HPM1_FPD_transactor->AWLEN(maxigp1_awlen);
+    mp_M_AXI_HPM1_FPD_transactor->AWSIZE(maxigp1_awsize);
+    mp_M_AXI_HPM1_FPD_transactor->AWBURST(maxigp1_awburst);
+    mp_M_AXI_HPM1_FPD_transactor->AWLOCK(maxigp1_awlock);
+    mp_M_AXI_HPM1_FPD_transactor->AWCACHE(maxigp1_awcache);
+    mp_M_AXI_HPM1_FPD_transactor->AWPROT(maxigp1_awprot);
+    mp_M_AXI_HPM1_FPD_transactor->AWVALID(maxigp1_awvalid);
+    mp_M_AXI_HPM1_FPD_transactor->AWUSER(maxigp1_awuser);
+    mp_M_AXI_HPM1_FPD_transactor->AWREADY(maxigp1_awready);
+    mp_M_AXI_HPM1_FPD_transactor->WDATA(maxigp1_wdata);
+    mp_M_AXI_HPM1_FPD_transactor->WSTRB(maxigp1_wstrb);
+    mp_M_AXI_HPM1_FPD_transactor->WLAST(maxigp1_wlast);
+    mp_M_AXI_HPM1_FPD_transactor->WVALID(maxigp1_wvalid);
+    mp_M_AXI_HPM1_FPD_transactor->WREADY(maxigp1_wready);
+    mp_M_AXI_HPM1_FPD_transactor->BID(maxigp1_bid);
+    mp_M_AXI_HPM1_FPD_transactor->BRESP(maxigp1_bresp);
+    mp_M_AXI_HPM1_FPD_transactor->BVALID(maxigp1_bvalid);
+    mp_M_AXI_HPM1_FPD_transactor->BREADY(maxigp1_bready);
+    mp_M_AXI_HPM1_FPD_transactor->ARID(maxigp1_arid);
+    mp_M_AXI_HPM1_FPD_transactor->ARADDR(maxigp1_araddr);
+    mp_M_AXI_HPM1_FPD_transactor->ARLEN(maxigp1_arlen);
+    mp_M_AXI_HPM1_FPD_transactor->ARSIZE(maxigp1_arsize);
+    mp_M_AXI_HPM1_FPD_transactor->ARBURST(maxigp1_arburst);
+    mp_M_AXI_HPM1_FPD_transactor->ARLOCK(maxigp1_arlock);
+    mp_M_AXI_HPM1_FPD_transactor->ARCACHE(maxigp1_arcache);
+    mp_M_AXI_HPM1_FPD_transactor->ARPROT(maxigp1_arprot);
+    mp_M_AXI_HPM1_FPD_transactor->ARVALID(maxigp1_arvalid);
+    mp_M_AXI_HPM1_FPD_transactor->ARUSER(maxigp1_aruser);
+    mp_M_AXI_HPM1_FPD_transactor->ARREADY(maxigp1_arready);
+    mp_M_AXI_HPM1_FPD_transactor->RID(maxigp1_rid);
+    mp_M_AXI_HPM1_FPD_transactor->RDATA(maxigp1_rdata);
+    mp_M_AXI_HPM1_FPD_transactor->RRESP(maxigp1_rresp);
+    mp_M_AXI_HPM1_FPD_transactor->RLAST(maxigp1_rlast);
+    mp_M_AXI_HPM1_FPD_transactor->RVALID(maxigp1_rvalid);
+    mp_M_AXI_HPM1_FPD_transactor->RREADY(maxigp1_rready);
+    mp_M_AXI_HPM1_FPD_transactor->AWQOS(maxigp1_awqos);
+    mp_M_AXI_HPM1_FPD_transactor->ARQOS(maxigp1_arqos);
+    mp_M_AXI_HPM1_FPD_transactor->CLK(maxihpm1_fpd_aclk);
+    m_M_AXI_HPM1_FPD_transactor_rst_signal.write(1);
+    mp_M_AXI_HPM1_FPD_transactor->RST(m_M_AXI_HPM1_FPD_transactor_rst_signal);
+
+    // M_AXI_HPM1_FPD' transactor sockets
+
+    mp_impl->M_AXI_HPM1_FPD_rd_socket->bind(*(mp_M_AXI_HPM1_FPD_transactor->rd_socket));
+    mp_impl->M_AXI_HPM1_FPD_wr_socket->bind(*(mp_M_AXI_HPM1_FPD_transactor->wr_socket));
+  }
+
   // configure 'M_AXI_HPM0_LPD' transactor
 
   if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("ps_block_zynq_ultra_ps_e_0_0", "M_AXI_HPM0_LPD_TLM_MODE") != 1)
@@ -418,16 +706,97 @@ void ps_block_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
 
 
 #ifdef VCSSYSTEMC
-ps_block_zynq_ultra_ps_e_0_0::ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_module_name& nm) : ps_block_zynq_ultra_ps_e_0_0_sc(nm),  maxihpm0_lpd_aclk("maxihpm0_lpd_aclk"), maxigp2_awid("maxigp2_awid"), maxigp2_awaddr("maxigp2_awaddr"), maxigp2_awlen("maxigp2_awlen"), maxigp2_awsize("maxigp2_awsize"), maxigp2_awburst("maxigp2_awburst"), maxigp2_awlock("maxigp2_awlock"), maxigp2_awcache("maxigp2_awcache"), maxigp2_awprot("maxigp2_awprot"), maxigp2_awvalid("maxigp2_awvalid"), maxigp2_awuser("maxigp2_awuser"), maxigp2_awready("maxigp2_awready"), maxigp2_wdata("maxigp2_wdata"), maxigp2_wstrb("maxigp2_wstrb"), maxigp2_wlast("maxigp2_wlast"), maxigp2_wvalid("maxigp2_wvalid"), maxigp2_wready("maxigp2_wready"), maxigp2_bid("maxigp2_bid"), maxigp2_bresp("maxigp2_bresp"), maxigp2_bvalid("maxigp2_bvalid"), maxigp2_bready("maxigp2_bready"), maxigp2_arid("maxigp2_arid"), maxigp2_araddr("maxigp2_araddr"), maxigp2_arlen("maxigp2_arlen"), maxigp2_arsize("maxigp2_arsize"), maxigp2_arburst("maxigp2_arburst"), maxigp2_arlock("maxigp2_arlock"), maxigp2_arcache("maxigp2_arcache"), maxigp2_arprot("maxigp2_arprot"), maxigp2_arvalid("maxigp2_arvalid"), maxigp2_aruser("maxigp2_aruser"), maxigp2_arready("maxigp2_arready"), maxigp2_rid("maxigp2_rid"), maxigp2_rdata("maxigp2_rdata"), maxigp2_rresp("maxigp2_rresp"), maxigp2_rlast("maxigp2_rlast"), maxigp2_rvalid("maxigp2_rvalid"), maxigp2_rready("maxigp2_rready"), maxigp2_awqos("maxigp2_awqos"), maxigp2_arqos("maxigp2_arqos"), pl_resetn0("pl_resetn0"), pl_clk0("pl_clk0")
+ps_block_zynq_ultra_ps_e_0_0::ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_module_name& nm) : ps_block_zynq_ultra_ps_e_0_0_sc(nm),  maxihpm1_fpd_aclk("maxihpm1_fpd_aclk"), maxigp1_awid("maxigp1_awid"), maxigp1_awaddr("maxigp1_awaddr"), maxigp1_awlen("maxigp1_awlen"), maxigp1_awsize("maxigp1_awsize"), maxigp1_awburst("maxigp1_awburst"), maxigp1_awlock("maxigp1_awlock"), maxigp1_awcache("maxigp1_awcache"), maxigp1_awprot("maxigp1_awprot"), maxigp1_awvalid("maxigp1_awvalid"), maxigp1_awuser("maxigp1_awuser"), maxigp1_awready("maxigp1_awready"), maxigp1_wdata("maxigp1_wdata"), maxigp1_wstrb("maxigp1_wstrb"), maxigp1_wlast("maxigp1_wlast"), maxigp1_wvalid("maxigp1_wvalid"), maxigp1_wready("maxigp1_wready"), maxigp1_bid("maxigp1_bid"), maxigp1_bresp("maxigp1_bresp"), maxigp1_bvalid("maxigp1_bvalid"), maxigp1_bready("maxigp1_bready"), maxigp1_arid("maxigp1_arid"), maxigp1_araddr("maxigp1_araddr"), maxigp1_arlen("maxigp1_arlen"), maxigp1_arsize("maxigp1_arsize"), maxigp1_arburst("maxigp1_arburst"), maxigp1_arlock("maxigp1_arlock"), maxigp1_arcache("maxigp1_arcache"), maxigp1_arprot("maxigp1_arprot"), maxigp1_arvalid("maxigp1_arvalid"), maxigp1_aruser("maxigp1_aruser"), maxigp1_arready("maxigp1_arready"), maxigp1_rid("maxigp1_rid"), maxigp1_rdata("maxigp1_rdata"), maxigp1_rresp("maxigp1_rresp"), maxigp1_rlast("maxigp1_rlast"), maxigp1_rvalid("maxigp1_rvalid"), maxigp1_rready("maxigp1_rready"), maxigp1_awqos("maxigp1_awqos"), maxigp1_arqos("maxigp1_arqos"), maxihpm0_lpd_aclk("maxihpm0_lpd_aclk"), maxigp2_awid("maxigp2_awid"), maxigp2_awaddr("maxigp2_awaddr"), maxigp2_awlen("maxigp2_awlen"), maxigp2_awsize("maxigp2_awsize"), maxigp2_awburst("maxigp2_awburst"), maxigp2_awlock("maxigp2_awlock"), maxigp2_awcache("maxigp2_awcache"), maxigp2_awprot("maxigp2_awprot"), maxigp2_awvalid("maxigp2_awvalid"), maxigp2_awuser("maxigp2_awuser"), maxigp2_awready("maxigp2_awready"), maxigp2_wdata("maxigp2_wdata"), maxigp2_wstrb("maxigp2_wstrb"), maxigp2_wlast("maxigp2_wlast"), maxigp2_wvalid("maxigp2_wvalid"), maxigp2_wready("maxigp2_wready"), maxigp2_bid("maxigp2_bid"), maxigp2_bresp("maxigp2_bresp"), maxigp2_bvalid("maxigp2_bvalid"), maxigp2_bready("maxigp2_bready"), maxigp2_arid("maxigp2_arid"), maxigp2_araddr("maxigp2_araddr"), maxigp2_arlen("maxigp2_arlen"), maxigp2_arsize("maxigp2_arsize"), maxigp2_arburst("maxigp2_arburst"), maxigp2_arlock("maxigp2_arlock"), maxigp2_arcache("maxigp2_arcache"), maxigp2_arprot("maxigp2_arprot"), maxigp2_arvalid("maxigp2_arvalid"), maxigp2_aruser("maxigp2_aruser"), maxigp2_arready("maxigp2_arready"), maxigp2_rid("maxigp2_rid"), maxigp2_rdata("maxigp2_rdata"), maxigp2_rresp("maxigp2_rresp"), maxigp2_rlast("maxigp2_rlast"), maxigp2_rvalid("maxigp2_rvalid"), maxigp2_rready("maxigp2_rready"), maxigp2_awqos("maxigp2_awqos"), maxigp2_arqos("maxigp2_arqos"), pl_resetn0("pl_resetn0"), pl_clk0("pl_clk0")
 {
   // initialize pins
+  mp_impl->maxihpm1_fpd_aclk(maxihpm1_fpd_aclk);
   mp_impl->maxihpm0_lpd_aclk(maxihpm0_lpd_aclk);
   mp_impl->pl_resetn0(pl_resetn0);
   mp_impl->pl_clk0(pl_clk0);
 
   // initialize transactors
+  mp_M_AXI_HPM1_FPD_transactor = NULL;
   mp_M_AXI_HPM0_LPD_transactor = NULL;
   // Instantiate Socket Stubs
+
+  // configure M_AXI_HPM1_FPD_transactor
+    xsc::common_cpp::properties M_AXI_HPM1_FPD_transactor_param_props;
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("FREQ_HZ", "96968727");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("ID_WIDTH", "16");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("ADDR_WIDTH", "40");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("AWUSER_WIDTH", "16");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("ARUSER_WIDTH", "16");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("WUSER_WIDTH", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("RUSER_WIDTH", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("BUSER_WIDTH", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_BURST", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_LOCK", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_PROT", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_CACHE", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_QOS", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_REGION", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_WSTRB", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_BRESP", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_RRESP", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_READ_THREADS", "4");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_WRITE_THREADS", "4");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_SIZE", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_RESET", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addFloat("PHASE", "0.000");
+    M_AXI_HPM1_FPD_transactor_param_props.addString("PROTOCOL", "AXI4");
+    M_AXI_HPM1_FPD_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
+    M_AXI_HPM1_FPD_transactor_param_props.addString("CLK_DOMAIN", "ps_block_zynq_ultra_ps_e_0_0_pl_clk0");
+
+    mp_M_AXI_HPM1_FPD_transactor = new xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>("M_AXI_HPM1_FPD_transactor", M_AXI_HPM1_FPD_transactor_param_props);
+  mp_M_AXI_HPM1_FPD_transactor->AWID(maxigp1_awid);
+  mp_M_AXI_HPM1_FPD_transactor->AWADDR(maxigp1_awaddr);
+  mp_M_AXI_HPM1_FPD_transactor->AWLEN(maxigp1_awlen);
+  mp_M_AXI_HPM1_FPD_transactor->AWSIZE(maxigp1_awsize);
+  mp_M_AXI_HPM1_FPD_transactor->AWBURST(maxigp1_awburst);
+  mp_M_AXI_HPM1_FPD_transactor->AWLOCK(maxigp1_awlock);
+  mp_M_AXI_HPM1_FPD_transactor->AWCACHE(maxigp1_awcache);
+  mp_M_AXI_HPM1_FPD_transactor->AWPROT(maxigp1_awprot);
+  mp_M_AXI_HPM1_FPD_transactor->AWVALID(maxigp1_awvalid);
+  mp_M_AXI_HPM1_FPD_transactor->AWUSER(maxigp1_awuser);
+  mp_M_AXI_HPM1_FPD_transactor->AWREADY(maxigp1_awready);
+  mp_M_AXI_HPM1_FPD_transactor->WDATA(maxigp1_wdata);
+  mp_M_AXI_HPM1_FPD_transactor->WSTRB(maxigp1_wstrb);
+  mp_M_AXI_HPM1_FPD_transactor->WLAST(maxigp1_wlast);
+  mp_M_AXI_HPM1_FPD_transactor->WVALID(maxigp1_wvalid);
+  mp_M_AXI_HPM1_FPD_transactor->WREADY(maxigp1_wready);
+  mp_M_AXI_HPM1_FPD_transactor->BID(maxigp1_bid);
+  mp_M_AXI_HPM1_FPD_transactor->BRESP(maxigp1_bresp);
+  mp_M_AXI_HPM1_FPD_transactor->BVALID(maxigp1_bvalid);
+  mp_M_AXI_HPM1_FPD_transactor->BREADY(maxigp1_bready);
+  mp_M_AXI_HPM1_FPD_transactor->ARID(maxigp1_arid);
+  mp_M_AXI_HPM1_FPD_transactor->ARADDR(maxigp1_araddr);
+  mp_M_AXI_HPM1_FPD_transactor->ARLEN(maxigp1_arlen);
+  mp_M_AXI_HPM1_FPD_transactor->ARSIZE(maxigp1_arsize);
+  mp_M_AXI_HPM1_FPD_transactor->ARBURST(maxigp1_arburst);
+  mp_M_AXI_HPM1_FPD_transactor->ARLOCK(maxigp1_arlock);
+  mp_M_AXI_HPM1_FPD_transactor->ARCACHE(maxigp1_arcache);
+  mp_M_AXI_HPM1_FPD_transactor->ARPROT(maxigp1_arprot);
+  mp_M_AXI_HPM1_FPD_transactor->ARVALID(maxigp1_arvalid);
+  mp_M_AXI_HPM1_FPD_transactor->ARUSER(maxigp1_aruser);
+  mp_M_AXI_HPM1_FPD_transactor->ARREADY(maxigp1_arready);
+  mp_M_AXI_HPM1_FPD_transactor->RID(maxigp1_rid);
+  mp_M_AXI_HPM1_FPD_transactor->RDATA(maxigp1_rdata);
+  mp_M_AXI_HPM1_FPD_transactor->RRESP(maxigp1_rresp);
+  mp_M_AXI_HPM1_FPD_transactor->RLAST(maxigp1_rlast);
+  mp_M_AXI_HPM1_FPD_transactor->RVALID(maxigp1_rvalid);
+  mp_M_AXI_HPM1_FPD_transactor->RREADY(maxigp1_rready);
+  mp_M_AXI_HPM1_FPD_transactor->AWQOS(maxigp1_awqos);
+  mp_M_AXI_HPM1_FPD_transactor->ARQOS(maxigp1_arqos);
+  mp_M_AXI_HPM1_FPD_transactor->CLK(maxihpm1_fpd_aclk);
+  m_M_AXI_HPM1_FPD_transactor_rst_signal.write(1);
+  mp_M_AXI_HPM1_FPD_transactor->RST(m_M_AXI_HPM1_FPD_transactor_rst_signal);
 
   // configure M_AXI_HPM0_LPD_transactor
     xsc::common_cpp::properties M_AXI_HPM0_LPD_transactor_param_props;
@@ -510,6 +879,8 @@ ps_block_zynq_ultra_ps_e_0_0::ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_mod
 
 
   // initialize transactors stubs
+  M_AXI_HPM1_FPD_transactor_initiator_wr_socket_stub = nullptr;
+  M_AXI_HPM1_FPD_transactor_initiator_rd_socket_stub = nullptr;
   M_AXI_HPM0_LPD_transactor_initiator_wr_socket_stub = nullptr;
   M_AXI_HPM0_LPD_transactor_initiator_rd_socket_stub = nullptr;
 
@@ -517,6 +888,21 @@ ps_block_zynq_ultra_ps_e_0_0::ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_mod
 
 void ps_block_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
 {
+  // configure 'M_AXI_HPM1_FPD' transactor
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("ps_block_zynq_ultra_ps_e_0_0", "M_AXI_HPM1_FPD_TLM_MODE") != 1)
+  {
+    mp_impl->M_AXI_HPM1_FPD_rd_socket->bind(*(mp_M_AXI_HPM1_FPD_transactor->rd_socket));
+    mp_impl->M_AXI_HPM1_FPD_wr_socket->bind(*(mp_M_AXI_HPM1_FPD_transactor->wr_socket));
+  }
+  else
+  {
+    M_AXI_HPM1_FPD_transactor_initiator_wr_socket_stub = new xtlm::xtlm_aximm_initiator_stub("wr_socket",0);
+    M_AXI_HPM1_FPD_transactor_initiator_wr_socket_stub->bind(*(mp_M_AXI_HPM1_FPD_transactor->wr_socket));
+    M_AXI_HPM1_FPD_transactor_initiator_rd_socket_stub = new xtlm::xtlm_aximm_initiator_stub("rd_socket",0);
+    M_AXI_HPM1_FPD_transactor_initiator_rd_socket_stub->bind(*(mp_M_AXI_HPM1_FPD_transactor->rd_socket));
+    mp_M_AXI_HPM1_FPD_transactor->disable_transactor();
+  }
+
   // configure 'M_AXI_HPM0_LPD' transactor
   if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("ps_block_zynq_ultra_ps_e_0_0", "M_AXI_HPM0_LPD_TLM_MODE") != 1)
   {
@@ -540,16 +926,97 @@ void ps_block_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
 
 
 #ifdef MTI_SYSTEMC
-ps_block_zynq_ultra_ps_e_0_0::ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_module_name& nm) : ps_block_zynq_ultra_ps_e_0_0_sc(nm),  maxihpm0_lpd_aclk("maxihpm0_lpd_aclk"), maxigp2_awid("maxigp2_awid"), maxigp2_awaddr("maxigp2_awaddr"), maxigp2_awlen("maxigp2_awlen"), maxigp2_awsize("maxigp2_awsize"), maxigp2_awburst("maxigp2_awburst"), maxigp2_awlock("maxigp2_awlock"), maxigp2_awcache("maxigp2_awcache"), maxigp2_awprot("maxigp2_awprot"), maxigp2_awvalid("maxigp2_awvalid"), maxigp2_awuser("maxigp2_awuser"), maxigp2_awready("maxigp2_awready"), maxigp2_wdata("maxigp2_wdata"), maxigp2_wstrb("maxigp2_wstrb"), maxigp2_wlast("maxigp2_wlast"), maxigp2_wvalid("maxigp2_wvalid"), maxigp2_wready("maxigp2_wready"), maxigp2_bid("maxigp2_bid"), maxigp2_bresp("maxigp2_bresp"), maxigp2_bvalid("maxigp2_bvalid"), maxigp2_bready("maxigp2_bready"), maxigp2_arid("maxigp2_arid"), maxigp2_araddr("maxigp2_araddr"), maxigp2_arlen("maxigp2_arlen"), maxigp2_arsize("maxigp2_arsize"), maxigp2_arburst("maxigp2_arburst"), maxigp2_arlock("maxigp2_arlock"), maxigp2_arcache("maxigp2_arcache"), maxigp2_arprot("maxigp2_arprot"), maxigp2_arvalid("maxigp2_arvalid"), maxigp2_aruser("maxigp2_aruser"), maxigp2_arready("maxigp2_arready"), maxigp2_rid("maxigp2_rid"), maxigp2_rdata("maxigp2_rdata"), maxigp2_rresp("maxigp2_rresp"), maxigp2_rlast("maxigp2_rlast"), maxigp2_rvalid("maxigp2_rvalid"), maxigp2_rready("maxigp2_rready"), maxigp2_awqos("maxigp2_awqos"), maxigp2_arqos("maxigp2_arqos"), pl_resetn0("pl_resetn0"), pl_clk0("pl_clk0")
+ps_block_zynq_ultra_ps_e_0_0::ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_module_name& nm) : ps_block_zynq_ultra_ps_e_0_0_sc(nm),  maxihpm1_fpd_aclk("maxihpm1_fpd_aclk"), maxigp1_awid("maxigp1_awid"), maxigp1_awaddr("maxigp1_awaddr"), maxigp1_awlen("maxigp1_awlen"), maxigp1_awsize("maxigp1_awsize"), maxigp1_awburst("maxigp1_awburst"), maxigp1_awlock("maxigp1_awlock"), maxigp1_awcache("maxigp1_awcache"), maxigp1_awprot("maxigp1_awprot"), maxigp1_awvalid("maxigp1_awvalid"), maxigp1_awuser("maxigp1_awuser"), maxigp1_awready("maxigp1_awready"), maxigp1_wdata("maxigp1_wdata"), maxigp1_wstrb("maxigp1_wstrb"), maxigp1_wlast("maxigp1_wlast"), maxigp1_wvalid("maxigp1_wvalid"), maxigp1_wready("maxigp1_wready"), maxigp1_bid("maxigp1_bid"), maxigp1_bresp("maxigp1_bresp"), maxigp1_bvalid("maxigp1_bvalid"), maxigp1_bready("maxigp1_bready"), maxigp1_arid("maxigp1_arid"), maxigp1_araddr("maxigp1_araddr"), maxigp1_arlen("maxigp1_arlen"), maxigp1_arsize("maxigp1_arsize"), maxigp1_arburst("maxigp1_arburst"), maxigp1_arlock("maxigp1_arlock"), maxigp1_arcache("maxigp1_arcache"), maxigp1_arprot("maxigp1_arprot"), maxigp1_arvalid("maxigp1_arvalid"), maxigp1_aruser("maxigp1_aruser"), maxigp1_arready("maxigp1_arready"), maxigp1_rid("maxigp1_rid"), maxigp1_rdata("maxigp1_rdata"), maxigp1_rresp("maxigp1_rresp"), maxigp1_rlast("maxigp1_rlast"), maxigp1_rvalid("maxigp1_rvalid"), maxigp1_rready("maxigp1_rready"), maxigp1_awqos("maxigp1_awqos"), maxigp1_arqos("maxigp1_arqos"), maxihpm0_lpd_aclk("maxihpm0_lpd_aclk"), maxigp2_awid("maxigp2_awid"), maxigp2_awaddr("maxigp2_awaddr"), maxigp2_awlen("maxigp2_awlen"), maxigp2_awsize("maxigp2_awsize"), maxigp2_awburst("maxigp2_awburst"), maxigp2_awlock("maxigp2_awlock"), maxigp2_awcache("maxigp2_awcache"), maxigp2_awprot("maxigp2_awprot"), maxigp2_awvalid("maxigp2_awvalid"), maxigp2_awuser("maxigp2_awuser"), maxigp2_awready("maxigp2_awready"), maxigp2_wdata("maxigp2_wdata"), maxigp2_wstrb("maxigp2_wstrb"), maxigp2_wlast("maxigp2_wlast"), maxigp2_wvalid("maxigp2_wvalid"), maxigp2_wready("maxigp2_wready"), maxigp2_bid("maxigp2_bid"), maxigp2_bresp("maxigp2_bresp"), maxigp2_bvalid("maxigp2_bvalid"), maxigp2_bready("maxigp2_bready"), maxigp2_arid("maxigp2_arid"), maxigp2_araddr("maxigp2_araddr"), maxigp2_arlen("maxigp2_arlen"), maxigp2_arsize("maxigp2_arsize"), maxigp2_arburst("maxigp2_arburst"), maxigp2_arlock("maxigp2_arlock"), maxigp2_arcache("maxigp2_arcache"), maxigp2_arprot("maxigp2_arprot"), maxigp2_arvalid("maxigp2_arvalid"), maxigp2_aruser("maxigp2_aruser"), maxigp2_arready("maxigp2_arready"), maxigp2_rid("maxigp2_rid"), maxigp2_rdata("maxigp2_rdata"), maxigp2_rresp("maxigp2_rresp"), maxigp2_rlast("maxigp2_rlast"), maxigp2_rvalid("maxigp2_rvalid"), maxigp2_rready("maxigp2_rready"), maxigp2_awqos("maxigp2_awqos"), maxigp2_arqos("maxigp2_arqos"), pl_resetn0("pl_resetn0"), pl_clk0("pl_clk0")
 {
   // initialize pins
+  mp_impl->maxihpm1_fpd_aclk(maxihpm1_fpd_aclk);
   mp_impl->maxihpm0_lpd_aclk(maxihpm0_lpd_aclk);
   mp_impl->pl_resetn0(pl_resetn0);
   mp_impl->pl_clk0(pl_clk0);
 
   // initialize transactors
+  mp_M_AXI_HPM1_FPD_transactor = NULL;
   mp_M_AXI_HPM0_LPD_transactor = NULL;
   // Instantiate Socket Stubs
+
+  // configure M_AXI_HPM1_FPD_transactor
+    xsc::common_cpp::properties M_AXI_HPM1_FPD_transactor_param_props;
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("DATA_WIDTH", "128");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("FREQ_HZ", "96968727");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("ID_WIDTH", "16");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("ADDR_WIDTH", "40");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("AWUSER_WIDTH", "16");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("ARUSER_WIDTH", "16");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("WUSER_WIDTH", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("RUSER_WIDTH", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("BUSER_WIDTH", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_BURST", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_LOCK", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_PROT", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_CACHE", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_QOS", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_REGION", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_WSTRB", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_BRESP", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_RRESP", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("MAX_BURST_LENGTH", "256");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_READ_THREADS", "4");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("NUM_WRITE_THREADS", "4");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_SIZE", "1");
+    M_AXI_HPM1_FPD_transactor_param_props.addLong("HAS_RESET", "0");
+    M_AXI_HPM1_FPD_transactor_param_props.addFloat("PHASE", "0.000");
+    M_AXI_HPM1_FPD_transactor_param_props.addString("PROTOCOL", "AXI4");
+    M_AXI_HPM1_FPD_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
+    M_AXI_HPM1_FPD_transactor_param_props.addString("CLK_DOMAIN", "ps_block_zynq_ultra_ps_e_0_0_pl_clk0");
+
+    mp_M_AXI_HPM1_FPD_transactor = new xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>("M_AXI_HPM1_FPD_transactor", M_AXI_HPM1_FPD_transactor_param_props);
+  mp_M_AXI_HPM1_FPD_transactor->AWID(maxigp1_awid);
+  mp_M_AXI_HPM1_FPD_transactor->AWADDR(maxigp1_awaddr);
+  mp_M_AXI_HPM1_FPD_transactor->AWLEN(maxigp1_awlen);
+  mp_M_AXI_HPM1_FPD_transactor->AWSIZE(maxigp1_awsize);
+  mp_M_AXI_HPM1_FPD_transactor->AWBURST(maxigp1_awburst);
+  mp_M_AXI_HPM1_FPD_transactor->AWLOCK(maxigp1_awlock);
+  mp_M_AXI_HPM1_FPD_transactor->AWCACHE(maxigp1_awcache);
+  mp_M_AXI_HPM1_FPD_transactor->AWPROT(maxigp1_awprot);
+  mp_M_AXI_HPM1_FPD_transactor->AWVALID(maxigp1_awvalid);
+  mp_M_AXI_HPM1_FPD_transactor->AWUSER(maxigp1_awuser);
+  mp_M_AXI_HPM1_FPD_transactor->AWREADY(maxigp1_awready);
+  mp_M_AXI_HPM1_FPD_transactor->WDATA(maxigp1_wdata);
+  mp_M_AXI_HPM1_FPD_transactor->WSTRB(maxigp1_wstrb);
+  mp_M_AXI_HPM1_FPD_transactor->WLAST(maxigp1_wlast);
+  mp_M_AXI_HPM1_FPD_transactor->WVALID(maxigp1_wvalid);
+  mp_M_AXI_HPM1_FPD_transactor->WREADY(maxigp1_wready);
+  mp_M_AXI_HPM1_FPD_transactor->BID(maxigp1_bid);
+  mp_M_AXI_HPM1_FPD_transactor->BRESP(maxigp1_bresp);
+  mp_M_AXI_HPM1_FPD_transactor->BVALID(maxigp1_bvalid);
+  mp_M_AXI_HPM1_FPD_transactor->BREADY(maxigp1_bready);
+  mp_M_AXI_HPM1_FPD_transactor->ARID(maxigp1_arid);
+  mp_M_AXI_HPM1_FPD_transactor->ARADDR(maxigp1_araddr);
+  mp_M_AXI_HPM1_FPD_transactor->ARLEN(maxigp1_arlen);
+  mp_M_AXI_HPM1_FPD_transactor->ARSIZE(maxigp1_arsize);
+  mp_M_AXI_HPM1_FPD_transactor->ARBURST(maxigp1_arburst);
+  mp_M_AXI_HPM1_FPD_transactor->ARLOCK(maxigp1_arlock);
+  mp_M_AXI_HPM1_FPD_transactor->ARCACHE(maxigp1_arcache);
+  mp_M_AXI_HPM1_FPD_transactor->ARPROT(maxigp1_arprot);
+  mp_M_AXI_HPM1_FPD_transactor->ARVALID(maxigp1_arvalid);
+  mp_M_AXI_HPM1_FPD_transactor->ARUSER(maxigp1_aruser);
+  mp_M_AXI_HPM1_FPD_transactor->ARREADY(maxigp1_arready);
+  mp_M_AXI_HPM1_FPD_transactor->RID(maxigp1_rid);
+  mp_M_AXI_HPM1_FPD_transactor->RDATA(maxigp1_rdata);
+  mp_M_AXI_HPM1_FPD_transactor->RRESP(maxigp1_rresp);
+  mp_M_AXI_HPM1_FPD_transactor->RLAST(maxigp1_rlast);
+  mp_M_AXI_HPM1_FPD_transactor->RVALID(maxigp1_rvalid);
+  mp_M_AXI_HPM1_FPD_transactor->RREADY(maxigp1_rready);
+  mp_M_AXI_HPM1_FPD_transactor->AWQOS(maxigp1_awqos);
+  mp_M_AXI_HPM1_FPD_transactor->ARQOS(maxigp1_arqos);
+  mp_M_AXI_HPM1_FPD_transactor->CLK(maxihpm1_fpd_aclk);
+  m_M_AXI_HPM1_FPD_transactor_rst_signal.write(1);
+  mp_M_AXI_HPM1_FPD_transactor->RST(m_M_AXI_HPM1_FPD_transactor_rst_signal);
 
   // configure M_AXI_HPM0_LPD_transactor
     xsc::common_cpp::properties M_AXI_HPM0_LPD_transactor_param_props;
@@ -632,6 +1099,8 @@ ps_block_zynq_ultra_ps_e_0_0::ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_mod
 
 
   // initialize transactors stubs
+  M_AXI_HPM1_FPD_transactor_initiator_wr_socket_stub = nullptr;
+  M_AXI_HPM1_FPD_transactor_initiator_rd_socket_stub = nullptr;
   M_AXI_HPM0_LPD_transactor_initiator_wr_socket_stub = nullptr;
   M_AXI_HPM0_LPD_transactor_initiator_rd_socket_stub = nullptr;
 
@@ -639,6 +1108,21 @@ ps_block_zynq_ultra_ps_e_0_0::ps_block_zynq_ultra_ps_e_0_0(const sc_core::sc_mod
 
 void ps_block_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
 {
+  // configure 'M_AXI_HPM1_FPD' transactor
+  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("ps_block_zynq_ultra_ps_e_0_0", "M_AXI_HPM1_FPD_TLM_MODE") != 1)
+  {
+    mp_impl->M_AXI_HPM1_FPD_rd_socket->bind(*(mp_M_AXI_HPM1_FPD_transactor->rd_socket));
+    mp_impl->M_AXI_HPM1_FPD_wr_socket->bind(*(mp_M_AXI_HPM1_FPD_transactor->wr_socket));
+  }
+  else
+  {
+    M_AXI_HPM1_FPD_transactor_initiator_wr_socket_stub = new xtlm::xtlm_aximm_initiator_stub("wr_socket",0);
+    M_AXI_HPM1_FPD_transactor_initiator_wr_socket_stub->bind(*(mp_M_AXI_HPM1_FPD_transactor->wr_socket));
+    M_AXI_HPM1_FPD_transactor_initiator_rd_socket_stub = new xtlm::xtlm_aximm_initiator_stub("rd_socket",0);
+    M_AXI_HPM1_FPD_transactor_initiator_rd_socket_stub->bind(*(mp_M_AXI_HPM1_FPD_transactor->rd_socket));
+    mp_M_AXI_HPM1_FPD_transactor->disable_transactor();
+  }
+
   // configure 'M_AXI_HPM0_LPD' transactor
   if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("ps_block_zynq_ultra_ps_e_0_0", "M_AXI_HPM0_LPD_TLM_MODE") != 1)
   {
@@ -663,6 +1147,8 @@ void ps_block_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
 
 ps_block_zynq_ultra_ps_e_0_0::~ps_block_zynq_ultra_ps_e_0_0()
 {
+  delete mp_M_AXI_HPM1_FPD_transactor;
+
   delete mp_M_AXI_HPM0_LPD_transactor;
 
 }
@@ -677,6 +1163,6 @@ XMSC_MODULE_EXPORT(ps_block_zynq_ultra_ps_e_0_0);
 
 #ifdef RIVIERA
 SC_MODULE_EXPORT(ps_block_zynq_ultra_ps_e_0_0);
-SC_REGISTER_BV(40);
+SC_REGISTER_BV(128);
 #endif
 

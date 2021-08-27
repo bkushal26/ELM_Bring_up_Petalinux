@@ -124,6 +124,7 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 1
   set_param power.BramSDPPropagationFix 1
+  set_param xicom.use_bs_reader 1
   set_param power.enableUnconnectedCarry8PinPower 1
   set_param power.enableCarry8RouteBelPower 1
   set_param power.enableLutRouteBelPower 1
@@ -135,7 +136,10 @@ OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/wt [current_project]
   set_property parent.project_path /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.xpr [current_project]
-  set_property ip_repo_paths /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmwovio/clkTestElm [current_project]
+  set_property ip_repo_paths {
+  /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmwovio/clkTestElm
+  /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/customReg/ip_repo
+} [current_project]
   update_ip_catalog
   set_property ip_output_repo /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
@@ -148,7 +152,7 @@ OPTRACE "add files" START { }
   add_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/constrs_1/new/elmXdc.xdc
+  read_xdc /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/constrs_1/new/elmXDC.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

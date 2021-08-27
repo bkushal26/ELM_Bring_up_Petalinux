@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# clktestTop
+# clkTestTop
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -164,38 +164,53 @@ proc create_root_design { parentCell } {
   # Create interface ports
 
   # Create ports
-  set fclkn_1 [ create_bd_port -dir I fclkn_1 ]
-  set fclkp_1 [ create_bd_port -dir I fclkp_1 ]
-  set gth_refClkN_i_1 [ create_bd_port -dir I -from 1 -to 0 gth_refClkN_i_1 ]
-  set gth_refClkP_i_1 [ create_bd_port -dir I -from 1 -to 0 gth_refClkP_i_1 ]
+  set fclkn_0 [ create_bd_port -dir I fclkn_0 ]
+  set fclkp_0 [ create_bd_port -dir I fclkp_0 ]
+  set gth_refClkN_i_0 [ create_bd_port -dir I -from 1 -to 0 gth_refClkN_i_0 ]
+  set gth_refClkP_i_0 [ create_bd_port -dir I -from 1 -to 0 gth_refClkP_i_0 ]
 
-  # Create instance: axi_gpio_0, and set properties
-  set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
-  set_property -dict [ list \
-   CONFIG.C_ALL_INPUTS {1} \
-   CONFIG.C_ALL_INPUTS_2 {1} \
-   CONFIG.C_IS_DUAL {1} \
- ] $axi_gpio_0
-
-  # Create instance: clktestTop_1, and set properties
-  set block_name clktestTop
-  set block_cell_name clktestTop_1
-  if { [catch {set clktestTop_1 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+  # Create instance: clkTestTop_0, and set properties
+  set block_name clkTestTop
+  set block_cell_name clkTestTop_0
+  if { [catch {set clkTestTop_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
-   } elseif { $clktestTop_1 eq "" } {
+   } elseif { $clkTestTop_0 eq "" } {
      catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
   
+  # Create instance: debug_bridge_0, and set properties
+  set debug_bridge_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:debug_bridge:3.0 debug_bridge_0 ]
+  set_property -dict [ list \
+   CONFIG.C_BSCAN_MUX {1} \
+   CONFIG.C_DEBUG_MODE {2} \
+   CONFIG.C_NUM_BS_MASTER {1} \
+   CONFIG.C_XVC_HW_ID {0x0001} \
+ ] $debug_bridge_0
+
+  # Create instance: debug_bridge_1, and set properties
+  set debug_bridge_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:debug_bridge:3.0 debug_bridge_1 ]
+
   # Create instance: ps8_0_axi_periph, and set properties
   set ps8_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ps8_0_axi_periph ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {1} \
+   CONFIG.NUM_MI {3} \
+   CONFIG.NUM_SI {2} \
  ] $ps8_0_axi_periph
+
+  # Create instance: reg64_0, and set properties
+  set reg64_0 [ create_bd_cell -type ip -vlnv user.org:user:reg64:1.0 reg64_0 ]
 
   # Create instance: rst_ps8_0_96M, and set properties
   set rst_ps8_0_96M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps8_0_96M ]
+
+  # Create instance: vio_0, and set properties
+  set vio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:vio:3.0 vio_0 ]
+  set_property -dict [ list \
+   CONFIG.C_NUM_PROBE_IN {2} \
+   CONFIG.C_NUM_PROBE_OUT {0} \
+ ] $vio_0
 
   # Create instance: zynq_ultra_ps_e_0, and set properties
   set zynq_ultra_ps_e_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.3 zynq_ultra_ps_e_0 ]
@@ -1642,7 +1657,7 @@ proc create_root_design { parentCell } {
    CONFIG.PSU__USE__IRQ0 {0} \
    CONFIG.PSU__USE__IRQ1 {0} \
    CONFIG.PSU__USE__M_AXI_GP0 {0} \
-   CONFIG.PSU__USE__M_AXI_GP1 {0} \
+   CONFIG.PSU__USE__M_AXI_GP1 {1} \
    CONFIG.PSU__USE__M_AXI_GP2 {1} \
    CONFIG.PSU__USE__PROC_EVENT_BUS {0} \
    CONFIG.PSU__USE__RPU_LEGACY_INTERRUPT {0} \
@@ -1688,22 +1703,38 @@ proc create_root_design { parentCell } {
  ] $zynq_ultra_ps_e_0
 
   # Create interface connections
-  connect_bd_intf_net -intf_net ps8_0_axi_periph_M00_AXI [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins ps8_0_axi_periph/M00_AXI]
+  connect_bd_intf_net -intf_net debug_bridge_0_m0_bscan [get_bd_intf_pins debug_bridge_0/m0_bscan] [get_bd_intf_pins debug_bridge_1/S_BSCAN]
+  connect_bd_intf_net -intf_net ps8_0_axi_periph_M01_AXI [get_bd_intf_pins debug_bridge_0/S_AXI] [get_bd_intf_pins ps8_0_axi_periph/M01_AXI]
+  connect_bd_intf_net -intf_net ps8_0_axi_periph_M02_AXI [get_bd_intf_pins ps8_0_axi_periph/M02_AXI] [get_bd_intf_pins reg64_0/S00_AXI]
   connect_bd_intf_net -intf_net zynq_ultra_ps_e_0_M_AXI_HPM0_LPD [get_bd_intf_pins ps8_0_axi_periph/S00_AXI] [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM0_LPD]
+  connect_bd_intf_net -intf_net zynq_ultra_ps_e_0_M_AXI_HPM1_FPD [get_bd_intf_pins ps8_0_axi_periph/S01_AXI] [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM1_FPD]
 
   # Create port connections
-  connect_bd_net -net clktestTop_1_freq_O1 [get_bd_pins axi_gpio_0/gpio_io_i] [get_bd_pins clktestTop_1/freq_O1]
-  connect_bd_net -net clktestTop_1_freq_O2 [get_bd_pins axi_gpio_0/gpio2_io_i] [get_bd_pins clktestTop_1/freq_O2]
-  connect_bd_net -net fclkn_1_1 [get_bd_ports fclkn_1] [get_bd_pins clktestTop_1/fclkn]
-  connect_bd_net -net fclkp_1_1 [get_bd_ports fclkp_1] [get_bd_pins clktestTop_1/fclkp]
-  connect_bd_net -net gth_refClkN_i_1_1 [get_bd_ports gth_refClkN_i_1] [get_bd_pins clktestTop_1/gth_refClkN_i]
-  connect_bd_net -net gth_refClkP_i_1_1 [get_bd_ports gth_refClkP_i_1] [get_bd_pins clktestTop_1/gth_refClkP_i]
-  connect_bd_net -net rst_ps8_0_96M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins ps8_0_axi_periph/ARESETN] [get_bd_pins ps8_0_axi_periph/M00_ARESETN] [get_bd_pins ps8_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps8_0_96M/peripheral_aresetn]
-  connect_bd_net -net zynq_ultra_ps_e_0_pl_clk0 [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins ps8_0_axi_periph/ACLK] [get_bd_pins ps8_0_axi_periph/M00_ACLK] [get_bd_pins ps8_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps8_0_96M/slowest_sync_clk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_lpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
+  connect_bd_net -net clkTestTop_0_fclk_p [get_bd_pins clkTestTop_0/fclk_p] [get_bd_pins vio_0/clk]
+  connect_bd_net -net clkTestTop_0_freq_11 [get_bd_pins clkTestTop_0/freq_11] [get_bd_pins reg64_0/clk11_reg]
+  connect_bd_net -net clkTestTop_0_freq_12 [get_bd_pins clkTestTop_0/freq_12] [get_bd_pins reg64_0/clk12_reg]
+  connect_bd_net -net clkTestTop_0_freq_1O [get_bd_pins clkTestTop_0/freq_1O] [get_bd_pins reg64_0/clk10_reg]
+  connect_bd_net -net clkTestTop_0_freq_O1 [get_bd_pins clkTestTop_0/freq_O1] [get_bd_pins reg64_0/clk1_reg] [get_bd_pins vio_0/probe_in0]
+  connect_bd_net -net clkTestTop_0_freq_O2 [get_bd_pins clkTestTop_0/freq_O2] [get_bd_pins reg64_0/clk2_reg] [get_bd_pins vio_0/probe_in1]
+  connect_bd_net -net clkTestTop_0_freq_O3 [get_bd_pins clkTestTop_0/freq_O3] [get_bd_pins reg64_0/clk3_reg]
+  connect_bd_net -net clkTestTop_0_freq_O4 [get_bd_pins clkTestTop_0/freq_O4] [get_bd_pins reg64_0/clk4_reg]
+  connect_bd_net -net clkTestTop_0_freq_O5 [get_bd_pins clkTestTop_0/freq_O5] [get_bd_pins reg64_0/clk5_reg]
+  connect_bd_net -net clkTestTop_0_freq_O6 [get_bd_pins clkTestTop_0/freq_O6] [get_bd_pins reg64_0/clk6_reg]
+  connect_bd_net -net clkTestTop_0_freq_O7 [get_bd_pins clkTestTop_0/freq_O7] [get_bd_pins reg64_0/clk7_reg]
+  connect_bd_net -net clkTestTop_0_freq_O8 [get_bd_pins clkTestTop_0/freq_O8] [get_bd_pins reg64_0/clk8_reg]
+  connect_bd_net -net clkTestTop_0_freq_O9 [get_bd_pins clkTestTop_0/freq_O9] [get_bd_pins reg64_0/clk9_reg]
+  connect_bd_net -net fclkn_0_1 [get_bd_ports fclkn_0] [get_bd_pins clkTestTop_0/fclkn]
+  connect_bd_net -net fclkp_0_1 [get_bd_ports fclkp_0] [get_bd_pins clkTestTop_0/fclkp]
+  connect_bd_net -net gth_refClkN_i_0_1 [get_bd_ports gth_refClkN_i_0] [get_bd_pins clkTestTop_0/gth_refClkN_i]
+  connect_bd_net -net gth_refClkP_i_0_1 [get_bd_ports gth_refClkP_i_0] [get_bd_pins clkTestTop_0/gth_refClkP_i]
+  connect_bd_net -net reg64_0_ctl_slv_reg0 [get_bd_pins reg64_0/ctl_slv_reg0]
+  connect_bd_net -net rst_ps8_0_96M_peripheral_aresetn [get_bd_pins debug_bridge_0/s_axi_aresetn] [get_bd_pins ps8_0_axi_periph/ARESETN] [get_bd_pins ps8_0_axi_periph/M00_ARESETN] [get_bd_pins ps8_0_axi_periph/M01_ARESETN] [get_bd_pins ps8_0_axi_periph/M02_ARESETN] [get_bd_pins ps8_0_axi_periph/S00_ARESETN] [get_bd_pins ps8_0_axi_periph/S01_ARESETN] [get_bd_pins reg64_0/s00_axi_aresetn] [get_bd_pins rst_ps8_0_96M/peripheral_aresetn]
+  connect_bd_net -net zynq_ultra_ps_e_0_pl_clk0 [get_bd_pins debug_bridge_0/s_axi_aclk] [get_bd_pins debug_bridge_1/clk] [get_bd_pins ps8_0_axi_periph/ACLK] [get_bd_pins ps8_0_axi_periph/M00_ACLK] [get_bd_pins ps8_0_axi_periph/M01_ACLK] [get_bd_pins ps8_0_axi_periph/M02_ACLK] [get_bd_pins ps8_0_axi_periph/S00_ACLK] [get_bd_pins ps8_0_axi_periph/S01_ACLK] [get_bd_pins reg64_0/s00_axi_aclk] [get_bd_pins rst_ps8_0_96M/slowest_sync_clk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_lpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm1_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
   connect_bd_net -net zynq_ultra_ps_e_0_pl_resetn0 [get_bd_pins rst_ps8_0_96M/ext_reset_in] [get_bd_pins zynq_ultra_ps_e_0/pl_resetn0]
 
   # Create address segments
-  assign_bd_address -offset 0x80000000 -range 0x00010000 -target_address_space [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] -force
+  assign_bd_address -offset 0x80010000 -range 0x00010000 -target_address_space [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs debug_bridge_0/S_AXI/Reg0] -force
+  assign_bd_address -offset 0x80020000 -range 0x00010000 -target_address_space [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs reg64_0/S00_AXI/S00_AXI_reg] -force
 
 
   # Restore current instance

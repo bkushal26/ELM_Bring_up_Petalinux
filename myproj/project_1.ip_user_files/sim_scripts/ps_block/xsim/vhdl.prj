@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../bd/ps_block/ip/ps_block_rst_ps8_0_96M_0/sim/ps_block_rst_ps8_0_96M_0.vhd" \
+"../../../bd/ps_block/ip/ps_block_debug_bridge_0_1/bd_0/ip/ip_1/sim/bd_5559_bsip_0.vhd" \
+
+nosort

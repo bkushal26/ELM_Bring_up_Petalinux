@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Fri Jul 16 08:30:20 2021
-# Process ID: 1832671
+# Start of session at: Wed Aug 25 04:31:21 2021
+# Process ID: 1491230
 # Current directory: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.runs/synth_1
 # Command line: vivado -log ps_block_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ps_block_wrapper.tcl
 # Log file: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.runs/synth_1/ps_block_wrapper.vds

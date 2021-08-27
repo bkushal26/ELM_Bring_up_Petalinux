@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2020.1 (64-bit)                     -->
+<!--                                                              -->
+<!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.        -->
+
+<hwsession version="1" minor="2">
+  <device name="debug_bridge_0" gui_info=""/>
+  <ObjectList object_type="hw_device" gui_info="">
+    <Object name="debug_bridge_0" gui_info="">
+      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/debug_nets.ltx"/>
+      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/debug_nets.ltx"/>
+    </Object>
+    <Object name="xc7a35t_0" gui_info="">
+      <Properties Property="FULL_PROBES.FILE" value=""/>
+      <Properties Property="PROBES.FILE" value=""/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/ps_block_wrapper.bit"/>
+      <Properties Property="SLR.COUNT" value="1"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_probe" gui_info="">
+    <Object name="ps_block_i/clkTestTop_0_freq_O1[31:0]" gui_info="hw_vios/hw_vio_1=0"/>
+    <Object name="ps_block_i/clkTestTop_0_freq_O2[31:0]" gui_info="hw_vios/hw_vio_1=1"/>
+  </ObjectList>
+  <probeset name="hw project" active="false">
+    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="UNSIGNED"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[31]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[30]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[29]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[28]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[27]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[26]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[25]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[24]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[23]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[22]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[21]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[20]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[19]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[18]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[17]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[16]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[15]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[14]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[13]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[12]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[11]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[10]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[9]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[8]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[7]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[6]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[5]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[4]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[3]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[2]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[1]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O1[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="UNSIGNED"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[31]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[30]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[29]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[28]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[27]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[26]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[25]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[24]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[23]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[22]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[21]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[20]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[19]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[18]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[17]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[16]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[15]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[14]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[13]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[12]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[11]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[10]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[9]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[8]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[7]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[6]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[5]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[4]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[3]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[2]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[1]"/>
+        <net name="ps_block_i/clkTestTop_0_freq_O2[0]"/>
+      </nets>
+    </probe>
+  </probeset>
+</hwsession>

@@ -80,6 +80,46 @@ public:
 
   // module pin-to-pin RTL interface
 
+  sc_core::sc_in< bool > maxihpm1_fpd_aclk;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_awid;
+  sc_core::sc_out< sc_dt::sc_bv<40> > maxigp1_awaddr;
+  sc_core::sc_out< sc_dt::sc_bv<8> > maxigp1_awlen;
+  sc_core::sc_out< sc_dt::sc_bv<3> > maxigp1_awsize;
+  sc_core::sc_out< sc_dt::sc_bv<2> > maxigp1_awburst;
+  sc_core::sc_out< bool > maxigp1_awlock;
+  sc_core::sc_out< sc_dt::sc_bv<4> > maxigp1_awcache;
+  sc_core::sc_out< sc_dt::sc_bv<3> > maxigp1_awprot;
+  sc_core::sc_out< bool > maxigp1_awvalid;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_awuser;
+  sc_core::sc_in< bool > maxigp1_awready;
+  sc_core::sc_out< sc_dt::sc_bv<128> > maxigp1_wdata;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_wstrb;
+  sc_core::sc_out< bool > maxigp1_wlast;
+  sc_core::sc_out< bool > maxigp1_wvalid;
+  sc_core::sc_in< bool > maxigp1_wready;
+  sc_core::sc_in< sc_dt::sc_bv<16> > maxigp1_bid;
+  sc_core::sc_in< sc_dt::sc_bv<2> > maxigp1_bresp;
+  sc_core::sc_in< bool > maxigp1_bvalid;
+  sc_core::sc_out< bool > maxigp1_bready;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_arid;
+  sc_core::sc_out< sc_dt::sc_bv<40> > maxigp1_araddr;
+  sc_core::sc_out< sc_dt::sc_bv<8> > maxigp1_arlen;
+  sc_core::sc_out< sc_dt::sc_bv<3> > maxigp1_arsize;
+  sc_core::sc_out< sc_dt::sc_bv<2> > maxigp1_arburst;
+  sc_core::sc_out< bool > maxigp1_arlock;
+  sc_core::sc_out< sc_dt::sc_bv<4> > maxigp1_arcache;
+  sc_core::sc_out< sc_dt::sc_bv<3> > maxigp1_arprot;
+  sc_core::sc_out< bool > maxigp1_arvalid;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_aruser;
+  sc_core::sc_in< bool > maxigp1_arready;
+  sc_core::sc_in< sc_dt::sc_bv<16> > maxigp1_rid;
+  sc_core::sc_in< sc_dt::sc_bv<128> > maxigp1_rdata;
+  sc_core::sc_in< sc_dt::sc_bv<2> > maxigp1_rresp;
+  sc_core::sc_in< bool > maxigp1_rlast;
+  sc_core::sc_in< bool > maxigp1_rvalid;
+  sc_core::sc_out< bool > maxigp1_rready;
+  sc_core::sc_out< sc_dt::sc_bv<4> > maxigp1_awqos;
+  sc_core::sc_out< sc_dt::sc_bv<4> > maxigp1_arqos;
   sc_core::sc_in< bool > maxihpm0_lpd_aclk;
   sc_core::sc_out< sc_dt::sc_bv<16> > maxigp2_awid;
   sc_core::sc_out< sc_dt::sc_bv<40> > maxigp2_awaddr;
@@ -129,6 +169,8 @@ protected:
 
 private:
 
+  xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>* mp_M_AXI_HPM1_FPD_transactor;
+  sc_signal< bool > m_M_AXI_HPM1_FPD_transactor_rst_signal;
   xtlm::xaximm_xtlm2pin_t<32,40,16,16,1,1,16,1>* mp_M_AXI_HPM0_LPD_transactor;
   sc_signal< bool > m_M_AXI_HPM0_LPD_transactor_rst_signal;
 
@@ -148,6 +190,46 @@ public:
 
   // module pin-to-pin RTL interface
 
+  sc_core::sc_in< bool > maxihpm1_fpd_aclk;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_awid;
+  sc_core::sc_out< sc_dt::sc_bv<40> > maxigp1_awaddr;
+  sc_core::sc_out< sc_dt::sc_bv<8> > maxigp1_awlen;
+  sc_core::sc_out< sc_dt::sc_bv<3> > maxigp1_awsize;
+  sc_core::sc_out< sc_dt::sc_bv<2> > maxigp1_awburst;
+  sc_core::sc_out< bool > maxigp1_awlock;
+  sc_core::sc_out< sc_dt::sc_bv<4> > maxigp1_awcache;
+  sc_core::sc_out< sc_dt::sc_bv<3> > maxigp1_awprot;
+  sc_core::sc_out< bool > maxigp1_awvalid;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_awuser;
+  sc_core::sc_in< bool > maxigp1_awready;
+  sc_core::sc_out< sc_dt::sc_bv<128> > maxigp1_wdata;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_wstrb;
+  sc_core::sc_out< bool > maxigp1_wlast;
+  sc_core::sc_out< bool > maxigp1_wvalid;
+  sc_core::sc_in< bool > maxigp1_wready;
+  sc_core::sc_in< sc_dt::sc_bv<16> > maxigp1_bid;
+  sc_core::sc_in< sc_dt::sc_bv<2> > maxigp1_bresp;
+  sc_core::sc_in< bool > maxigp1_bvalid;
+  sc_core::sc_out< bool > maxigp1_bready;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_arid;
+  sc_core::sc_out< sc_dt::sc_bv<40> > maxigp1_araddr;
+  sc_core::sc_out< sc_dt::sc_bv<8> > maxigp1_arlen;
+  sc_core::sc_out< sc_dt::sc_bv<3> > maxigp1_arsize;
+  sc_core::sc_out< sc_dt::sc_bv<2> > maxigp1_arburst;
+  sc_core::sc_out< bool > maxigp1_arlock;
+  sc_core::sc_out< sc_dt::sc_bv<4> > maxigp1_arcache;
+  sc_core::sc_out< sc_dt::sc_bv<3> > maxigp1_arprot;
+  sc_core::sc_out< bool > maxigp1_arvalid;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_aruser;
+  sc_core::sc_in< bool > maxigp1_arready;
+  sc_core::sc_in< sc_dt::sc_bv<16> > maxigp1_rid;
+  sc_core::sc_in< sc_dt::sc_bv<128> > maxigp1_rdata;
+  sc_core::sc_in< sc_dt::sc_bv<2> > maxigp1_rresp;
+  sc_core::sc_in< bool > maxigp1_rlast;
+  sc_core::sc_in< bool > maxigp1_rvalid;
+  sc_core::sc_out< bool > maxigp1_rready;
+  sc_core::sc_out< sc_dt::sc_bv<4> > maxigp1_awqos;
+  sc_core::sc_out< sc_dt::sc_bv<4> > maxigp1_arqos;
   sc_core::sc_in< bool > maxihpm0_lpd_aclk;
   sc_core::sc_out< sc_dt::sc_bv<16> > maxigp2_awid;
   sc_core::sc_out< sc_dt::sc_bv<40> > maxigp2_awaddr;
@@ -197,6 +279,8 @@ protected:
 
 private:
 
+  xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>* mp_M_AXI_HPM1_FPD_transactor;
+  sc_signal< bool > m_M_AXI_HPM1_FPD_transactor_rst_signal;
   xtlm::xaximm_xtlm2pin_t<32,40,16,16,1,1,16,1>* mp_M_AXI_HPM0_LPD_transactor;
   sc_signal< bool > m_M_AXI_HPM0_LPD_transactor_rst_signal;
 
@@ -216,6 +300,46 @@ public:
 
   // module pin-to-pin RTL interface
 
+  sc_core::sc_in< bool > maxihpm1_fpd_aclk;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_awid;
+  sc_core::sc_out< sc_dt::sc_bv<40> > maxigp1_awaddr;
+  sc_core::sc_out< sc_dt::sc_bv<8> > maxigp1_awlen;
+  sc_core::sc_out< sc_dt::sc_bv<3> > maxigp1_awsize;
+  sc_core::sc_out< sc_dt::sc_bv<2> > maxigp1_awburst;
+  sc_core::sc_out< bool > maxigp1_awlock;
+  sc_core::sc_out< sc_dt::sc_bv<4> > maxigp1_awcache;
+  sc_core::sc_out< sc_dt::sc_bv<3> > maxigp1_awprot;
+  sc_core::sc_out< bool > maxigp1_awvalid;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_awuser;
+  sc_core::sc_in< bool > maxigp1_awready;
+  sc_core::sc_out< sc_dt::sc_bv<128> > maxigp1_wdata;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_wstrb;
+  sc_core::sc_out< bool > maxigp1_wlast;
+  sc_core::sc_out< bool > maxigp1_wvalid;
+  sc_core::sc_in< bool > maxigp1_wready;
+  sc_core::sc_in< sc_dt::sc_bv<16> > maxigp1_bid;
+  sc_core::sc_in< sc_dt::sc_bv<2> > maxigp1_bresp;
+  sc_core::sc_in< bool > maxigp1_bvalid;
+  sc_core::sc_out< bool > maxigp1_bready;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_arid;
+  sc_core::sc_out< sc_dt::sc_bv<40> > maxigp1_araddr;
+  sc_core::sc_out< sc_dt::sc_bv<8> > maxigp1_arlen;
+  sc_core::sc_out< sc_dt::sc_bv<3> > maxigp1_arsize;
+  sc_core::sc_out< sc_dt::sc_bv<2> > maxigp1_arburst;
+  sc_core::sc_out< bool > maxigp1_arlock;
+  sc_core::sc_out< sc_dt::sc_bv<4> > maxigp1_arcache;
+  sc_core::sc_out< sc_dt::sc_bv<3> > maxigp1_arprot;
+  sc_core::sc_out< bool > maxigp1_arvalid;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_aruser;
+  sc_core::sc_in< bool > maxigp1_arready;
+  sc_core::sc_in< sc_dt::sc_bv<16> > maxigp1_rid;
+  sc_core::sc_in< sc_dt::sc_bv<128> > maxigp1_rdata;
+  sc_core::sc_in< sc_dt::sc_bv<2> > maxigp1_rresp;
+  sc_core::sc_in< bool > maxigp1_rlast;
+  sc_core::sc_in< bool > maxigp1_rvalid;
+  sc_core::sc_out< bool > maxigp1_rready;
+  sc_core::sc_out< sc_dt::sc_bv<4> > maxigp1_awqos;
+  sc_core::sc_out< sc_dt::sc_bv<4> > maxigp1_arqos;
   sc_core::sc_in< bool > maxihpm0_lpd_aclk;
   sc_core::sc_out< sc_dt::sc_bv<16> > maxigp2_awid;
   sc_core::sc_out< sc_dt::sc_bv<40> > maxigp2_awaddr;
@@ -265,6 +389,8 @@ protected:
 
 private:
 
+  xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>* mp_M_AXI_HPM1_FPD_transactor;
+  sc_signal< bool > m_M_AXI_HPM1_FPD_transactor_rst_signal;
   xtlm::xaximm_xtlm2pin_t<32,40,16,16,1,1,16,1>* mp_M_AXI_HPM0_LPD_transactor;
   sc_signal< bool > m_M_AXI_HPM0_LPD_transactor_rst_signal;
 
@@ -286,6 +412,46 @@ public:
 
   // module pin-to-pin RTL interface
 
+  sc_core::sc_in< bool > maxihpm1_fpd_aclk;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_awid;
+  sc_core::sc_out< sc_dt::sc_bv<40> > maxigp1_awaddr;
+  sc_core::sc_out< sc_dt::sc_bv<8> > maxigp1_awlen;
+  sc_core::sc_out< sc_dt::sc_bv<3> > maxigp1_awsize;
+  sc_core::sc_out< sc_dt::sc_bv<2> > maxigp1_awburst;
+  sc_core::sc_out< bool > maxigp1_awlock;
+  sc_core::sc_out< sc_dt::sc_bv<4> > maxigp1_awcache;
+  sc_core::sc_out< sc_dt::sc_bv<3> > maxigp1_awprot;
+  sc_core::sc_out< bool > maxigp1_awvalid;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_awuser;
+  sc_core::sc_in< bool > maxigp1_awready;
+  sc_core::sc_out< sc_dt::sc_bv<128> > maxigp1_wdata;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_wstrb;
+  sc_core::sc_out< bool > maxigp1_wlast;
+  sc_core::sc_out< bool > maxigp1_wvalid;
+  sc_core::sc_in< bool > maxigp1_wready;
+  sc_core::sc_in< sc_dt::sc_bv<16> > maxigp1_bid;
+  sc_core::sc_in< sc_dt::sc_bv<2> > maxigp1_bresp;
+  sc_core::sc_in< bool > maxigp1_bvalid;
+  sc_core::sc_out< bool > maxigp1_bready;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_arid;
+  sc_core::sc_out< sc_dt::sc_bv<40> > maxigp1_araddr;
+  sc_core::sc_out< sc_dt::sc_bv<8> > maxigp1_arlen;
+  sc_core::sc_out< sc_dt::sc_bv<3> > maxigp1_arsize;
+  sc_core::sc_out< sc_dt::sc_bv<2> > maxigp1_arburst;
+  sc_core::sc_out< bool > maxigp1_arlock;
+  sc_core::sc_out< sc_dt::sc_bv<4> > maxigp1_arcache;
+  sc_core::sc_out< sc_dt::sc_bv<3> > maxigp1_arprot;
+  sc_core::sc_out< bool > maxigp1_arvalid;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_aruser;
+  sc_core::sc_in< bool > maxigp1_arready;
+  sc_core::sc_in< sc_dt::sc_bv<16> > maxigp1_rid;
+  sc_core::sc_in< sc_dt::sc_bv<128> > maxigp1_rdata;
+  sc_core::sc_in< sc_dt::sc_bv<2> > maxigp1_rresp;
+  sc_core::sc_in< bool > maxigp1_rlast;
+  sc_core::sc_in< bool > maxigp1_rvalid;
+  sc_core::sc_out< bool > maxigp1_rready;
+  sc_core::sc_out< sc_dt::sc_bv<4> > maxigp1_awqos;
+  sc_core::sc_out< sc_dt::sc_bv<4> > maxigp1_arqos;
   sc_core::sc_in< bool > maxihpm0_lpd_aclk;
   sc_core::sc_out< sc_dt::sc_bv<16> > maxigp2_awid;
   sc_core::sc_out< sc_dt::sc_bv<40> > maxigp2_awaddr;
@@ -335,12 +501,16 @@ protected:
 
 private:
 
+  xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>* mp_M_AXI_HPM1_FPD_transactor;
+  sc_signal< bool > m_M_AXI_HPM1_FPD_transactor_rst_signal;
   xtlm::xaximm_xtlm2pin_t<32,40,16,16,1,1,16,1>* mp_M_AXI_HPM0_LPD_transactor;
   sc_signal< bool > m_M_AXI_HPM0_LPD_transactor_rst_signal;
 
   // Transactor stubs
   xtlm::xtlm_aximm_initiator_stub * M_AXI_HPM0_LPD_transactor_initiator_rd_socket_stub;
   xtlm::xtlm_aximm_initiator_stub * M_AXI_HPM0_LPD_transactor_initiator_wr_socket_stub;
+  xtlm::xtlm_aximm_initiator_stub * M_AXI_HPM1_FPD_transactor_initiator_rd_socket_stub;
+  xtlm::xtlm_aximm_initiator_stub * M_AXI_HPM1_FPD_transactor_initiator_wr_socket_stub;
 
   // Socket stubs
 
@@ -362,6 +532,46 @@ public:
 
   // module pin-to-pin RTL interface
 
+  sc_core::sc_in< bool > maxihpm1_fpd_aclk;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_awid;
+  sc_core::sc_out< sc_dt::sc_bv<40> > maxigp1_awaddr;
+  sc_core::sc_out< sc_dt::sc_bv<8> > maxigp1_awlen;
+  sc_core::sc_out< sc_dt::sc_bv<3> > maxigp1_awsize;
+  sc_core::sc_out< sc_dt::sc_bv<2> > maxigp1_awburst;
+  sc_core::sc_out< bool > maxigp1_awlock;
+  sc_core::sc_out< sc_dt::sc_bv<4> > maxigp1_awcache;
+  sc_core::sc_out< sc_dt::sc_bv<3> > maxigp1_awprot;
+  sc_core::sc_out< bool > maxigp1_awvalid;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_awuser;
+  sc_core::sc_in< bool > maxigp1_awready;
+  sc_core::sc_out< sc_dt::sc_bv<128> > maxigp1_wdata;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_wstrb;
+  sc_core::sc_out< bool > maxigp1_wlast;
+  sc_core::sc_out< bool > maxigp1_wvalid;
+  sc_core::sc_in< bool > maxigp1_wready;
+  sc_core::sc_in< sc_dt::sc_bv<16> > maxigp1_bid;
+  sc_core::sc_in< sc_dt::sc_bv<2> > maxigp1_bresp;
+  sc_core::sc_in< bool > maxigp1_bvalid;
+  sc_core::sc_out< bool > maxigp1_bready;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_arid;
+  sc_core::sc_out< sc_dt::sc_bv<40> > maxigp1_araddr;
+  sc_core::sc_out< sc_dt::sc_bv<8> > maxigp1_arlen;
+  sc_core::sc_out< sc_dt::sc_bv<3> > maxigp1_arsize;
+  sc_core::sc_out< sc_dt::sc_bv<2> > maxigp1_arburst;
+  sc_core::sc_out< bool > maxigp1_arlock;
+  sc_core::sc_out< sc_dt::sc_bv<4> > maxigp1_arcache;
+  sc_core::sc_out< sc_dt::sc_bv<3> > maxigp1_arprot;
+  sc_core::sc_out< bool > maxigp1_arvalid;
+  sc_core::sc_out< sc_dt::sc_bv<16> > maxigp1_aruser;
+  sc_core::sc_in< bool > maxigp1_arready;
+  sc_core::sc_in< sc_dt::sc_bv<16> > maxigp1_rid;
+  sc_core::sc_in< sc_dt::sc_bv<128> > maxigp1_rdata;
+  sc_core::sc_in< sc_dt::sc_bv<2> > maxigp1_rresp;
+  sc_core::sc_in< bool > maxigp1_rlast;
+  sc_core::sc_in< bool > maxigp1_rvalid;
+  sc_core::sc_out< bool > maxigp1_rready;
+  sc_core::sc_out< sc_dt::sc_bv<4> > maxigp1_awqos;
+  sc_core::sc_out< sc_dt::sc_bv<4> > maxigp1_arqos;
   sc_core::sc_in< bool > maxihpm0_lpd_aclk;
   sc_core::sc_out< sc_dt::sc_bv<16> > maxigp2_awid;
   sc_core::sc_out< sc_dt::sc_bv<40> > maxigp2_awaddr;
@@ -411,12 +621,16 @@ protected:
 
 private:
 
+  xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>* mp_M_AXI_HPM1_FPD_transactor;
+  sc_signal< bool > m_M_AXI_HPM1_FPD_transactor_rst_signal;
   xtlm::xaximm_xtlm2pin_t<32,40,16,16,1,1,16,1>* mp_M_AXI_HPM0_LPD_transactor;
   sc_signal< bool > m_M_AXI_HPM0_LPD_transactor_rst_signal;
 
   // Transactor stubs
   xtlm::xtlm_aximm_initiator_stub * M_AXI_HPM0_LPD_transactor_initiator_rd_socket_stub;
   xtlm::xtlm_aximm_initiator_stub * M_AXI_HPM0_LPD_transactor_initiator_wr_socket_stub;
+  xtlm::xtlm_aximm_initiator_stub * M_AXI_HPM1_FPD_transactor_initiator_rd_socket_stub;
+  xtlm::xtlm_aximm_initiator_stub * M_AXI_HPM1_FPD_transactor_initiator_wr_socket_stub;
 
   // Socket stubs
 

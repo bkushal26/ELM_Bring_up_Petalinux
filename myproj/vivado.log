@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Fri Jul 16 05:31:30 2021
-# Process ID: 1799322
+# Start of session at: Fri Aug 13 03:24:10 2021
+# Process ID: 1862822
 # Current directory: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj
 # Command line: vivado project_1.xpr
 # Log file: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/vivado.log
@@ -11,164 +11,86 @@
 #-----------------------------------------------------------
 start_gui
 open_project project_1.xpr
-INFO: [Project 1-313] Project file moved from '/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmReg/myproj' since last save.
 Scanning sources...
 Finished scanning sources
-INFO: [filemgmt 56-1] IP Repository Path: Directory not found as '/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/clkTestElmwovio/clkTestElm'; using path '/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmwovio/clkTestElm' instead.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmwovio/clkTestElm'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/software/xilinx/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:32 ; elapsed = 00:00:24 . Memory (MB): peak = 7102.445 ; gain = 33.062 ; free physical = 764 ; free virtual = 37145
 WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-open_project: Time (s): cpu = 00:00:40 ; elapsed = 00:00:23 . Memory (MB): peak = 7106.691 ; gain = 27.055 ; free physical = 317 ; free virtual = 41044
 update_compile_order -fileset sources_1
-close [ open /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/new/clktestTop.v w ]
-add_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/new/clktestTop.v
-update_compile_order -fileset sources_1
-close [ open /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/new/freq_meter.v w ]
-add_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/new/freq_meter.v
-update_compile_order -fileset sources_1
-open_bd_design {/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd}
-Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_e_0
-Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
-Adding component instance block -- user.org:user:clkTestTop:1.0 - clkTestTop_0
-Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph
-Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
-Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps8_0_96M
-Successfully read diagram <ps_block> from BD file </home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd>
-open_bd_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 7424.879 ; gain = 60.070 ; free physical = 743 ; free virtual = 41075
-create_bd_cell -type module -reference clktestTop clktestTop_1
+update_module_reference ps_block_clkTestTop_0_0
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmwovio/clkTestElm'.
-set_property location {2 948 571} [get_bd_cells clktestTop_1]
-delete_bd_objs [get_bd_nets gth_refClkP_i_0_1] [get_bd_nets gth_refClkN_i_0_1] [get_bd_nets fclkp_0_1] [get_bd_nets fclkn_0_1] [get_bd_nets clkTestTop_0_freq_O1] [get_bd_nets clkTestTop_0_freq_O2] [get_bd_cells clkTestTop_0]
-set_property location {3 1195 404} [get_bd_cells clktestTop_1]
-connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_i] [get_bd_pins clktestTop_1/freq_O1]
-WARNING: [BD 41-1306] The connection to interface pin /axi_gpio_0/gpio_io_i is being overridden by the user. This pin will not be connected as a part of interface connection GPIO
-connect_bd_net [get_bd_pins axi_gpio_0/gpio2_io_i] [get_bd_pins clktestTop_1/freq_O2]
-WARNING: [BD 41-1306] The connection to interface pin /axi_gpio_0/gpio2_io_i is being overridden by the user. This pin will not be connected as a part of interface connection GPIO2
-startgroup
-make_bd_pins_external  [get_bd_pins clktestTop_1/gth_refClkP_i]
-endgroup
-startgroup
-make_bd_pins_external  [get_bd_pins clktestTop_1/gth_refClkN_i]
-endgroup
-startgroup
-make_bd_pins_external  [get_bd_pins clktestTop_1/fclkp]
-endgroup
-startgroup
-make_bd_pins_external  [get_bd_pins clktestTop_1/fclkn]
-endgroup
-regenerate_bd_layout
-delete_bd_objs [get_bd_ports fclkn_0]
-delete_bd_objs [get_bd_ports fclkp_0]
-delete_bd_objs [get_bd_ports gth_refClkN_i_0]
-delete_bd_objs [get_bd_ports gth_refClkP_i_0]
-export_ip_user_files -of_objects  [get_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/constrs_1/new/clkTestCostr.xdc] -no_script -reset -force -quiet
-remove_files  -fileset constrs_1 /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/constrs_1/new/clkTestCostr.xdc
-save_bd_design
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_e_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps8_0_96M
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:debug_bridge:3.0 - debug_bridge_0
+Adding component instance block -- xilinx.com:ip:debug_bridge:3.0 - debug_bridge_1
+Adding component instance block -- xilinx.com:ip:vio:3.0 - vio_0
+Adding component instance block -- xilinx.com:module_ref:clkTestTop:1.0 - clkTestTop_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clkTestTop_0/fclk_p(undef) and /vio_0/clk(clk)
+Successfully read diagram <ps_block> from BD file </home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd>
+Upgrading '/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd'
+INFO: [IP_Flow 19-1972] Upgraded ps_block_clkTestTop_0_0 from clkTestTop_v1_0 1.0 to clkTestTop_v1_0 1.0
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'enable'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'ps_block_clkTestTop_0_0'. These changes may impact your design.
+WARNING: [BD 41-1731] Type mismatch between connected pins: /vio_0/clk(clk) and /clkTestTop_0_upgraded_ipi/fclk_p(undef)
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'ps_block_clkTestTop_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : </home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd> 
+Wrote  : </home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ui/bd_ebbe11d1.ui> 
+upgrade_ip: Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 7292.668 ; gain = 0.000 ; free physical = 615 ; free virtual = 36991
+update_module_reference: Time (s): cpu = 00:00:29 ; elapsed = 00:00:14 . Memory (MB): peak = 7292.668 ; gain = 62.160 ; free physical = 615 ; free virtual = 36991
+update_module_reference ps_block_clkTestTop_0_0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmwovio/clkTestElm'.
+Upgrading '/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd'
+INFO: [IP_Flow 19-1972] Upgraded ps_block_clkTestTop_0_0 from clkTestTop_v1_0 1.0 to clkTestTop_v1_0 1.0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /vio_0/clk(clk) and /clkTestTop_0_upgraded_ipi/fclk_p(undef)
 Wrote  : </home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd> 
 Wrote  : </home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ui/bd_ebbe11d1.ui> 
 reset_run synth_1
-launch_runs synth_1 -jobs 2
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+WARNING: [BD 41-2121] Port s_axi_aclk associated reset port s_axi_lite_resetn does not exist
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s01_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM1_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s01_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM1_FPD(16)
 WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
 WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/clkTestTop_0/enable
+
 Wrote  : </home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd> 
+Wrote  : </home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ui/bd_ebbe11d1.ui> 
 VHDL Output written to : /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/synth/ps_block.v
 VHDL Output written to : /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/sim/ps_block.v
 VHDL Output written to : /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/hdl/ps_block_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block clktestTop_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clkTestTop_0 .
+Exporting to file /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ip/ps_block_debug_bridge_0_1/bd_0/hw_handoff/ps_block_debug_bridge_0_1.hwh
+Generated Block Design Tcl file /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ip/ps_block_debug_bridge_0_1/bd_0/hw_handoff/ps_block_debug_bridge_0_1_bd.tcl
+Generated Hardware Definition File /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ip/ps_block_debug_bridge_0_1/bd_0/synth/ps_block_debug_bridge_0_1.hwdef
+Exporting to file /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ip/ps_block_debug_bridge_1_1/bd_0/hw_handoff/ps_block_debug_bridge_1_1.hwh
+Generated Block Design Tcl file /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ip/ps_block_debug_bridge_1_1/bd_0/hw_handoff/ps_block_debug_bridge_1_1_bd.tcl
+Generated Hardware Definition File /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ip/ps_block_debug_bridge_1_1/bd_0/synth/ps_block_debug_bridge_1_1.hwdef
 WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ip/ps_block_auto_pc_0/ps_block_auto_pc_0_ooc.xdc'
 INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ip/ps_block_auto_ds_0/ps_block_auto_ds_0_ooc.xdc'
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s01_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ip/ps_block_auto_pc_1/ps_block_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s01_couplers/auto_pc .
 Exporting to file /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/hw_handoff/ps_block.hwh
 Generated Block Design Tcl file /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/hw_handoff/ps_block_bd.tcl
 Generated Hardware Definition File /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/synth/ps_block.hwdef
-[Fri Jul 16 08:17:54 2021] Launched synth_1...
+[Fri Aug 13 03:38:07 2021] Launched synth_1...
 Run output will be captured here: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.runs/synth_1/runme.log
-launch_runs: Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 7424.879 ; gain = 0.000 ; free physical = 617 ; free virtual = 40939
-open_run synth_1 -name synth_1
-Design is defaulting to impl run constrset: constrs_1
-Design is defaulting to synth run part: xczu4cg-sfvc784-2-e
-INFO: [Device 21-403] Loading part xczu4cg-sfvc784-2-e
-Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 8096.641 ; gain = 0.000 ; free physical = 2819 ; free virtual = 40355
-INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2020.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ip/ps_block_zynq_ultra_ps_e_0_0/ps_block_zynq_ultra_ps_e_0_0.xdc] for cell 'ps_block_i/zynq_ultra_ps_e_0/inst'
-create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 8112.648 ; gain = 0.000 ; free physical = 2720 ; free virtual = 40256
-Finished Parsing XDC File [/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ip/ps_block_zynq_ultra_ps_e_0_0/ps_block_zynq_ultra_ps_e_0_0.xdc] for cell 'ps_block_i/zynq_ultra_ps_e_0/inst'
-Parsing XDC File [/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ip/ps_block_axi_gpio_0_0/ps_block_axi_gpio_0_0_board.xdc] for cell 'ps_block_i/axi_gpio_0/U0'
-Finished Parsing XDC File [/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ip/ps_block_axi_gpio_0_0/ps_block_axi_gpio_0_0_board.xdc] for cell 'ps_block_i/axi_gpio_0/U0'
-Parsing XDC File [/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ip/ps_block_axi_gpio_0_0/ps_block_axi_gpio_0_0.xdc] for cell 'ps_block_i/axi_gpio_0/U0'
-Finished Parsing XDC File [/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ip/ps_block_axi_gpio_0_0/ps_block_axi_gpio_0_0.xdc] for cell 'ps_block_i/axi_gpio_0/U0'
-Parsing XDC File [/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ip/ps_block_rst_ps8_0_96M_0/ps_block_rst_ps8_0_96M_0_board.xdc] for cell 'ps_block_i/rst_ps8_0_96M/U0'
-Finished Parsing XDC File [/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ip/ps_block_rst_ps8_0_96M_0/ps_block_rst_ps8_0_96M_0_board.xdc] for cell 'ps_block_i/rst_ps8_0_96M/U0'
-Parsing XDC File [/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ip/ps_block_rst_ps8_0_96M_0/ps_block_rst_ps8_0_96M_0.xdc] for cell 'ps_block_i/rst_ps8_0_96M/U0'
-Finished Parsing XDC File [/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ip/ps_block_rst_ps8_0_96M_0/ps_block_rst_ps8_0_96M_0.xdc] for cell 'ps_block_i/rst_ps8_0_96M/U0'
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8112.648 ; gain = 0.000 ; free physical = 2719 ; free virtual = 40256
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 1 instances were transformed.
-  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
-
-open_run: Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 8205.348 ; gain = 780.469 ; free physical = 2475 ; free virtual = 40012
-place_ports {gth_refClkP_i_1[1]} V6
-place_ports: Time (s): cpu = 00:00:58 ; elapsed = 00:01:36 . Memory (MB): peak = 9441.215 ; gain = 1233.867 ; free physical = 1334 ; free virtual = 38980
-set_property package_pin "" [get_ports [list  {gth_refClkP_i_1[0]}]]
-place_ports {gth_refClkP_i_1[0]} Y6
-set_property is_loc_fixed false [get_ports [list  {gth_refClkP_i_1[1]}]]
-set_property is_loc_fixed false [get_ports [list  {gth_refClkP_i_1[0]}]]
-set_property is_loc_fixed true [get_ports [list  {gth_refClkP_i_1[1]}]]
-set_property is_loc_fixed true [get_ports [list  {gth_refClkP_i_1[0]}]]
-set_property IOSTANDARD LVDS [get_ports [list fclkp_1]]
-place_ports fclkp_1 AF7
-set_property package_pin "" [get_ports [list  {gth_refClkP_i_1[0]}]]
-set_property package_pin "" [get_ports [list  {gth_refClkP_i_1[0]}]]
-set_property IOSTANDARD LVDS [get_ports [list {gth_refClkP_i_1[0]}]]
-place_ports {gth_refClkP_i_1[0]} Y6
-set_property package_pin "" [get_ports [list  {gth_refClkP_i_1[0]}]]
-startgroup
-set_property package_pin "" [get_ports [list  {gth_refClkP_i_1[1]}]]
-place_ports {gth_refClkP_i_1[1]} V6
-endgroup
-set_property package_pin "" [get_ports [list  {gth_refClkP_i_1[1]}]]
-set_property IOSTANDARD LVDS [get_ports [list {gth_refClkP_i_1[1]}]]
-place_ports {gth_refClkP_i_1[1]} V6
-place_ports {gth_refClkP_i_1[0]} Y6
-close [ open /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/constrs_1/new/elmXdc.xdc w ]
-add_files -fileset constrs_1 /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/constrs_1/new/elmXdc.xdc
-set_property target_constrs_file /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/constrs_1/new/elmXdc.xdc [current_fileset -constrset]
-save_constraints -force
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
-[Fri Jul 16 08:30:17 2021] Launched synth_1...
-Run output will be captured here: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.runs/synth_1/runme.log
-[Fri Jul 16 08:30:17 2021] Launched impl_1...
+[Fri Aug 13 03:38:07 2021] Launched impl_1...
 Run output will be captured here: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.runs/impl_1/runme.log
-close_design
-open_run impl_1
-Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 9441.215 ; gain = 0.000 ; free physical = 3443 ; free virtual = 39141
-INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2020.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Constraints 18-5170] The checkpoint was created with non-default parameter values which do not match the current Vivado settings.  Mismatching parameters are:
-  general.maxThreads
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 9444.215 ; gain = 0.000 ; free physical = 3340 ; free virtual = 39035
-Restored from archive | CPU: 1.780000 secs | Memory: -1.375061 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 9444.215 ; gain = 0.000 ; free physical = 3340 ; free virtual = 39035
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9444.215 ; gain = 0.000 ; free physical = 3341 ; free virtual = 39036
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-open_run: Time (s): cpu = 00:00:21 ; elapsed = 00:00:14 . Memory (MB): peak = 9444.215 ; gain = 3.000 ; free physical = 3324 ; free virtual = 39036
-close_design
-make_wrapper -files [get_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd] -top
+launch_runs: Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 7314.242 ; gain = 21.574 ; free physical = 356 ; free virtual = 36712
+reset_run synth_1

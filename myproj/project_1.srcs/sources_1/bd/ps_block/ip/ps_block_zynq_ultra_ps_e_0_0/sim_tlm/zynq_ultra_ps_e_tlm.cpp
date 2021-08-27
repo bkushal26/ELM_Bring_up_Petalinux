@@ -142,15 +142,19 @@ void add_extensions_to_tlm(const xtlm::aximm_payload* xtlm_pay, tlm::tlm_generic
 
     zynq_ultra_ps_e_tlm :: zynq_ultra_ps_e_tlm (sc_core::sc_module_name name,
     xsc::common_cpp::properties&): sc_module(name)//registering module name with parent
+        ,maxihpm1_fpd_aclk("maxihpm1_fpd_aclk")
         ,maxihpm0_lpd_aclk("maxihpm0_lpd_aclk")
         ,pl_resetn0("pl_resetn0")
         ,pl_clk0("pl_clk0")
+    ,m_rp_bridge_M_AXI_HPM1_FPD("m_rp_bridge_M_AXI_HPM1_FPD")
     ,m_rp_bridge_M_AXI_HPM0_LPD("m_rp_bridge_M_AXI_HPM0_LPD")
         ,pl_clk0_clk("pl_clk0_clk", sc_time(10.312603155035747,sc_core::SC_NS))//clock period in nanoseconds = 1000/freq(in MZ)
     {
         //creating instances of xtlm slave sockets
 
         //creating instances of xtlm master sockets
+        M_AXI_HPM1_FPD_wr_socket = new xtlm::xtlm_aximm_initiator_socket("M_AXI_HPM1_FPD_wr_socket", 128);
+        M_AXI_HPM1_FPD_rd_socket = new xtlm::xtlm_aximm_initiator_socket("M_AXI_HPM1_FPD_rd_socket", 128);
         M_AXI_HPM0_LPD_wr_socket = new xtlm::xtlm_aximm_initiator_socket("M_AXI_HPM0_LPD_wr_socket", 32);
         M_AXI_HPM0_LPD_rd_socket = new xtlm::xtlm_aximm_initiator_socket("M_AXI_HPM0_LPD_rd_socket", 32);
 
@@ -165,6 +169,12 @@ void add_extensions_to_tlm(const xtlm::aximm_payload* xtlm_pay, tlm::tlm_generic
 
         
         //instantiating TLM2XTLM bridge and stiching it between 
+        //s_axi_hpm_fpd[1] initiator socket of zynqmp Qemu tlm wrapper to M_AXI_HPM1_FPD_wr_socket/rd_socket sockets 
+        m_rp_bridge_M_AXI_HPM1_FPD.wr_socket->bind(*M_AXI_HPM1_FPD_wr_socket);
+        m_rp_bridge_M_AXI_HPM1_FPD.rd_socket->bind(*M_AXI_HPM1_FPD_rd_socket);
+        m_rp_bridge_M_AXI_HPM1_FPD.target_socket.bind(*m_zynqmp_tlm_model->s_axi_hpm_fpd[1]);
+
+        //instantiating TLM2XTLM bridge and stiching it between 
         //s_axi_hpm_lpd initiator socket of zynqmp Qemu tlm wrapper to M_AXI_HPM0_LPD_wr_socket/rd_socket sockets 
         m_rp_bridge_M_AXI_HPM0_LPD.wr_socket->bind(*M_AXI_HPM0_LPD_wr_socket);
         m_rp_bridge_M_AXI_HPM0_LPD.rd_socket->bind(*M_AXI_HPM0_LPD_rd_socket);
@@ -176,6 +186,7 @@ void add_extensions_to_tlm(const xtlm::aximm_payload* xtlm_pay, tlm::tlm_generic
         sensitive << pl_clk0_clk;
         dont_initialize();
         
+        m_rp_bridge_M_AXI_HPM1_FPD.registerUserExtensionHandlerCallback(&get_extensions_from_tlm);
         m_rp_bridge_M_AXI_HPM0_LPD.registerUserExtensionHandlerCallback(&get_extensions_from_tlm);
 
         m_zynqmp_tlm_model->rst(qemu_rst);
@@ -184,6 +195,8 @@ void add_extensions_to_tlm(const xtlm::aximm_payload* xtlm_pay, tlm::tlm_generic
 
     zynq_ultra_ps_e_tlm :: ~zynq_ultra_ps_e_tlm ()    {
         //deleteing dynamically created objects 
+        delete M_AXI_HPM1_FPD_wr_socket;
+        delete M_AXI_HPM1_FPD_rd_socket;
         delete M_AXI_HPM0_LPD_wr_socket;
         delete M_AXI_HPM0_LPD_rd_socket;
     }

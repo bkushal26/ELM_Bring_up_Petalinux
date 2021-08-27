@@ -14676,6 +14676,17 @@ set psu_afi_config {
 		#(OFFSET, MASK, VALUE)      (0XFF5E023C, 0x00080000U ,0x00000000U)  */
     mask_write 0XFF5E023C 0x00080000 0x00000000
 		# : AFIFM INTERFACE WIDTH
+		# Register : afi_fs @ 0XFD615000</p>
+
+		# Select the 32/64/128-bit data width selection for the Slave 1 00: 32-bit
+    #  AXI data width (default) 01: 64-bit AXI data width 10: 128-bit AXI data
+    #  width 11: reserved
+		# PSU_FPD_SLCR_AFI_FS_DW_SS1_SEL                                                  0x2
+
+		# afi fs SLCR control register. This register is static and should not be
+    # modified during operation.
+		#(OFFSET, MASK, VALUE)      (0XFD615000, 0x00000C00U ,0x00000800U)  */
+    mask_write 0XFD615000 0x00000C00 0x00000800
 		# Register : afi_fs @ 0XFF419000</p>
 
 		# Select the 32/64/128-bit data width selection for the Slave 0 00: 32-bit

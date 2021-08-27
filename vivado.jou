@@ -1,0 +1,109 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Aug 24 05:33:21 2021
+# Process ID: 1273098
+# Current directory: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux
+# Command line: vivado myproj/project_1.xpr
+# Log file: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/vivado.log
+# Journal file: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project myproj/project_1.xpr
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -url localhost:3121 -allow_non_jtag
+current_hw_target [get_hw_targets */xilinx_tcf/Xilinx/192.168.100.2:2542]
+close_hw_manager
+open_bd_design {/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd}
+open_run synth_1 -name synth_1
+close_design
+open_run impl_1
+open_hw_manager
+close_hw_target {localhost:3121/xilinx_tcf/Xilinx/192.168.100.2:2542}
+connect_hw_server -url localhost:3121 -allow_non_jtag
+current_hw_target [get_hw_targets */xilinx_tcf/Xilinx/192.168.100.2:2542]
+set_property PARAM.FREQUENCY 10000000 [get_hw_targets */xilinx_tcf/Xilinx/192.168.100.2:2542]
+open_hw_target
+current_hw_device [get_hw_devices debug_bridge_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices debug_bridge_0] 0]
+set_property PROBES.FILE {/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.runs/impl_1/debug_nets.ltx} [get_hw_devices debug_bridge_0]
+set_property FULL_PROBES.FILE {/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.runs/impl_1/debug_nets.ltx} [get_hw_devices debug_bridge_0]
+refresh_hw_device [lindex [get_hw_devices debug_bridge_0] 0]
+set_property INPUT_VALUE_RADIX UNSIGNED [get_hw_probes ps_block_i/clkTestTop_0_freq_O1 -of_objects [get_hw_vios -of_objects [get_hw_devices debug_bridge_0] -filter {CELL_NAME=~"ps_block_i/vio_0"}]]
+set_property INPUT_VALUE_RADIX UNSIGNED [get_hw_probes ps_block_i/clkTestTop_0_freq_O2 -of_objects [get_hw_vios -of_objects [get_hw_devices debug_bridge_0] -filter {CELL_NAME=~"ps_block_i/vio_0"}]]
+close_hw_manager
+open_bd_design {/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd}
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:reg64:1.0 reg64_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/zynq_ultra_ps_e_0/pl_clk0 (96 MHz)} Clk_slave {Auto} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (96 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM1_FPD} Slave {/reg64_0/S00_AXI} ddr_seg {Auto} intc_ip {/ps8_0_axi_periph} master_apm {0}}  [get_bd_intf_pins reg64_0/S00_AXI]
+connect_bd_net [get_bd_pins reg64_0/clk1_reg] [get_bd_pins clkTestTop_0/freq_O1]
+connect_bd_net [get_bd_pins reg64_0/clk2_reg] [get_bd_pins clkTestTop_0/freq_O2]
+regenerate_bd_layout
+validate_bd_design
+generate_target all [get_files  /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd]
+export_ip_user_files -of_objects [get_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd] -directory /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.ip_user_files -ipstatic_source_dir /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/modelsim} {questa=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/questa} {ies=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/ies} {xcelium=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/xcelium} {vcs=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/vcs} {riviera=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd] -top
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+refresh_design
+open_bd_design {/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd}
+update_module_reference ps_block_clkTestTop_0_0
+connect_bd_net [get_bd_pins reg64_0/ctl_slv_reg0] [get_bd_pins clkTestTop_0/enable]
+regenerate_bd_layout
+validate_bd_design
+generate_target all [get_files  /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd]
+export_ip_user_files -of_objects [get_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd] -directory /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.ip_user_files -ipstatic_source_dir /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/modelsim} {questa=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/questa} {ies=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/ies} {xcelium=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/xcelium} {vcs=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/vcs} {riviera=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd] -top
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -url localhost:3121 -allow_non_jtag
+current_hw_target [get_hw_targets */xilinx_tcf/Xilinx/192.168.100.2:2542]
+close_hw_manager
+close_design
+delete_bd_objs [get_bd_intf_nets ps8_0_axi_periph_M00_AXI] [get_bd_cells axi_gpio_0]
+regenerate_bd_layout
+validate_bd_design
+generate_target all [get_files  /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd]
+export_ip_user_files -of_objects [get_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd] -directory /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.ip_user_files -ipstatic_source_dir /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/modelsim} {questa=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/questa} {ies=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/ies} {xcelium=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/xcelium} {vcs=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/vcs} {riviera=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd] -top
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+update_module_reference ps_block_clkTestTop_0_0
+regenerate_bd_layout
+validate_bd_design
+generate_target all [get_files  /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd]
+export_ip_user_files -of_objects [get_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd] -directory /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.ip_user_files -ipstatic_source_dir /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/modelsim} {questa=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/questa} {ies=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/ies} {xcelium=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/xcelium} {vcs=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/vcs} {riviera=/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd] -top
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+connect_bd_net [get_bd_pins reg64_0/clk3_reg] [get_bd_pins clkTestTop_0/freq_O3]
+connect_bd_net [get_bd_pins clkTestTop_0/freq_O4] [get_bd_pins reg64_0/clk5_reg]
+delete_bd_objs [get_bd_nets clkTestTop_0_freq_O4]
+connect_bd_net [get_bd_pins reg64_0/clk4_reg] [get_bd_pins clkTestTop_0/freq_O4]
+connect_bd_net [get_bd_pins reg64_0/clk5_reg] [get_bd_pins clkTestTop_0/freq_O5]
+connect_bd_net [get_bd_pins clkTestTop_0/freq_O6] [get_bd_pins reg64_0/clk6_reg]
+connect_bd_net [get_bd_pins clkTestTop_0/freq_O7] [get_bd_pins reg64_0/clk7_reg]
+connect_bd_net [get_bd_pins clkTestTop_0/freq_O8] [get_bd_pins reg64_0/clk8_reg]
+connect_bd_net [get_bd_pins clkTestTop_0/freq_O9] [get_bd_pins reg64_0/clk9_reg]
+connect_bd_net [get_bd_pins clkTestTop_0/freq_1O] [get_bd_pins reg64_0/clk10_reg]
+connect_bd_net [get_bd_pins clkTestTop_0/freq_11] [get_bd_pins reg64_0/clk11_reg]
+connect_bd_net [get_bd_pins clkTestTop_0/freq_12] [get_bd_pins reg64_0/clk12_reg]
+regenerate_bd_layout
+validate_bd_design
+make_wrapper -files [get_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd] -top
+make_wrapper -files [get_files /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/project_1.srcs/sources_1/bd/ps_block/ps_block.bd] -top
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
