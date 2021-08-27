@@ -56,7 +56,7 @@ This folder contains source files for to configure clock synthesizers on board, 
 |USB     |USB interface | Approach to be discussed  |
 |UART    | Serial transceivers for debugging |  |
 |Chip2chip    |Interface to communicate with another FPGA | MGTs- 1 Design is ready to test. Will be tested after Clock distribution Network. PS-GTR test approach is to be finalized  |
-|Clock distribution network    |Several clock generators and jitter cleaners | Tested in Standalone+ linux userspace. Custom register IP to replace AXI-GPIO is in progress |
+|Clock distribution network    |Several clock generators and jitter cleaners | Tested fully. A shell script reads the frequency values stored in custom register Refer Wiki for details. |
 | I2C interfaces    | For on-board device configuration | 2 clock synthesizers Tested. EERPROM codes needs logic update |
 
 ## List of useful commands-
