@@ -1,5 +1,5 @@
 # ELM_Bring_up_Petalinux
-This repo will include ELM bring up tests for GEM,I2C, and  Petalinux Based tests. \
+This repo will include ELM bring up tests for GEM,I2C, and  Petalinux Based tests. 
 
 ***Note-*** This project is under development so repo and readme is incomplete 
 
@@ -10,28 +10,17 @@ This repo will include ELM bring up tests for GEM,I2C, and  Petalinux Based test
 ### Using SSH-
 ``` git clone --recursive git@github.com:bkushal26/ELM_Bring_up_Petalinux.git```
 
+## Wiki
+The instructions for GEM and I2C tests can be found [here](https://github.com/bkushal26/ELM_Bring_up_Petalinux/wiki)
+
 ## Git Repo Structure for GEM1:-
 
 ### myproj
 Working Vivado project saved in this folder (Vivado 2020.1)
 
-
 ### petaProj
-(switched to 2020.1 version, so will update the project accordingly, (just the boot image files)
-Working Petalinux project saved in this folder. 
-1. Includes HDF sourced from `myProj/<project_1.sdk` directory.
-2. Configured macb Driver in kernel Configuration. Steps for checking macb driver configuration:- 
- -  ```petalinux-config -c kernel ```
- - Then go to to `Device Drivers--> Network device support--> Ethernet Driver Support-->` \
- 		`[*] Cadence devices`\
-		`<*> Cadence MACB/GEM support ` (this option is not selected by default, press 'y' to select, 'n' to deselect.)
- - use left/right arrow keys to `<Save>` option.
-	
-3. Configured `iperf3` application. 
-- In your `<project_dir>/project-spec/meta-user/recipes-core/images/petalinux-image.bb` append add the following line:\
-   ```IMAGE_INSTALL_append = " iperf3"```(be aware of the extra space)
-- In ```petalinux-config -c rootfs``` -> user packages, enable iperf3
-	
+switched to 2020.1 version, so will update the project accordingly, (Currently just the boot image files are added). 
+- Instructions for Petalinux Project can be found [here](https://github.com/bkushal26/ELM_Bring_up_Petalinux/wiki/Petalinux-Configuration)
 ### tcl
 This folder contains tcl file which needs to be sourced when starting from scratch
 
@@ -40,24 +29,35 @@ This folder includes shell scripts to automate the tests.
 1. ping_iperf_client.sh-To be sourced on Board by- ``` sh ping_iperf_clinet.sh ```
 2. ping_iperf_slient.sh-To be sourced on Host PC by- ``` sh ping_iperf_server.sh ```
  
-Two tests are conducted-
- - Ping
- - iperf
-
-#### Note regarding iperf tests- 
- If after launching shell script on the server, if this error is printed-```iperf3: error - unable to connect to server: No route to host``` then chances are firewall is blocking the iperf data packets. In that case, Follow the following steps-
- 1. Check if the port is open by- ``` sudo firewall-cmd --list-ports ```
- 2. If you dont see 5201/udp or 5201/tcp, add them by- <br />
- ```
-sudo firewall-cmd --permanent --add-port=5201/udp 
-sudo firewall-cmd --permanent --add-port=5201/tcp 
-sudo firewall-cmd --reload 
- ```
-
 ## Create a new project from scratch:
 1. check the current working directory has 'tcl' folder.
-2. Launch Vivado (2019.1)
-3. In Vivado Tcl Console run :```source tcl/psddr.tcl```
+2. Launch Vivado (2020.1 or 2019.1)
+3. In Vivado Tcl Console run :```source tcl//elm2.tcl```
+
+## I2C related-
+
+### C_Program
+C-code, which writes into the eeproms and then reads back using i2c tools. Current version have some logical errors. When tested individual memory locations, it reads and writes sucessfully. Issue lies with function arguments being passed to the i2c get/set commands, (development under process)
+
+### shellScripts
+This folder includes shell scripts to automate the tests for mac EEPROM and Utility EEPROM
+1. i2c_eeprom_helper.sh-To be sourced on Board by- ``` sh i2c_eeprom_helper.sh ```
+
+### Clk_synthesizers
+This folder contains source files for to configure clock synthesizers on board, which are (si5338 and si5344). User is expected to make the executable of the c codes on board and then run it to configure it the the desired freqency. Currently, both clock synthesizers are configured to 250MHZ.
+
+## Project status 
+
+| Interface Name        |Details         | Status  |
+| :-------------: |:-------------:| :-------------:|
+|DDR4 Memeory    | Main RAM for CPU,4GB | Tested fully for Vivado 2019.1 & 2020.1 (baremetal application |
+|QSPI Flash    | Memory device for reserve system image | Approach to be discussed |
+|Gigabit Ethernet Module| Main channel of communication with outside world. | Tested fully. Check Wiki for instructions|
+|USB     |USB interface | Approach to be discussed  |
+|UART    | Serial transceivers for debugging |  |
+|Chip2chip    |Interface to communicate with another FPGA | MGTs- 1 Design is ready to test. Will be tested after Clock distribution Network. PS-GTR test approach is to be finalized  |
+|Clock distribution network    |Several clock generators and jitter cleaners | Tested in Standalone+ linux userspace. Custom register IP to replace AXI-GPIO is in progress |
+| I2C interfaces    | For on-board device configuration | 2 clock synthesizers Tested. EERPROM codes needs logic update |
 
 ## List of useful commands-
 1. To check the usb port status- ``` dmesg | grep ttyUSB```
@@ -69,72 +69,8 @@ sudo firewall-cmd --reload
 -  Configure the Linux Kernel:- ```petalinux-config -c kernel ```
 -  Configure the Root Filesystem:- ```petalinux-config -c rootfs ```
 -  Build the System:- ```petalinux-build ```
-- package (for petalinux2020):- <br /> ``` petalinux-package --boot --format BIN --fsbl images/linux/zynqmp_fsbl.elf --u-boot images/linux/u-boot.elf --pmufw images/linux/pmufw.elf --fpga images/linux/*.bit --force```
-## I2C related-
-### HDF
-It is a harware despcription file which is exported from Vivado (2019.1) to create Petalinux Project.
+- package (for petalinux2020):- <br /> 
+``` 
+petalinux-package --boot --format BIN --fsbl images/linux/zynqmp_fsbl.elf --u-boot images/linux/u-boot.elf --pmufw images/linux/pmufw.elf --fpga images/linux/*.bit --force
 
-### PetaProj
-Working Petalinux project saved in this folder. 
-1. Includes HDF sourced from `I2C/HDF/ps_block_wrapper.hdf` 
-2. Configured Cadence Driver in kernel Configuration. Steps for checking Cadence driver configuration:- 
- -  ```petalinux-config -c kernel ```
- Then go to to <br /> 
- `Device Drivers--> I2C support--> I2C support(I2C[=y])I2C hardware Bus Support-->[*] Cadence I2C controller ` <br />
- (this option is not selected by default, press 'space bar' to select, 'n' to deselect.)
- use left/right arrow keys to `<Save>` option.
-3.
-- In ```petalinux-config -c rootfs``` -> 
-- a. ```I2C tools (filesystem packages-> base-> i2c tools )```
-- b. ```GCC run-time (filesystem packages-> misc-> GCC run-time) ```
-- c. ```Packagegroup-petalinux-buildessential (filesystem packages -> misc -> `Packagegroup-petalinux-buildessential ) ```
-
-4.
-- In  ```petalinux-config``` ->
-- a. ```replace Image config --> SD card with Image Packaging Configrations  --> Root filesystem type --> SD card ```
-5. Editing Device tree 
-
-   ```<YourPetalinuxProjectDirectory>/project-spec/meta-user/recipes-bsp/device-tree/files``` 
-    - Add this device tree
 ```
-	/include/ "system-conf.dtsi"
-/ {
-
-i2c0 {
-
-status = "okay";
-clock-frequency = <400000>;
-bus-id = <0>;
-clocks = <&zynqmp_clk 61>;
-compatible = "cdns,i2c-r1p14", "cdns,i2c-r1p10";
-interrupt-parent = <&gic>;
-interrupts = <0 17 4>;
-reg = <0x0 0xff020000 0x0 0x1000>;
-xlnx,has-interrupt = <0x0>;
-
-eeprom@50 {
-
-compatible = "microchip,24aa02e48";
-reg = <0x50>;
-};
-
-eeprom@51{
-                compatible = "at24,24a256";
-                reg = <0x51>;
-        };
-};
-};
-
-```	
-
-### tcl
-This folder contains tcl file which needs to be sourced when starting from scratch, supports both versions 2019.1 and 2020.1. (2019.1 is temp, will be switiching to 2020.1 fully soon)
-
-### shellScripts
-This folder includes shell scripts to automate the tests for mac EEPROM and Utility EEPROM
-1. i2c_eeprom_helper.sh-To be sourced on Board by- ``` sh i2c_eeprom_helper.sh ```
-
-### Create a new project from scratch:
-1. check the current working directory has 'tcl' folder.
-2. Launch Vivado (2020.1)
-3. In Vivado Tcl Console run :```source TCL/elm2.tcl```
