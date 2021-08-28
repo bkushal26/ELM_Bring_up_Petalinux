@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat Aug 28 06:04:18 2021
+# Process ID: 2084916
+# Current directory: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj
+# Command line: vivado project_1.xpr
+# Log file: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/vivado.log
+# Journal file: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project project_1.xpr
+update_compile_order -fileset sources_1
+open_hw_manager
+close_hw_target {localhost:3121/xilinx_tcf/Xilinx/192.168.100.2:2542}
+connect_hw_server -url localhost:3121 -allow_non_jtag
+current_hw_target [get_hw_targets */xilinx_tcf/Xilinx/192.168.100.2:2542]
+set_property PARAM.FREQUENCY 10000000 [get_hw_targets */xilinx_tcf/Xilinx/192.168.100.2:2542]
+open_hw_target
+current_hw_device [get_hw_devices debug_bridge_0]
+refresh_hw_device [lindex [get_hw_devices debug_bridge_0] 0]

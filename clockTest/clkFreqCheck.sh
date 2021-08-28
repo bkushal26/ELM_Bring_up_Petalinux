@@ -1,6 +1,8 @@
-echo    "---------------------Clock distribution network on ELM----------------------"
-echo "Note that the user needs to replace the physical address if there is change in firmware or change in the device"
 
+#
+echo    "---------------------Clock distribution network on ELM----------------------"
+echo "Note that the user needs to replace the physical address if there is change in firmware or change in the device,"
+echo "Make sure that clock synthesizers are configurred to the respective frequency, this script reads from custom registers"
 statusReg1Add=$((16#80020080))
 statusReg12Add=$((16#800200AC))
 b=1
@@ -14,7 +16,7 @@ do
         var3=$(devmem2 $statusRegAdd  | awk '{print $5}')
         var4=$((${var3}))
         var5=$(bc <<<"scale = 7;$var4 /1000000")
-        echo "Output frequency $b is:-" $var5 "M Hertz"
+        echo "    Output frequency $b is:-" $var5 "M Hertz  "
 
 
  #increment address
@@ -23,4 +25,5 @@ do
 
 
 done
-echo "---------------------Frequency check Done!-------------------------------------"
+echo "*******************************Frequency check Done!**********************************"
+

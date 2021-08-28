@@ -1,0 +1,255 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:35 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 2084916
+License: Customer
+
+Current time: 	Sat Aug 28 06:04:52 EDT 2021
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: CentOS Linux release 8.2.2004 (Core)
+OS Version: 4.18.0-193.19.1.el8_2.x86_64
+OS Architecture: amd64
+Available processors (cores): 4
+
+Display: :1
+Screen size: 1920x1057
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/home/software/xilinx/Vivado/2020.1/tps/lnx64/jre9.0.4
+Java executable location: 	/home/software/xilinx/Vivado/2020.1/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	bhalerao
+User home directory: /home/bhalerao
+User working directory: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/software/xilinx/Vivado
+HDI_APPROOT: /home/software/xilinx/Vivado/2020.1
+RDI_DATADIR: /home/software/xilinx/Vivado/2020.1/data
+RDI_BINDIR: /home/software/xilinx/Vivado/2020.1/bin
+
+Vivado preferences file location: /home/bhalerao/.Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: /home/bhalerao/.Xilinx/Vivado/2020.1/
+Vivado layouts directory: /home/bhalerao/.Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	/home/software/xilinx/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/vivado.log
+Vivado journal file location: 	/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-2084916-madorsky-d2.phys.ufl.edu
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /home/software/xilinx/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: /home/software/xilinx/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: /home/software/xilinx/Vivado/2020.1
+XILINX_SDK: /home/software/xilinx/Vitis/2020.1
+XILINX_VITIS: /home/software/xilinx/Vitis/2020.1
+XILINX_VIVADO: /home/software/xilinx/Vivado/2020.1
+XILINX_VIVADO_HLS: /home/software/xilinx/Vivado/2020.1
+
+
+GUI allocated memory:	390 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,626 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// WARNING: HEventQueue.dispatchEvent() is taking  1059 ms.
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 76 MB (+77536kb) [00:00:14]
+// [Engine Memory]: 1,510 MB (+1432005kb) [00:00:14]
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: project_1.xpr. Version: Vivado v2020.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project project_1.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,634 MB. GUI used memory: 69 MB. Current time: 8/28/21, 6:04:53 AM EDT
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 130 MB (+52256kb) [00:00:37]
+// [Engine Memory]: 1,730 MB (+151261kb) [00:00:37]
+// [GUI Memory]: 138 MB (+1923kb) [00:00:39]
+// WARNING: HEventQueue.dispatchEvent() is taking  6715 ms.
+// Tcl Message: open_project project_1.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/clkTestElmwovio/clkTestElm'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/bhalerao/kushal/ELM_test_suites/vivadoProjects/clkTestProj/elmClkTest/customReg/ip_repo'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/software/xilinx/Vivado/2020.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,538 MB. GUI used memory: 77 MB. Current time: 8/28/21, 6:05:18 AM EDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1862 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1097 ms.
+// Tcl Message: open_project: Time (s): cpu = 00:00:43 ; elapsed = 00:00:27 . Memory (MB): peak = 7105.477 ; gain = 34.059 ; free physical = 7747 ; free virtual = 34374 
+// Project name: project_1; location: /home/bhalerao/kushal/ELM_test_suites/vivadoProjects/elmGit/ELM_Bring_up_Petalinux/myproj; part: xczu4cg-sfvc784-2-e
+dismissDialog("Open Project"); // bz (cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// [Engine Memory]: 1,926 MB (+114797kb) [00:00:56]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,583 MB. GUI used memory: 78 MB. Current time: 8/28/21, 6:05:34 AM EDT
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 145 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21, true); // u (J, cs) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bz (cs):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// WARNING: HEventQueue.dispatchEvent() is taking  1991 ms.
+// Tcl Message: open_hw_manager 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// 'Q' command handler elapsed time: 3 seconds
+dismissDialog("Open Hardware Manager"); // bz (cs)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (ds, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_TARGET_WIZARD, "Open New Target..."); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_TARGET_WIZARD
+// aN (cs): Open New Hardware Target: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, aN)
+// bz (aN):  Open Server : addNotify
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// bz (aN):  Open Target : addNotify
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_TARGET_CLOSE
+// bz (aN):  Close Target : addNotify
+// TclEventType: HW_TARGET_CLOSE
+dismissDialog("Open Target"); // bz (aN)
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+selectButton("NEXT", "Next >"); // JButton (j, aN)
+dismissDialog("Close Target"); // bz (aN)
+// Elapsed time: 18 seconds
+selectButton(PAResourceTtoZ.TargetChooserPanel_ADD_XILINX_VIRTUAL_CABLE_AS_HARDWARE, "Add Xilinx Virtual Cable (XVC)"); // a (E, aN)
+// a (cs): Add Virtual Cable: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (a)
+dismissDialog("Add Virtual Cable"); // a (cs)
+selectButton(PAResourceTtoZ.TargetChooserPanel_ADD_XILINX_VIRTUAL_CABLE_AS_HARDWARE, "Add Xilinx Virtual Cable (XVC)"); // a (E, aN)
+// a (cs): Add Virtual Cable: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (a)
+// Tcl Command: 'open_hw_target -xvc_url 192.168.100.2:2542'
+dismissDialog("Add Virtual Cable"); // a (cs)
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042 INFO: [Labtools 27-3414] Connected to existing cs_server. INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/192.168.100.2:2542 
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: HW_TARGET_CHANGE
+// bz (aN):  Open Target : addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  4263 ms.
+// Tcl Message: close_hw_target {localhost:3121/xilinx_tcf/Xilinx/192.168.100.2:2542} 
+// Tcl Message: INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Xilinx/192.168.100.2:2542 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,434 MB. GUI used memory: 86 MB. Current time: 8/28/21, 6:08:59 AM EDT
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_TARGET_CLOSE
+// bz (aN):  Close Target : addNotify
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+dismissDialog("Open Target"); // bz (aN)
+// TclEventType: DEBUG_PROBE_DELETE
+dismissDialog("Close Target"); // bz (aN)
+selectTable(PAResourceEtoH.HardwareDeviceChooserPanel_DEVICE_CHOOSER_TABLE, "debug_bridge_0 ; 0A003093 ; 6", 0, "debug_bridge_0", 0); // ac (J, aN)
+selectButton("NEXT", "Next >"); // JButton (j, aN)
+// TclEventType: HW_OBJECT_DELETE
+// bz (aN):  Open Hardware Target : addNotify
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server -url localhost:3121 -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042 INFO: [Labtools 27-3414] Connected to existing cs_server. 
+// Tcl Message: current_hw_target [get_hw_targets */xilinx_tcf/Xilinx/192.168.100.2:2542] 
+// TclEventType: HW_TARGET_CHANGE
+// Tcl Message: set_property PARAM.FREQUENCY 10000000 [get_hw_targets */xilinx_tcf/Xilinx/192.168.100.2:2542] 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/192.168.100.2:2542 
+// Tcl Message: current_hw_device [get_hw_devices debug_bridge_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_VIO_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// [Engine Memory]: 2,492 MB (+492146kb) [00:04:37]
+// WARNING: HEventQueue.dispatchEvent() is taking  3313 ms.
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices debug_bridge_0] 0] 
+// Tcl Message: INFO: [Labtools 27-2302] Device debug_bridge (JTAG device index = 0) is programmed with a design that has 1 VIO core(s). 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: HW_VIO_CHANGE
+// TclEventType: HW_VIO_PROBE_VALUE_CHANGE
+selectButton("FINISH", "Finish"); // JButton (j, aN)
+// 'H' command handler elapsed time: 75 seconds
+dismissDialog("Open Hardware Target"); // bz (aN)
+// TclEventType: HW_VIO_PROBE_VALUE_CHANGE
+dismissDialog("Open New Hardware Target"); // aN (cs)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 1, 71); // dT (ae, cs)
+// Elapsed time: 10 seconds
+selectTreeTableHeader(PAResourceTtoZ.VioProbesTreeTablePanel_VIO_PROBES_TREE_TABLE, "Activity", 2); // g (J, cs)
+selectTreeTableHeader(PAResourceTtoZ.VioProbesTreeTablePanel_VIO_PROBES_TREE_TABLE, "Activity", 2); // g (J, cs)
+// PAPropertyPanels.initPanels (debug_bridge_0) elapsed time: 0.2s
+// TclEventType: HW_VIO_PROBE_VALUE_CHANGE
+// Elapsed time: 48 seconds
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "debug_bridge_0 (1) ; N/A", 3, "debug_bridge_0 (1)", 0, true); // t (J, cs) - Node
+selectTreeTable(PAResourceEtoH.HardwareTreePanel_HARDWARE_TREE_TABLE, "debug_bridge_0 (1) ; N/A", 3, "debug_bridge_0 (1)", 0, true, false, false, false, true, false); // t (J, cs) - Popup Trigger - Node
+// [GUI Memory]: 146 MB (+512kb) [00:05:58]
+// TclEventType: HW_VIO_PROBE_VALUE_CHANGE
