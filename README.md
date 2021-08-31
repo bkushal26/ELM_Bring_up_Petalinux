@@ -37,7 +37,7 @@ This folder includes shell scripts to automate the tests.
 ## I2C related-
 
 ### C_Program
-C-code, which writes into the eeproms and then reads back using i2c tools. Current version have some logical errors. When tested individual memory locations, it reads and writes sucessfully. Issue lies with function arguments being passed to the i2c get/set commands, (development under process)
+C-code, which writes into the eeproms and then reads back using i2c tools. Current version writes and read back to the user selected EERPOM and prints the output on to the terminal. addition of few more functions is underway.
 
 ### shellScripts
 This folder includes shell scripts to automate the tests for mac EEPROM and Utility EEPROM
@@ -57,7 +57,7 @@ This folder contains source files for to configure clock synthesizers on board, 
 |UART    | Serial transceivers for debugging |  |
 |Chip2chip    |Interface to communicate with another FPGA | MGTs- 1 Design is ready to test. Will be tested after Clock distribution Network. PS-GTR test approach is to be finalized  |
 |Clock distribution network    |Several clock generators and jitter cleaners | Tested fully. A shell script reads the frequency values stored in custom register Refer Wiki for details. |
-| I2C interfaces    | For on-board device configuration | 2 clock synthesizers Tested. EERPROM codes needs logic update |
+| I2C interfaces    | For on-board device configuration | 2 clock synthesizers Tested. EERPROM Tested successfully. More functions being added |
 
 ## List of useful commands-
 1. To check the usb port status- ``` dmesg | grep ttyUSB```
