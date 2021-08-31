@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xczu4cg-sfvc784-2-e" LaunchTime="1629880273">
-  <File Type="VDS-TIMING-PB" Name="ps_block_wrapper_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="ps_block_wrapper_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="ps_block_wrapper.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="ps_block_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="ps_block_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="ps_block_wrapper_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="ps_block_wrapper.vds"/>
   <File Type="REPORTS-TCL" Name="ps_block_wrapper_reports.tcl"/>
   <File Type="PA-TCL" Name="ps_block_wrapper.tcl"/>
+  <File Type="RDS-DCP" Name="ps_block_wrapper.dcp"/>
+  <File Type="RDS-RDS" Name="ps_block_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="ps_block_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="ps_block_wrapper_utilization_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/freqMeter.v">
