@@ -24,27 +24,35 @@ switched to 2020.1 version, so will update the project accordingly, (Currently j
 ### tcl
 This folder contains tcl file which needs to be sourced when starting from scratch. The current script is behind the project in `myproj` directory & it only configures PS part and generates runs from synthesis to bit stream and export the hardware. It dones not inlcude steps to add custom AXI slave and clock distribution network checking firmware. Update is underway. User should refer to proejct available in `myproj` directory for further modification. 
 
-### GEM
-This folder includes shell scripts to automate the GEM bring up tests tests.The details about tests can be found in 
-1. ping_iperf_client.sh-To be sourced on Board by- ``` sh ping_iperf_clinet.sh ```
-2. ping_iperf_slient.sh-To be sourced on Host PC by- ``` sh ping_iperf_server.sh ```
- 
-## Create a new project from scratch:
+#### Create a new project from scratch:
 1. check the current working directory has 'tcl' folder.
 2. Launch Vivado (2020.1 or 2019.1)
 3. In Vivado Tcl Console run :```source tcl//elm2.tcl```
 
-## I2C related-
+### GEM
+This folder includes shell scripts to automate the GEM bring up tests tests.The details about tests can be found in Wiki page.
+1. ping_iperf_client.sh-To be sourced on Board by- ``` sh ping_iperf_clinet.sh ```
+2. ping_iperf_slient.sh-To be sourced on Host PC by- ``` sh ping_iperf_server.sh ```
+ 
+### I2C -
+This folder includes scripts to test I2C interfaces available on board. Currently script given in `C_Program` is being used. ShellScript folder was earlier approach and consists of bugs
 
-### C_Program
+#### C_Program
 C-code, which writes into the eeproms and then reads back using i2c tools. Current version writes and read back to the user selected EERPOM and prints the output on to the terminal. addition of few more functions is underway.
 
-### shellScripts
+#### shellScripts
 This folder includes shell scripts to automate the tests for mac EEPROM and Utility EEPROM
 1. i2c_eeprom_helper.sh-To be sourced on Board by- ``` sh i2c_eeprom_helper.sh ```
 
-### Clk_synthesizers
+#### Clk_synthesizers
 This folder contains source files for to configure clock synthesizers on board, which are (si5338 and si5344). User is expected to make the executable of the c codes on board and then run it to configure it the the desired freqency. Currently, both clock synthesizers are configured to 250MHZ.
+
+## clockTest
+This directory includes shell script to test clock distribution network. Refer to wiki page for more details. 
+
+## xvc
+This directory contains source code and executable(ready to test on board) for Xilinx Virtual Cable. Instructions can be found into the Wiki Page.
+
 
 ## Project status 
 

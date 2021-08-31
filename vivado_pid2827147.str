@@ -454,3 +454,19 @@ selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System"
 // HMemoryUtils.trashcanNow. Engine heap size: 1,784 MB. GUI used memory: 102 MB. Current time: 8/31/21, 3:00:42 AM EDT
 // HMemoryUtils.trashcanNow. Engine heap size: 1,784 MB. GUI used memory: 102 MB. Current time: 8/31/21, 3:30:42 AM EDT
 // HMemoryUtils.trashcanNow. Engine heap size: 1,784 MB. GUI used memory: 102 MB. Current time: 8/31/21, 4:00:43 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,784 MB. GUI used memory: 102 MB. Current time: 8/31/21, 4:30:43 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,784 MB. GUI used memory: 102 MB. Current time: 8/31/21, 5:00:43 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,784 MB. GUI used memory: 102 MB. Current time: 8/31/21, 5:30:43 AM EDT
+// Elapsed time: 74894 seconds
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 310, 186); // dT (ae, cs)
+// Elapsed time: 605 seconds
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 360, 187, false, false, false, true, false); // dT (ae, cs) - Popup Trigger
+selectMenuItem(RDIResource.TclConsoleView_COPY, "Copy"); // ai (ao, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,784 MB. GUI used memory: 102 MB. Current time: 8/31/21, 6:00:43 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,784 MB. GUI used memory: 102 MB. Current time: 8/31/21, 6:30:43 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,783 MB. GUI used memory: 101 MB. Current time: 8/31/21, 7:00:43 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,783 MB. GUI used memory: 101 MB. Current time: 8/31/21, 7:30:43 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,783 MB. GUI used memory: 101 MB. Current time: 8/31/21, 8:00:43 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,783 MB. GUI used memory: 101 MB. Current time: 8/31/21, 8:30:43 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,783 MB. GUI used memory: 101 MB. Current time: 8/31/21, 9:00:43 AM EDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,783 MB. GUI used memory: 101 MB. Current time: 8/31/21, 9:30:43 AM EDT
