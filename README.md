@@ -13,7 +13,7 @@ This repo will include ELM bring up tests for GEM,I2C, and  Petalinux Based test
 ## Wiki
 The instructions for GEM and I2C tests can be found [here](https://github.com/bkushal26/ELM_Bring_up_Petalinux/wiki)
 
-## Git Repo Structure for GEM1:-
+## Git Repo Structure:-
 
 ### myproj
 Working Vivado project saved in this folder (Vivado 2020.1)
@@ -24,8 +24,8 @@ switched to 2020.1 version, so will update the project accordingly, (Currently j
 ### tcl
 This folder contains tcl file which needs to be sourced when starting from scratch. The current script is behind the project in `myproj` directory & it only configures PS part and generates runs from synthesis to bit stream and export the hardware. It dones not inlcude steps to add custom AXI slave and clock distribution network checking firmware. Update is underway. User should refer to proejct available in `myproj` directory for further modification. 
 
-### shellScripts
-This folder includes shell scripts to automate the tests.
+### GEM
+This folder includes shell scripts to automate the GEM bring up tests tests.The details about tests can be found in 
 1. ping_iperf_client.sh-To be sourced on Board by- ``` sh ping_iperf_clinet.sh ```
 2. ping_iperf_slient.sh-To be sourced on Host PC by- ``` sh ping_iperf_server.sh ```
  
