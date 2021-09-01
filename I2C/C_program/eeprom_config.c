@@ -28,7 +28,7 @@
 		the printf statement when the result was printed had ("%s\n%s",output[10],output[11]) .. when %s is given it should just be the array adress printf("%s",output)
 		the scanf("%d",a) -> scanf("%d",&a)  .. it is the adress of 'a' that should be passed
 		the configuration of the loop was changed to start from a desiered start value to desiered end value [dwordMin to dwordMax]
-				this was done since for option a=2 , the start afress is not 0x0 but 0x03
+				
 */
 
 // Make the SDK console work in the debugger
@@ -74,23 +74,23 @@ int main(int argc, char * argv[])
 {
 	int bus = 0;	
 	int chip, a, dwordsMin,dwordsMax, i, flag=0;
-	chip=0x50;
-	dwordsMin=0x0;
-	dwordsMax=0x7f;
+//	chip=0x50;
+//	dwordsMin=0x0;
+//	dwordsMax=0x7f;
 	printf("Enter value 1 for MAC EEPROM and 2 for Utility EEPROM:");
 	scanf("%d",&a);
 	printf ("%d",a);
 	if(a==1)
 	{
 		chip=0x50;
-		dwordsMin=0x0;
+		dwordsMin=0x00;
 		dwordsMax=0x7f;
 	}
 	else if(a==2)
 	{
 		chip=0x51;
-		dwordsMin=0x03;
-		dwordsMax=0x77; //change according to utility eeprom
+		dwordsMin=0x00;
+		dwordsMax=0xFF; //change according to utility eeprom
 	}
 	else
 	{
