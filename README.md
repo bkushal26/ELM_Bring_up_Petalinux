@@ -31,7 +31,8 @@ This folder contains tcl file which needs to be sourced when starting from scrat
 3. In Vivado Tcl Console run :```source tcl//elm2.tcl```
 
 ### topWrapper 
-This directory contains a shell script, which performs integrated tests of the listed modules. More details can be found at [Integrated-Tests wiki page](https://github.com/bkushal26/ELM_Bring_up_Petalinux/wiki/Integrated-Test).
+This directory contains a shell script, which performs integrated tests of the listed modules. More details can be found at [Integrated-Tests wiki page](https://github.com/bkushal26/ELM_Bring_up_Petalinux/wiki/Integrated-Test). Current script version is working it is tested on the ELM2 board. User may need to change the `pathToScirpt` variable in the script to test the script on the other ELM2 board. Current version have directory path relative to the `/root` directory on board.
+
 
 ### GEM
 This folder includes shell scripts to automate the GEM bring up tests tests.The details about tests can be found in Wiki page.
