@@ -21,13 +21,17 @@ Working Vivado project saved in this folder (Vivado 2020.1)
 ### petaProj
 switched to 2020.1 version, so will update the project accordingly, (Currently just the boot image files are added). 
 - Instructions for Petalinux Project can be found [here](https://github.com/bkushal26/ELM_Bring_up_Petalinux/wiki/Petalinux-Configuration)
-### tcl
-This folder contains tcl file which needs to be sourced when starting from scratch. The current script is behind the project in `myproj` directory & it only configures PS part and generates runs from synthesis to bit stream and export the hardware. It dones not inlcude steps to add custom AXI slave and clock distribution network checking firmware. Update is underway. User should refer to proejct available in `myproj` directory for further modification. 
 
-#### Create a new project from scratch:
+### tcl
+This folder contains tcl file which needs to be sourced when starting from scratch. The current script is behind the project in `myproj` directory & it only configures PS part and generates runs from synthesis to bit stream generation and export the hardware. It does not inlcude steps to add custom AXI slave and clock distribution network checking firmware. Update is underway. User should refer to proejct available in `myproj` directory for further modification.
+
+**Create a new project from scratch:**
 1. check the current working directory has 'tcl' folder.
 2. Launch Vivado (2020.1 or 2019.1)
 3. In Vivado Tcl Console run :```source tcl//elm2.tcl```
+
+### topWrapper 
+This directory contains a shell script, which performs integrated tests of the listed modules. More details can be found at [Integrated-Tests wiki page](https://github.com/bkushal26/ELM_Bring_up_Petalinux/wiki/Integrated-Test).
 
 ### GEM
 This folder includes shell scripts to automate the GEM bring up tests tests.The details about tests can be found in Wiki page.
