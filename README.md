@@ -28,7 +28,7 @@ This folder contains tcl file which needs to be sourced when starting from scrat
 **Create a new project from scratch:**
 1. check the current working directory has 'tcl' folder.
 2. Launch Vivado (2020.1 or 2019.1)
-3. In Vivado Tcl Console run :```source tcl//elm2.tcl```
+3. In Vivado Tcl Console run :```source tcl/elm2.tcl```
 
 ### topWrapper 
 This directory contains a shell script, which performs integrated tests of the listed modules. More details can be found at [Integrated-Tests wiki page](https://github.com/bkushal26/ELM_Bring_up_Petalinux/wiki/Integrated-Test). Current script version is working it is tested on the ELM2 board. User may need to change the `pathToScirpt` variable in the script to test the script on the other ELM2 board. Current version have directory path relative to the `/root` directory on board.
@@ -61,7 +61,7 @@ This directory contains source code and executable(ready to test on board) for X
 
 | Interface Name        |Details         | Status  |
 | :-------------: |:-------------:| :-------------:|
-|DDR4 Memeory    | Main RAM for CPU,4GB | Tested fully for Vivado 2019.1 & 2020.1 (baremetal application) |
+|DDR4 Memeory    | Main RAM for CPU,4GB | Tested fully for Vivado 2019.1 & 2020.1 (baremetal application). Refer to [this repo](https://github.com/bkushal26/ELM_BringUP_PSDDR) for standalone tests  |
 |QSPI Flash    | Memory device for reserve system image | Approach to be discussed |
 |Gigabit Ethernet Module| Main channel of communication with outside world. | Tested fully. Check Wiki for instructions|
 |USB     |USB interface | Approach to be discussed  |
