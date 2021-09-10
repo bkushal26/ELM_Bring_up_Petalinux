@@ -36,8 +36,6 @@ This directory contains a shell script, which performs integrated tests of the l
 
 ### GEM
 This folder includes shell scripts to automate the GEM bring up tests tests.The details about tests can be found in Wiki page.
-1. ping_iperf_client.sh-To be sourced on Board by- ``` sh ping_iperf_clinet.sh ```
-2. ping_iperf_slient.sh-To be sourced on Host PC by- ``` sh ping_iperf_server.sh ```
  
 ### I2C -
 This folder includes scripts to test I2C interfaces available on board. Currently script given in `C_Program` is being used. ShellScript folder was earlier approach and consists of bugs
