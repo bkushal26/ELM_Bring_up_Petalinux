@@ -61,7 +61,7 @@ This directory contains source code and executable(ready to test on board) for X
 
 | Interface Name        |Details         | Status  |
 | :-------------: |:-------------:| :-------------:|
-|DDR4 Memeory    | Main RAM for CPU,4GB | Tested fully for Vivado 2019.1 & 2020.1 (baremetal application |
+|DDR4 Memeory    | Main RAM for CPU,4GB | Tested fully for Vivado 2019.1 & 2020.1 (baremetal application) |
 |QSPI Flash    | Memory device for reserve system image | Approach to be discussed |
 |Gigabit Ethernet Module| Main channel of communication with outside world. | Tested fully. Check Wiki for instructions|
 |USB     |USB interface | Approach to be discussed  |
