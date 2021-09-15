@@ -11,7 +11,10 @@ This repo will include ELM bring up tests for GEM,I2C, and  Petalinux Based test
 ``` git clone --recursive git@github.com:bkushal26/ELM_Bring_up_Petalinux.git```
 
 ## Wiki
-The instructions for GEM and I2C tests can be found [here](https://github.com/bkushal26/ELM_Bring_up_Petalinux/wiki)
+There are 3 wiki pages designed-
+1. Home- Consists instructions and information for all individual tests. User can refer these when performing the tests individually, details can be found [here](https://github.com/bkushal26/ELM_Bring_up_Petalinux/wiki)
+2. Integrated Test- Details about how to run integrated test script.
+3. Petalinux configuration- Petalinux settings used during development.
 
 ## Git Repo Structure:-
 
